@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "SSO_ListProfile", menuName = "Data/SSO/ListProfile")]
-public class SSO_ListProfile : StaticScriptableObject<int>
+public class SSO_ListProfile : StaticScriptableObject<List<Profil>>
 {
 
 }

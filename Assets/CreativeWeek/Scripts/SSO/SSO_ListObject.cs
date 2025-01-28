@@ -3,6 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "SSO_ListObject", menuName = "Data/SSO/ListObject")]
-public class SSO_ListObject : StaticScriptableObject<int>
+public class SSO_ListObject : StaticScriptableObject<List<Item>>
 {
 }
