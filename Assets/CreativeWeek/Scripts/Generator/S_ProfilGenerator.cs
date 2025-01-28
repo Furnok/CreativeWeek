@@ -28,13 +28,13 @@ public class S_ProfilGenerator : MonoBehaviour
     }
 
 
-    private T GetRandomItem<T>(List<T> list)
+    T GetRandomItem<T>(List<T> list)
     {
         int randomIndex = UnityEngine.Random.Range(0, list.Count);
         return list[randomIndex];
     }
 
-    public T GetRandomEnumValue<T>()
+    T GetRandomEnumValue<T>()
     {
         Array values = Enum.GetValues(typeof(T));
 
@@ -42,8 +42,8 @@ public class S_ProfilGenerator : MonoBehaviour
 
         return (T)values.GetValue(randomIndex);
     }
-
-    public List<T> GetUniqueRandomEnumValues<T>(int count)
+   
+    List<T> GetUniqueRandomEnumValues<T>(int count)
     {
         Array values = Enum.GetValues(typeof(T));
 
@@ -65,5 +65,5 @@ public class S_ProfilGenerator : MonoBehaviour
         }
 
         return uniqueValues;
-    }
+    }   
 }

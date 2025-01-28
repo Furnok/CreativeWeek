@@ -7,5 +7,6 @@ public struct ItemUseEffect
 {
     public int ItemIdLink;
     public int CharmeValueGive;
+    public string TextItemContent;
     public string TextItemEffect;
 }
