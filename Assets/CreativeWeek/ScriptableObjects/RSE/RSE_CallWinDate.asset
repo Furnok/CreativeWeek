@@ -9,7 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef985483c81ce4e41a49ff93c5155843, type: 3}
-  m_Name: SSO_LoseCondition
+  m_Script: {fileID: 11500000, guid: 5e3d6cd9805e2ad4e9ed3cc6fc09e408, type: 3}
+  m_Name: RSE_CallWinDate
   m_EditorClassIdentifier: 
-  _value: 0
