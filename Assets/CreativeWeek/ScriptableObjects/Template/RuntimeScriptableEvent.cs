@@ -36,33 +36,3 @@ public class RuntimeScriptableEvent<T1, T2, T3> : ScriptableObject
         action?.Invoke(t1, t2, t3);
     }
 }
-
-public class RuntimeScriptableObject : ScriptableObject
-{
-    public Action<Vector2> onValueChanged;
-
-    private Vector2 _value;
-
-    public Vector2 Value
-    {
-        get => _value;
-        set
-        {
-            if (_value == value) return;
-
-            _value = value;
-
-            onValueChanged?.Invoke(_value);
-        }
-    }
-}
-
-public class StaticScriptableObject : ScriptableObject
-{
-    private Vector2 _value;
-
-    public Vector2 Value
-    {
-        get => _value;
-    }
-}
