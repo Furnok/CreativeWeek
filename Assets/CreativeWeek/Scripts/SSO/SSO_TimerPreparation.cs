@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "SSO_TimerPreparation", menuName = "Data/SSO/TimerPreparation")]
-public class SSO_TimerPreparation : StaticScriptableObject<float>
+public class SSO_TimerPreparation : BT.ScriptablesObject.StaticScriptableObject<float>
 {
 
 }

@@ -1,11 +1,14 @@
 using UnityEngine;
 
-public class StaticScriptableObject<T> : ScriptableObject
+namespace BT.ScriptablesObject
 {
-    public T _value;
-
-    public T Value
+    public class StaticScriptableObject<T> : ScriptableObject
     {
-        get => _value;
+        public T _value;
+
+        public T Value
+        {
+            get => _value;
+        }
     }
 }

@@ -3,6 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "RSE_CallWinDate", menuName = "Data/RSE/GameCondition/CallWinDate")]
-public class RSE_CallWinDate : RuntimeScriptableEvent
+public class RSE_CallWinDate : BT.ScriptablesObject.RuntimeScriptableEvent
 {
 }

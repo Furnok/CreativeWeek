@@ -2,22 +2,25 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RuntimeScriptableObject<T> : ScriptableObject
+namespace BT.ScriptablesObject
 {
-    public Action<T> onValueChanged;
-
-    public T _value;
-
-    public T Value
+    public class RuntimeScriptableObject<T> : ScriptableObject
     {
-        get => _value;
-        set
+        public Action<T> onValueChanged;
+
+        public T _value;
+
+        public T Value
         {
-            if (EqualityComparer<T>.Default.Equals(_value, value)) return;
+            get => _value;
+            set
+            {
+                if (EqualityComparer<T>.Default.Equals(_value, value)) return;
 
-            _value = value;
+                _value = value;
 
-            onValueChanged?.Invoke(_value);
+                onValueChanged?.Invoke(_value);
+            }
         }
     }
 }
