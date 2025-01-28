@@ -6,7 +6,7 @@ public class RuntimeScriptableObject<T> : ScriptableObject
 {
     public Action<T> onValueChanged;
 
-    private T _value;
+    public T _value;
 
     public T Value
     {
