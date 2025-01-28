@@ -18,6 +18,7 @@ public enum ProfilType
 
 public enum DrinkPreference
 {
+    None,
     Alcohol,
     Water,
     Soda
@@ -25,6 +26,7 @@ public enum DrinkPreference
 
 public enum DietType
 {
+    None,
     Carnivore,
     Vegetarian,
     Vegan
@@ -40,6 +42,7 @@ public enum IntoleranceType
 
 public enum BillSeparation
 {
+    None,
     Full,
     FiftyFifty,
     DontPay
