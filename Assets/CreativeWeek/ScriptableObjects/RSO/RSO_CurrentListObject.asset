@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a749c7c93b442e645bef886cb39bb169, type: 3}
   m_Name: RSO_CurrentListObject
   m_EditorClassIdentifier: 
-  _value: 0
+  _value:
+  - CanUse: 0
+    Index: 0
+    Name: 
+    Sprite: {fileID: 0}

@@ -12,4 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ba902ba1688924eb65fdc04b6a914a, type: 3}
   m_Name: RSO_CurrentProfile
   m_EditorClassIdentifier: 
-  _value: 0
+  _value:
+    Age: 0
+    Name: 
+    ProfilType: 0
+    CurrentProfilState: 0
+    ListProfilStates: []
+    Description: 
+    ItemsWantedAndUnwanted:
+    - ItemIdLink: 0
+      CharmeValueGive: 0
+      TextItemEffect: 
+    DietType: 0
+    DrinkPreference: 0
+    Intolerances: 0000000001000000
+    BillSeparation: 0

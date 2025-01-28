@@ -12,4 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26b3b7929d44b7645ae1e63ed4b890ca, type: 3}
   m_Name: SSO_ListQuestionAnswer
   m_EditorClassIdentifier: 
-  _value: 0
+  _value:
+    QuestionName: 
+    QuestionContent: 
+    Answer:
+    - AnswerName: 
+      AnswerContent: 
+      CharmeValueGive: 0
+      CanUseItems: 0
+      ListItems: []
+    QuestionDateStep: 0

@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f928825f15a99448adf240a2d9abc7d, type: 3}
   m_Name: SSO_MaxObject
   m_EditorClassIdentifier: 
-  _value: 0
+  _value: 5

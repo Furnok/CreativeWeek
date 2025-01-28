@@ -37,6 +37,15 @@ public enum IntoleranceType
     Fructose,
     NutsFruits
 }
+
+public enum BillSeparation
+{
+    Full,
+    FiftyFifty,
+    DontPay
+}
+
+[System.Serializable]
 public struct ProfilStateDictionary
 {
     public ProfilState State;
@@ -49,12 +58,13 @@ public class Profil
     public int Age;
     public string Name;
     public ProfilType ProfilType;
-    //public ProfilState CurrentProfilState;
+    public ProfilState CurrentProfilState;
     public List<ProfilStateDictionary> ListProfilStates;
     public string Description;
     public List<ItemUseEffect> ItemsWantedAndUnwanted;
     public DietType DietType;
     public DrinkPreference DrinkPreference;
     public List<IntoleranceType> Intolerances;
+    public BillSeparation BillSeparation;
 
 }

@@ -12,4 +12,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11cb12c0e995b424aafd028e75cc89a9, type: 3}
   m_Name: SSO_ListProfile
   m_EditorClassIdentifier: 
-  _value: 0
+  _value:
+  - Age: 0
+    Name: 
+    ProfilType: 0
+    CurrentProfilState: 0
+    ListProfilStates:
+    - State: 0
+      Sprite: {fileID: 0}
+    - State: 1
+      Sprite: {fileID: 0}
+    - State: 2
+      Sprite: {fileID: 0}
+    Description: 
+    ItemsWantedAndUnwanted: []
+    DietType: 0
+    DrinkPreference: 0
+    Intolerances: 
+    BillSeparation: 0
+  - Age: 0
+    Name: 
+    ProfilType: 1
+    CurrentProfilState: 0
+    ListProfilStates:
+    - State: 0
+      Sprite: {fileID: 0}
+    - State: 1
+      Sprite: {fileID: 0}
+    - State: 2
+      Sprite: {fileID: 0}
+    Description: 
+    ItemsWantedAndUnwanted: []
+    DietType: 0
+    DrinkPreference: 0
+    Intolerances: 
+    BillSeparation: 0
+  - Age: 0
+    Name: 
+    ProfilType: 2
+    CurrentProfilState: 0
+    ListProfilStates:
+    - State: 0
+      Sprite: {fileID: 0}
+    - State: 1
+      Sprite: {fileID: 0}
+    - State: 2
+      Sprite: {fileID: 0}
+    Description: 
+    ItemsWantedAndUnwanted: []
+    DietType: 0
+    DrinkPreference: 0
+    Intolerances: 
+    BillSeparation: 0

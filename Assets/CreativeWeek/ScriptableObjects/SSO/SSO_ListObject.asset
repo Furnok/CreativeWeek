@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3fd5bb9609959e49b03e2042271071e, type: 3}
   m_Name: SSO_ListObject
   m_EditorClassIdentifier: 
-  _value: 0
+  _value:
+  - CanUse: 0
+    Index: 0
+    Name: 
+    Sprite: {fileID: 0}
