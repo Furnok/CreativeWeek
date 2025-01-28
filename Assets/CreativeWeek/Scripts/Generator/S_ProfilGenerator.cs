@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class S_ProfilGenerator : MonoBehaviour
@@ -7,5 +9,61 @@ public class S_ProfilGenerator : MonoBehaviour
     [Header("Reference")]
     [SerializeField] RSO_CurrentProfile _rsoCurrentProfile;
     [SerializeField] SSO_ListProfile _ssoListProfile;
+    [SerializeField] SSO_MaxIntoleranceType _maxIntoleranceType;
 
+
+    private void Start()
+    {
+        
+    }
+
+    void CreateProfil()
+    {
+        var profil = GetRandomItem(_ssoListProfile.Value);
+        profil.DietType = GetRandomEnumValue<DietType>();
+        profil.DrinkPreference = GetRandomEnumValue<DrinkPreference>();
+        profil.BillSeparation = GetRandomEnumValue<BillSeparation>();
+        profil.Intolerances = GetUniqueRandomEnumValues<IntoleranceType>(_maxIntoleranceType.Value);
+        _rsoCurrentProfile.Value = profil;
+    }
+
+
+    private T GetRandomItem<T>(List<T> list)
+    {
+        int randomIndex = UnityEngine.Random.Range(0, list.Count);
+        return list[randomIndex];
+    }
+
+    public T GetRandomEnumValue<T>()
+    {
+        Array values = Enum.GetValues(typeof(T));
+
+        int randomIndex = UnityEngine.Random.Range(0, values.Length);
+
+        return (T)values.GetValue(randomIndex);
+    }
+
+    public List<T> GetUniqueRandomEnumValues<T>(int count)
+    {
+        Array values = Enum.GetValues(typeof(T));
+
+        List<T> uniqueValues = new List<T>();
+
+        if (count > values.Length)
+        {
+            throw new ArgumentException($"Impossible de sélectionner {count} valeurs uniques. L'enum ne contient que {values.Length} valeurs.");
+        }
+
+        while (uniqueValues.Count < count)
+        {
+            T randomValue = (T)values.GetValue(UnityEngine.Random.Range(0, values.Length));
+
+            if (!uniqueValues.Contains(randomValue))
+            {
+                uniqueValues.Add(randomValue);
+            }
+        }
+
+        return uniqueValues;
+    }
 }
