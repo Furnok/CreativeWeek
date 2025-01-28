@@ -4,7 +4,7 @@ namespace BT.ScriptablesObject
 {
     public class StaticScriptableObject<T> : ScriptableObject
     {
-        public T _value;
+        [SerializeField] private T _value;
 
         public T Value
         {

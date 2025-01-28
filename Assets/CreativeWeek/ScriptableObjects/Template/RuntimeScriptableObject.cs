@@ -8,7 +8,7 @@ namespace BT.ScriptablesObject
     {
         public Action<T> onValueChanged;
 
-        public T _value;
+        [SerializeField] private T _value;
 
         public T Value
         {
