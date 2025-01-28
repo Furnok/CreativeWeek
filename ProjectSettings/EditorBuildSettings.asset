@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/CreativeWeek/Scenes/Scene_MainMenu.unity
+    guid: 0c848e1b9364a3a4cbeee79218b08172
+  - enabled: 1
+    path: Assets/CreativeWeek/Scenes/Scene_Preparation.unity
+    guid: af835e6821314c14e85265811671a8a2
+  - enabled: 1
+    path: Assets/CreativeWeek/Scenes/Scene_Date.unity
+    guid: 38a52b0da2013db4cb428bbc67511ca3
   m_configObjects: {}
