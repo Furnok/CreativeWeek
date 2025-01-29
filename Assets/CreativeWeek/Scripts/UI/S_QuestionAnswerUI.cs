@@ -22,6 +22,10 @@ public class S_QuestionAnswerUI : MonoBehaviour
     [SerializeField] RSE_OnDateAnswering _rseOnDateAnswering;
     [SerializeField] RSE_OnAnswerGive _rseOnAnswerGive;
     [SerializeField] RSE_OnTimerQuestionEnd _rseTimerQuestionEnd;
+    [SerializeField] RSE_OnSpeechQuestionCreate _rseOnSpeechQuestionCreate;
+    [SerializeField] RSE_OnQuestionSpeechGenerate _rseOnQuestionSpeechGenerate;
+
+
 
 
     [Header("SSO")]
@@ -33,23 +37,34 @@ public class S_QuestionAnswerUI : MonoBehaviour
     private void Start()
     {
         _rseQuestionGenerate.action += DisplayQuestionAnswer;
+        _rseOnSpeechQuestionCreate.action += DisplaySpeechContent;
         _rseOnDateAnswering.action += DisplayDateAnswer;
         _rseOnAnswerGive.action += StopTimerCoroutine;
+        _rseOnQuestionSpeechGenerate.action += DisplayQuestionAnswer;
     }
 
     private void OnDestroy()
     {
         _rseQuestionGenerate.action -= DisplayQuestionAnswer;
+        _rseOnSpeechQuestionCreate.action -= DisplaySpeechContent;
         _rseOnDateAnswering.action -= DisplayDateAnswer;
         _rseOnAnswerGive.action -= StopTimerCoroutine;
-
+        _rseOnQuestionSpeechGenerate.action -= DisplayQuestionAnswer;
 
     }
     void DisplayQuestionAnswer(Question question)
     {
         StartCoroutine(QuestionDisplay(question));
     }
+    void DisplaySpeechContent(SpeechQuestion speechQuestion)
+    {
+        StartCoroutine(TextDisplay(speechQuestion.PitchContent));
+    }
 
+    void DisplayQuestionAnswer(SpeechQuestion speechQuestion)
+    {
+        StartCoroutine(TextDisplay(speechQuestion.PitchContent));
+    }
     IEnumerator QuestionDisplay(Question question)
     {
         
@@ -63,10 +78,25 @@ public class S_QuestionAnswerUI : MonoBehaviour
         }
         DisplayResponseOption(question);
 
-        _timerCoroutine = StartCoroutine(SliderTimerToAnwer(question));
-
-
+        _timerCoroutine = StartCoroutine(SliderTimerToAnwer());
     }
+
+    IEnumerator QuestionDisplay(SpeechQuestion speechQuestion)
+    {
+
+        _textDate.text = "";
+
+        for (int i = 0; i < speechQuestion.PitchContent.Length; i++)
+        {
+            _textDate.text += speechQuestion.PitchContent[i];
+
+            yield return new WaitForSeconds(_ssoTimeBetweenCharactereDisplay.Value);
+        }
+        DisplayResponseOption(speechQuestion);
+
+        _timerCoroutine = StartCoroutine(SliderTimerToAnwer());
+    }
+
 
     IEnumerator TextDisplay(string textToDIsplay)
     {
@@ -78,9 +108,14 @@ public class S_QuestionAnswerUI : MonoBehaviour
 
             yield return new WaitForSeconds(_ssoTimeBetweenCharactereDisplay.Value);
         }
+
+        yield return new WaitForSeconds(2f);
+
+        _textDate.text = "";
+
     }
 
-    IEnumerator SliderTimerToAnwer(Question question)
+    IEnumerator SliderTimerToAnwer()
     {
         float currentTimeToRespond = _ssoTimeToAnswer.Value;
 
@@ -131,6 +166,19 @@ public class S_QuestionAnswerUI : MonoBehaviour
         foreach(Answer answer in question.Answers)
         {
             var answerScript = Instantiate(_answer, Vector3.zero,Quaternion.identity, _answerContentParents);
+
+            _answersList.Add(answerScript);
+
+            answerScript.InitializeAnswer(answer);
+
+        }
+    }
+
+    void DisplayResponseOption(SpeechQuestion speechQuestion)
+    {
+        foreach (SpeechAnswer answer in speechQuestion.PitchAnswers)
+        {
+            var answerScript = Instantiate(_answer, Vector3.zero, Quaternion.identity, _answerContentParents);
 
             _answersList.Add(answerScript);
 

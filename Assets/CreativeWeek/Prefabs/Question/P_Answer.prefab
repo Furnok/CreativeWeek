@@ -189,6 +189,7 @@ MonoBehaviour:
   _textReplyContent: {fileID: 7087311691927286735}
   _rseOnAnswerGiveToQuestion: {fileID: 11400000, guid: 1bed241a4779bb5499ade3d0cadaff03, type: 2}
   _rseOnAnswerGive: {fileID: 11400000, guid: 4f693a22fa3d74f43b3359d463b25d08, type: 2}
+  _rseOnSpeechAnswerGive: {fileID: 11400000, guid: 57ba02c7fe4e2e847a0e46eb0e6f8a48, type: 2}
 --- !u!114 &5214052444050822535
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -12,4 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e5de3285f78b074dba8d6dbc51d8f5b, type: 3}
   m_Name: SSO_ListPitchQuestion
   m_EditorClassIdentifier: 
-  _value: []
+  _value:
+  - PitchQuestionName: 
+    ProfilType: 0
+    PitchContent: Dans ma vie jai eu 2 chats
+    PitchQuestionContent: Combien j'ai eu de chats dans ma vie
+    PitchAnswers:
+    - AnswerName: 
+      ReplyContent: 2 chiens
+      CharmeAnswerGive: -20
+      IsAnswerCorrect: 0
+    - AnswerName: 
+      ReplyContent: 2 chats
+      CharmeAnswerGive: 20
+      IsAnswerCorrect: 1
+    IsQuestionAlreadySay: 0

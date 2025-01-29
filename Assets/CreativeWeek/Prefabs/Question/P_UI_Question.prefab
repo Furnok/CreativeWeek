@@ -227,6 +227,7 @@ GameObject:
   - component: {fileID: 869908384486433034}
   - component: {fileID: 3170267411425243174}
   - component: {fileID: 7799660239863051221}
+  - component: {fileID: 9163845714377163854}
   m_Layer: 5
   m_Name: P_UI_Question
   m_TagString: Untagged
@@ -301,8 +302,29 @@ MonoBehaviour:
   _rseOnDateAnswering: {fileID: 11400000, guid: 180a832f308f727448c01f07ea3bc668, type: 2}
   _rseOnAnswerGive: {fileID: 11400000, guid: 4f693a22fa3d74f43b3359d463b25d08, type: 2}
   _rseTimerQuestionEnd: {fileID: 11400000, guid: 8dadb020ec7a7fc4e806b8fec189a603, type: 2}
+  _rseOnSpeechQuestionCreate: {fileID: 11400000, guid: 975afc85fe5f99442a7f164511b34e36, type: 2}
+  _rseOnQuestionSpeechGenerate: {fileID: 11400000, guid: 84f0e6e2b10752f4ea018903156a2de7, type: 2}
   _ssoTimeBetweenCharactereDisplay: {fileID: 11400000, guid: a7a3b86abc75d4c43b23e14c0b510fc1, type: 2}
   _ssoTimeToAnswer: {fileID: 11400000, guid: c0d55d14e14e1094aa8d64d001e79a01, type: 2}
+--- !u!114 &9163845714377163854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375169028085374807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d51c165db8b2c5c459a40a6cf8d6f496, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rseOnSpeechQuestionCreate: {fileID: 11400000, guid: 975afc85fe5f99442a7f164511b34e36, type: 2}
+  _rseOnQuestionSpeechGenerate: {fileID: 11400000, guid: 84f0e6e2b10752f4ea018903156a2de7, type: 2}
+  _rseOnSpeechAnswerGive: {fileID: 11400000, guid: 57ba02c7fe4e2e847a0e46eb0e6f8a48, type: 2}
+  _rsoSpeachPitchQuestion: {fileID: 11400000, guid: db73cb886f022274f9157db8705b160c, type: 2}
+  _rsoSpeechSays: {fileID: 11400000, guid: ea1dfc451fc900c4dad7af287c76d335, type: 2}
+  _rsoCurrentProfile: {fileID: 11400000, guid: eb35386258e8e7e448ebc31f81ace3a3, type: 2}
+  _ssoSpeachPitchQuestion: {fileID: 11400000, guid: c221b6e15bc119f46a711f6b6a782228, type: 2}
 --- !u!1 &1527851336770699237
 GameObject:
   m_ObjectHideFlags: 0
