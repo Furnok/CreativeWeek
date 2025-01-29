@@ -35,7 +35,7 @@ public class S_CharmManager : MonoBehaviour
     private void UpdateCharmValue(int charmValue)
     {
         RSO_Charm.Value = Mathf.Clamp(RSO_Charm.Value + charmValue, 0, 100);
-        RSE_UpdateUICharm.RaiseEvent();
+        RSE_UpdateUICharm?.RaiseEvent();
         if (RSO_Charm.Value <= 0)
         {
             RSE_CallLoseDate.RaiseEvent();
@@ -45,11 +45,11 @@ public class S_CharmManager : MonoBehaviour
     {
         if(RSO_Charm.Value >= SSO_WinCondition.Value)
         {
-            RSE_CallWinDate.RaiseEvent();
+            RSE_CallWinDate?.RaiseEvent();
         }
         else
         {
-            RSE_CallLoseDate.RaiseEvent();
+            RSE_CallLoseDate?.RaiseEvent();
         }
     }
 }
