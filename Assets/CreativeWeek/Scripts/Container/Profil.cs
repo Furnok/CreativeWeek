@@ -67,7 +67,7 @@ public class Profil
     public List<ItemUseEffect> ItemsWantedAndUnwanted;
     public DietType DietType;
     public DrinkPreference DrinkPreference;
-    public List<IntoleranceType> Intolerances;
+    public List<IntoleranceType> Intolerances = new List<IntoleranceType>();
     public BillSeparation BillSeparation;
 
 }

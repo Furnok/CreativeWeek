@@ -1,4 +1,6 @@
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class S_QuestionManager : MonoBehaviour
@@ -42,13 +44,100 @@ public class S_QuestionManager : MonoBehaviour
     void CreateQuestion()
     {
         var question = GetRandomQuestionWithEnum(_ssoListQuestionAnswer.Value, _rsoCurrentStep.Value);
-        Debug.Log("question");
+        //Debug.Log("question");
         _rseQuestionGenerate.RaiseEvent(question);
     }
 
     void TcheckAnswer(Answer answer)
     {
-        _rseOnDateAnswering.RaiseEvent(answer.DateAnswerIfPositifReply);//gonna chnage
+        var currentProfil = _rsoCurrentProfile.Value;
+        //var currentProfil = new Profil();
+        //currentProfil.Intolerances = new List<IntoleranceType>();
+        //currentProfil.Intolerances.Add(IntoleranceType.Gluten);
+        //currentProfil.Intolerances.Add(IntoleranceType.Lactose);
+        //currentProfil.Intolerances.Add(IntoleranceType.NutsFruits);
+
+        var condition = answer.ConditionIn;
+
+        if(condition.DietType != DietType.None && condition.IntoleranceType != null && condition.IntoleranceType.Count != 0)
+        {
+            if (condition.DietType == currentProfil.DietType && condition.IntoleranceType.Intersect(currentProfil.Intolerances).Any() == false)
+            {
+                _rseOnDateAnswering.RaiseEvent(answer.DateAnswerIfPositifReply);
+                _rseUpdateCharm.RaiseEvent(answer.CharmeIfValidAnswer);
+                return;
+            }
+            else
+            {
+                _rseOnDateAnswering.RaiseEvent(answer.DateAnswerIfNegatifReply);
+                _rseUpdateCharm.RaiseEvent(answer.CharmeIfUnvalidAnswer);
+                return;
+            }
+        }
+        else if (condition.DietType != DietType.None)
+        {
+            if (condition.DietType == currentProfil.DietType)
+            {
+                _rseOnDateAnswering.RaiseEvent(answer.DateAnswerIfPositifReply);
+                _rseUpdateCharm.RaiseEvent(answer.CharmeIfValidAnswer);
+                return;
+            }
+            else
+            {
+                _rseOnDateAnswering.RaiseEvent(answer.DateAnswerIfNegatifReply);
+                _rseUpdateCharm.RaiseEvent(answer.CharmeIfUnvalidAnswer);
+                return;
+            }
+        }
+        else if (condition.IntoleranceType != null && condition.IntoleranceType.Count != 0)
+        {
+            if (condition.IntoleranceType.Intersect(currentProfil.Intolerances).Any() == false)
+            {
+                _rseOnDateAnswering.RaiseEvent(answer.DateAnswerIfPositifReply);
+                _rseUpdateCharm.RaiseEvent(answer.CharmeIfValidAnswer);
+                return;
+            }
+            else
+            {
+                _rseOnDateAnswering.RaiseEvent(answer.DateAnswerIfNegatifReply);
+                _rseUpdateCharm.RaiseEvent(answer.CharmeIfUnvalidAnswer);
+                return;
+            }
+        }
+
+        if (condition.DrinkPreference != DrinkPreference.None)
+        {
+            if (condition.DrinkPreference == currentProfil.DrinkPreference)
+            {
+                _rseOnDateAnswering.RaiseEvent(answer.DateAnswerIfPositifReply);
+                _rseUpdateCharm.RaiseEvent(answer.CharmeIfValidAnswer);
+                return;
+            }
+            else
+            {
+                _rseOnDateAnswering.RaiseEvent(answer.DateAnswerIfNegatifReply);
+                _rseUpdateCharm.RaiseEvent(answer.CharmeIfUnvalidAnswer);
+                return;
+            }
+        }
+        if (condition.BillSeparation != BillSeparation.None)
+        {
+            if (condition.BillSeparation == currentProfil.BillSeparation)
+            {
+                _rseOnDateAnswering.RaiseEvent(answer.DateAnswerIfPositifReply);
+                _rseUpdateCharm.RaiseEvent(answer.CharmeIfValidAnswer);
+                return;
+            }
+            else
+            {
+                _rseOnDateAnswering.RaiseEvent(answer.DateAnswerIfNegatifReply);
+                _rseUpdateCharm.RaiseEvent(answer.CharmeIfUnvalidAnswer);
+                return;
+            }
+        }
+
+        _rseOnDateAnswering.RaiseEvent(answer.DateAnswerIfPositifReply);
+        _rseUpdateCharm.RaiseEvent(answer.CharmeIfValidAnswer);
     }
     Question GetRandomQuestionWithEnum(List<Question> listQuestion, DateStep targetEnum)
     {

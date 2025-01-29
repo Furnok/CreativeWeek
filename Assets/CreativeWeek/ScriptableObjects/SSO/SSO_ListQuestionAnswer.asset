@@ -19,12 +19,10 @@ MonoBehaviour:
     Answers:
     - AnswerName: 
       ReplyContentText: gg
-      DateAnswerIfPositifReply: eez
-      DateAnswerIfNegatifReply: ez
+      DateAnswerIfPositifReply: yes
+      DateAnswerIfNegatifReply: no
       CharmeIfValidAnswer: 10
       CharmeIfUnvalidAnswer: -10
-      CanUseItems: 0
-      ListItems: []
       ConditionIn:
         DrinkPreference: 0
         DietType: 0
@@ -32,14 +30,12 @@ MonoBehaviour:
         IntoleranceType: 
     - AnswerName: 
       ReplyContentText: gz
-      DateAnswerIfPositifReply: pbl
-      DateAnswerIfNegatifReply: gggjgjg
+      DateAnswerIfPositifReply: yay
+      DateAnswerIfNegatifReply: nine
       CharmeIfValidAnswer: 10
       CharmeIfUnvalidAnswer: -10
-      CanUseItems: 0
-      ListItems: []
       ConditionIn:
         DrinkPreference: 0
         DietType: 0
         BillSeparation: 0
-        IntoleranceType: 
+        IntoleranceType: 03000000

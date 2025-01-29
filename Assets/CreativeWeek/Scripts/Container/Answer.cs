@@ -12,8 +12,8 @@ public struct Answer
     public string DateAnswerIfNegatifReply;
     public int CharmeIfValidAnswer;
     public int CharmeIfUnvalidAnswer;
-    public bool CanUseItems;
-    public List<ItemUseEffect> ListItems;
+    //public bool CanUseItems;
+    //public List<ItemUseEffect> ListItems;
     //public bool HasCondition;
     public Condition ConditionIn;
 }
