@@ -17,8 +17,8 @@ public struct Question
 {
     public string QuestionName;
     public string QuestionContent;
-    public List<Answer> Answer;
     public DateStep QuestionDateStep;
-    public bool IsNeedConditionToValid;
+    public List<Answer> Answers;
+    //public bool IsNeedConditionToValid;
     //public Condition ConditionToValid;
 }

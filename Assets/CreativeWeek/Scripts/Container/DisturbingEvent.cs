@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public struct DisturbingEvent
+public struct DisturbingActifEvent
 {
     public string NameEvent;
-    //public List<Answer>
+    public string EventContent;
 }

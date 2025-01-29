@@ -23,7 +23,8 @@ public class S_ProfilGenerator : MonoBehaviour
         profil.DietType = GetRandomEnumValue<DietType>();
         profil.DrinkPreference = GetRandomEnumValue<DrinkPreference>();
         profil.BillSeparation = GetRandomEnumValue<BillSeparation>();
-        profil.Intolerances = GetUniqueRandomEnumValues<IntoleranceType>(_maxIntoleranceType.Value);
+        var randomNumberOfIntolerances = UnityEngine.Random.Range(0, _maxIntoleranceType.Value);
+        profil.Intolerances = GetUniqueRandomEnumValues<IntoleranceType>(randomNumberOfIntolerances);
         _rsoCurrentProfile.Value = profil;
     }
 

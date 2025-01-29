@@ -12,4 +12,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26b3b7929d44b7645ae1e63ed4b890ca, type: 3}
   m_Name: SSO_ListQuestionAnswer
   m_EditorClassIdentifier: 
-  _value: []
+  _value:
+  - QuestionName: 
+    QuestionContent: test
+    Answers:
+    - AnswerName: 
+      AnswerPositifContent: a
+      AnswerNegatifContent: b
+      CharmeIfValidAnswer: 10
+      CharmeIfUnvalidAnswer: -10
+      CanUseItems: 0
+      ListItems: []
+      ConditionIn:
+        DrinkPreference: 0
+        DietType: 0
+        BillSeparation: 0
+        IntoleranceType: 
+    - AnswerName: 
+      AnswerPositifContent: ab
+      AnswerNegatifContent: bb
+      CharmeIfValidAnswer: 10
+      CharmeIfUnvalidAnswer: -10
+      CanUseItems: 0
+      ListItems: []
+      ConditionIn:
+        DrinkPreference: 0
+        DietType: 0
+        BillSeparation: 0
+        IntoleranceType: 
+    QuestionDateStep: 0
+    IsNeedConditionToValid: 1

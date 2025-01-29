@@ -6,12 +6,14 @@ using UnityEngine;
 public struct Answer
 {
     public string AnswerName;
-    public string AnswerContent;
+    //public string AnswerNeutralContent;
+    public string DateAnswerIfPositifReply;
+    public string DateAnswerIfNegatifReply;
     public int CharmeIfValidAnswer;
     public int CharmeIfUnvalidAnswer;
     public bool CanUseItems;
     public List<ItemUseEffect> ListItems;
-    public bool HasCondition;
+    //public bool HasCondition;
     public Condition ConditionIn;
 }
 

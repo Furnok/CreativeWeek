@@ -30,6 +30,8 @@ public class S_CharmManager : MonoBehaviour
     private void Start()
     {
         RSO_Charm.Value = SSO_Charm.Value;
+        RSE_UpdateUICharm.RaiseEvent();
+
     }
 
     private void UpdateCharmValue(int charmValue)
