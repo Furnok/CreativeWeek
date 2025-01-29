@@ -9,6 +9,7 @@ public class S_CharmManager : MonoBehaviour
     [SerializeField] RSE_CheckWinDate RSE_CheckWinDate;
     [SerializeField] RSE_CallWinDate RSE_CallWinDate;
     [SerializeField] RSE_CallLoseDate RSE_CallLoseDate;
+    [SerializeField] RSE_UpdateUICharm RSE_UpdateUICharm;
     [Header("SSO")]
     [SerializeField] SSO_Charm SSO_Charm;
     [SerializeField] SSO_WinCondition SSO_WinCondition;
@@ -34,7 +35,8 @@ public class S_CharmManager : MonoBehaviour
     private void UpdateCharmValue(int charmValue)
     {
         RSO_Charm.Value = Mathf.Clamp(RSO_Charm.Value + charmValue, 0, 100);
-        if(RSO_Charm.Value <= 0)
+        RSE_UpdateUICharm.RaiseEvent();
+        if (RSO_Charm.Value <= 0)
         {
             RSE_CallLoseDate.RaiseEvent();
         }

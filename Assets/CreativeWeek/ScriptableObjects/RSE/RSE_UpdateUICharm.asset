@@ -9,7 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23edc9f707156684fa2bfc735ea0ded0, type: 3}
-  m_Name: SSO_Charm
+  m_Script: {fileID: 11500000, guid: 8b87316e8d3b140439424ee352346019, type: 3}
+  m_Name: RSE_UpdateUICharm
   m_EditorClassIdentifier: 
-  _value: 50

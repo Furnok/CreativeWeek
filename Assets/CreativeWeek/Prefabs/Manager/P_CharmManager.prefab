@@ -48,6 +48,7 @@ MonoBehaviour:
   RSE_CheckWinDate: {fileID: 11400000, guid: 49fcbd3f6560a694eacc8dfbfa4cf8a1, type: 2}
   RSE_CallWinDate: {fileID: 11400000, guid: 7581edbb64ceaac4599368517bdfb227, type: 2}
   RSE_CallLoseDate: {fileID: 11400000, guid: c2e1371eed5b0a94fb3014ac62687079, type: 2}
+  RSE_UpdateUICharm: {fileID: 11400000, guid: 44f7893e92e743f419ebf07cd6772bba, type: 2}
   SSO_Charm: {fileID: 11400000, guid: 47a14fe0ccf965a4685b505a722dfb53, type: 2}
   SSO_WinCondition: {fileID: 11400000, guid: d2dc2bea0cccd8c4fa7cb7c8cb0cace0, type: 2}
   RSO_Charm: {fileID: 11400000, guid: 18ded467c8d814647bd85c9f43ad8fca, type: 2}
