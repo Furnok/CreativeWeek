@@ -40,7 +40,7 @@ public class S_CharmManager : MonoBehaviour
         RSE_UpdateUICharm?.RaiseEvent();
         if (RSO_Charm.Value <= 0)
         {
-            RSE_CallLoseDate.RaiseEvent();
+            RSE_CallLoseDate?.RaiseEvent();
         }
     }
     private void CheckWinCondition()

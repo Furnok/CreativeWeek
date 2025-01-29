@@ -12,4 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b72721f9d49258a40be47e6d08b027ab, type: 3}
   m_Name: SSO_ListDisturbingEvent
   m_EditorClassIdentifier: 
-  _value: 0
+  _value:
+  - NameEvent: Serveur
+    EventContent: Apporte un plat
+  - NameEvent: Vendeur de Rose
+    EventContent: Vend des roses
+  - NameEvent: SDF
+    EventContent: Veut de l'argent
+  - NameEvent: Chien
+    EventContent: "Joue \xE0 la balle"
