@@ -1007,7 +1007,7 @@ GameObject:
   - component: {fileID: 976069236598494219}
   - component: {fileID: 565578406949499321}
   - component: {fileID: 6237192461157425193}
-  - component: {fileID: 2919365158819448907}
+  - component: {fileID: 3531395065128469220}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1100,7 +1100,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &2919365158819448907
+--- !u!114 &3531395065128469220
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1109,13 +1109,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 4014167826568559276}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40b203fc4418a9340919307e5f6fa31f, type: 3}
+  m_Script: {fileID: 11500000, guid: 1e78b39d758a50b4799de0b6ab7e65dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panelWin: {fileID: 900658087247902571}
-  panelLose: {fileID: 3987737753104184269}
-  RSE_CallWinDate: {fileID: 11400000, guid: 7581edbb64ceaac4599368517bdfb227, type: 2}
-  RSE_CallLoseDate: {fileID: 11400000, guid: c2e1371eed5b0a94fb3014ac62687079, type: 2}
+  charmSlider: {fileID: 4806207115789188891}
+  charmText: {fileID: 7365205643034785835}
+  RSE_UpdateUICharm: {fileID: 11400000, guid: 44f7893e92e743f419ebf07cd6772bba, type: 2}
+  RSO_Charm: {fileID: 11400000, guid: 18ded467c8d814647bd85c9f43ad8fca, type: 2}
 --- !u!1 &5016243250277836127
 GameObject:
   m_ObjectHideFlags: 0
