@@ -2,19 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class S_InventoryManager : MonoBehaviour
 {
+    [Header("References")]
+    [SerializeField] private List<Button> buttonObjects;
     [Header("RSE")]
     [SerializeField] RSE_PickUpItem RSE_PickUpItem;
     [SerializeField] RSE_RemoveItem RSE_RemoveItem;
+    [SerializeField] RSE_UpdateInventory RSE_UpdateInventory;
     [Header("RSO")]
     [SerializeField] RSO_CurrentListObject RSO_CurrentListObject;
     [Header("SSO")]
     [SerializeField] SSO_ListObject SSO_ListObject;
     [SerializeField] SSO_MaxObject SSO_MaxObject;
     private bool isNotInCurrentList = true;
-    private bool isInCurrentList = false;
+
     private void OnEnable()
     {
         RSE_PickUpItem.action += AddItem;
@@ -25,9 +30,15 @@ public class S_InventoryManager : MonoBehaviour
         RSE_PickUpItem.action -= AddItem;
         RSE_RemoveItem.action -= RemoveItem;
     }
+
+    private void Start()
+    {
+        RSO_CurrentListObject.Value.Clear();
+    }
+
     private void AddItem(int index)
     {
-        if(RSO_CurrentListObject.Value.Count < SSO_MaxObject.Value)
+        if (RSO_CurrentListObject.Value.Count < SSO_MaxObject.Value)
         {
             isNotInCurrentList = true;
             foreach(var item in RSO_CurrentListObject.Value)
@@ -39,15 +50,19 @@ public class S_InventoryManager : MonoBehaviour
             }
             if (isNotInCurrentList)
             {
+                buttonObjects[index].gameObject.SetActive(false);
+
                 RSO_CurrentListObject.Value.Add(SSO_ListObject.Value.FirstOrDefault(x=> x.Index == index));
+                RSE_UpdateInventory.RaiseEvent();
             }
         }
     }
     private void RemoveItem(int index)
     {
-        if(RSO_CurrentListObject.Value.Count > 0)
+        if (RSO_CurrentListObject.Value.Count > 0)
         {
-            isInCurrentList = false;
+            bool isInCurrentList = false;
+
             foreach (var item in RSO_CurrentListObject.Value)
             {
                 if (item.Index == index)
@@ -55,11 +70,14 @@ public class S_InventoryManager : MonoBehaviour
                     isInCurrentList = true;
                 }
             }
+
             if (isInCurrentList)
             {
+                buttonObjects[index].gameObject.SetActive(true);
+
                 RSO_CurrentListObject.Value.Remove(SSO_ListObject.Value.FirstOrDefault(x => x.Index == index));
+                RSE_UpdateInventory.RaiseEvent();
             }
-            
         }
     }
 }
