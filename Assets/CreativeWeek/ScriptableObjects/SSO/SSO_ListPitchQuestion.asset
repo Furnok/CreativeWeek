@@ -18,12 +18,11 @@ MonoBehaviour:
     PitchContent: Dans ma vie jai eu 2 chats
     PitchQuestionContent: Combien j'ai eu de chats dans ma vie
     PitchAnswers:
-    - AnswerName: 
+    - AnswerName: Parfait!
       ReplyContent: 2 chiens
       CharmeAnswerGive: -20
       IsAnswerCorrect: 0
-    - AnswerName: 
+    - AnswerName: "Sac \xE0 merde"
       ReplyContent: 2 chats
       CharmeAnswerGive: 20
       IsAnswerCorrect: 1
-    IsQuestionAlreadySay: 0

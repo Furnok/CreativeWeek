@@ -15,7 +15,7 @@ public class S_QuestionManager : MonoBehaviour
     [SerializeField] RSE_OnDateAnswering _rseOnDateAnswering;
     [SerializeField] RSE_OnTimerQuestionEnd _rseTimerQuestionEnd;
     [SerializeField] RSE_UpdateCharm _rseUpdateCharm;
-
+    [SerializeField] RSE_ProfilStateChange _rseProfilStateChange;
 
 
     [Header("RSO")]
@@ -64,13 +64,21 @@ public class S_QuestionManager : MonoBehaviour
             if (condition.DietType == currentProfil.DietType && condition.IntoleranceType.Intersect(currentProfil.Intolerances).Any() == false)
             {
                 _rseOnDateAnswering.RaiseEvent(answer.DateAnswerIfPositifReply);
+
                 _rseUpdateCharm.RaiseEvent(answer.CharmeIfValidAnswer);
+
+                _rseProfilStateChange.RaiseEvent(ProfilState.Happy);
+
                 return;
             }
             else
             {
                 _rseOnDateAnswering.RaiseEvent(answer.DateAnswerIfNegatifReply);
+
                 _rseUpdateCharm.RaiseEvent(answer.CharmeIfUnvalidAnswer);
+
+                _rseProfilStateChange.RaiseEvent(ProfilState.Angry);
+
                 return;
             }
         }
@@ -80,12 +88,16 @@ public class S_QuestionManager : MonoBehaviour
             {
                 _rseOnDateAnswering.RaiseEvent(answer.DateAnswerIfPositifReply);
                 _rseUpdateCharm.RaiseEvent(answer.CharmeIfValidAnswer);
+                _rseProfilStateChange.RaiseEvent(ProfilState.Happy);
+
                 return;
             }
             else
             {
                 _rseOnDateAnswering.RaiseEvent(answer.DateAnswerIfNegatifReply);
                 _rseUpdateCharm.RaiseEvent(answer.CharmeIfUnvalidAnswer);
+                _rseProfilStateChange.RaiseEvent(ProfilState.Angry);
+
                 return;
             }
         }
@@ -95,12 +107,16 @@ public class S_QuestionManager : MonoBehaviour
             {
                 _rseOnDateAnswering.RaiseEvent(answer.DateAnswerIfPositifReply);
                 _rseUpdateCharm.RaiseEvent(answer.CharmeIfValidAnswer);
+                _rseProfilStateChange.RaiseEvent(ProfilState.Happy);
+
                 return;
             }
             else
             {
                 _rseOnDateAnswering.RaiseEvent(answer.DateAnswerIfNegatifReply);
                 _rseUpdateCharm.RaiseEvent(answer.CharmeIfUnvalidAnswer);
+                _rseProfilStateChange.RaiseEvent(ProfilState.Angry);
+
                 return;
             }
         }
@@ -111,12 +127,16 @@ public class S_QuestionManager : MonoBehaviour
             {
                 _rseOnDateAnswering.RaiseEvent(answer.DateAnswerIfPositifReply);
                 _rseUpdateCharm.RaiseEvent(answer.CharmeIfValidAnswer);
+                _rseProfilStateChange.RaiseEvent(ProfilState.Happy);
+
                 return;
             }
             else
             {
                 _rseOnDateAnswering.RaiseEvent(answer.DateAnswerIfNegatifReply);
                 _rseUpdateCharm.RaiseEvent(answer.CharmeIfUnvalidAnswer);
+                _rseProfilStateChange.RaiseEvent(ProfilState.Angry);
+
                 return;
             }
         }
@@ -126,18 +146,24 @@ public class S_QuestionManager : MonoBehaviour
             {
                 _rseOnDateAnswering.RaiseEvent(answer.DateAnswerIfPositifReply);
                 _rseUpdateCharm.RaiseEvent(answer.CharmeIfValidAnswer);
+                _rseProfilStateChange.RaiseEvent(ProfilState.Happy);
+
                 return;
             }
             else
             {
                 _rseOnDateAnswering.RaiseEvent(answer.DateAnswerIfNegatifReply);
                 _rseUpdateCharm.RaiseEvent(answer.CharmeIfUnvalidAnswer);
+                _rseProfilStateChange.RaiseEvent(ProfilState.Angry);
+
                 return;
             }
         }
 
         _rseOnDateAnswering.RaiseEvent(answer.DateAnswerIfPositifReply);
         _rseUpdateCharm.RaiseEvent(answer.CharmeIfValidAnswer);
+        _rseProfilStateChange.RaiseEvent(ProfilState.Happy);
+
     }
     Question GetRandomQuestionWithEnum(List<Question> listQuestion, DateStep targetEnum)
     {

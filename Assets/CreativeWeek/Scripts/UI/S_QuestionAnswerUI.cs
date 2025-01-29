@@ -40,7 +40,7 @@ public class S_QuestionAnswerUI : MonoBehaviour
         _rseOnSpeechQuestionCreate.action += DisplaySpeechContent;
         _rseOnDateAnswering.action += DisplayDateAnswer;
         _rseOnAnswerGive.action += StopTimerCoroutine;
-        _rseOnQuestionSpeechGenerate.action += DisplayQuestionAnswer;
+        _rseOnQuestionSpeechGenerate.action += DisplaySpeechQuestionAnswer;
     }
 
     private void OnDestroy()
@@ -49,7 +49,7 @@ public class S_QuestionAnswerUI : MonoBehaviour
         _rseOnSpeechQuestionCreate.action -= DisplaySpeechContent;
         _rseOnDateAnswering.action -= DisplayDateAnswer;
         _rseOnAnswerGive.action -= StopTimerCoroutine;
-        _rseOnQuestionSpeechGenerate.action -= DisplayQuestionAnswer;
+        _rseOnQuestionSpeechGenerate.action -= DisplaySpeechQuestionAnswer;
 
     }
     void DisplayQuestionAnswer(Question question)
@@ -58,12 +58,16 @@ public class S_QuestionAnswerUI : MonoBehaviour
     }
     void DisplaySpeechContent(SpeechQuestion speechQuestion)
     {
+
         StartCoroutine(TextDisplay(speechQuestion.PitchContent));
     }
 
-    void DisplayQuestionAnswer(SpeechQuestion speechQuestion)
+    void DisplaySpeechQuestionAnswer(SpeechQuestion speechQuestion)
     {
-        StartCoroutine(TextDisplay(speechQuestion.PitchContent));
+
+       
+
+        StartCoroutine(SpeechQuestionDisplay(speechQuestion));
     }
     IEnumerator QuestionDisplay(Question question)
     {
@@ -81,18 +85,19 @@ public class S_QuestionAnswerUI : MonoBehaviour
         _timerCoroutine = StartCoroutine(SliderTimerToAnwer());
     }
 
-    IEnumerator QuestionDisplay(SpeechQuestion speechQuestion)
+    IEnumerator SpeechQuestionDisplay(SpeechQuestion speechQuestion)
     {
+        
 
         _textDate.text = "";
 
-        for (int i = 0; i < speechQuestion.PitchContent.Length; i++)
+        for (int i = 0; i < speechQuestion.PitchQuestionContent.Length; i++)
         {
-            _textDate.text += speechQuestion.PitchContent[i];
+            _textDate.text += speechQuestion.PitchQuestionContent[i];
 
             yield return new WaitForSeconds(_ssoTimeBetweenCharactereDisplay.Value);
         }
-        DisplayResponseOption(speechQuestion);
+        DisplaySpeechResponseOption(speechQuestion);
 
         _timerCoroutine = StartCoroutine(SliderTimerToAnwer());
     }
@@ -174,7 +179,7 @@ public class S_QuestionAnswerUI : MonoBehaviour
         }
     }
 
-    void DisplayResponseOption(SpeechQuestion speechQuestion)
+    void DisplaySpeechResponseOption(SpeechQuestion speechQuestion)
     {
         foreach (SpeechAnswer answer in speechQuestion.PitchAnswers)
         {

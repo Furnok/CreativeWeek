@@ -13,6 +13,11 @@ public class S_SpeechQuestionManager : MonoBehaviour
     [SerializeField] RSE_OnSpeechQuestionCreate _rseOnSpeechQuestionCreate;
     [SerializeField] RSE_OnQuestionSpeechGenerate _rseOnQuestionSpeechGenerate;
     [SerializeField] RSE_OnSpeechAnswerGive _rseOnSpeechAnswerGive;
+    [SerializeField] RSE_UpdateCharm _rseUpdateCharm;
+    [SerializeField] RSE_OnDateAnswering _rseOnDateAnswering;
+    [SerializeField] RSE_ProfilStateChange _rseProfilStateChange;
+
+
 
     [Header("RSO")]
     [SerializeField] RSO_SpeetchPitchQuestion _rsoSpeachPitchQuestion;
@@ -27,9 +32,14 @@ public class S_SpeechQuestionManager : MonoBehaviour
     private void Start()
     {
         _rsoSpeachPitchQuestion.Value.Clear();
-        _rsoSpeachPitchQuestion.Value = _ssoSpeachPitchQuestion.Value;
+        _rsoSpeechSays.Value.Clear();
+        _speechQuestionsAlreadyPosed.Clear();
+        _rsoSpeachPitchQuestion.Value = new List<SpeechQuestion>(_ssoSpeachPitchQuestion.Value);
 
         _rseOnSpeechAnswerGive.action += TcheckAnswer;
+
+
+        //StartCoroutine(test());
     }
 
     private void OnDestroy()
@@ -37,12 +47,25 @@ public class S_SpeechQuestionManager : MonoBehaviour
         _rsoSpeachPitchQuestion.Value.Clear();
         _rseOnSpeechAnswerGive.action -= TcheckAnswer;
 
+        
+    }
 
+    IEnumerator test()
+    {
+        _rsoCurrentProfile.Value.ProfilType = ProfilType.Street;
+
+        yield return new WaitForEndOfFrame();
+
+        GenerateSpeech();
+
+        yield return new WaitForSeconds(5);
+
+        GeneratQuestionAboutSpeech();
     }
     void GenerateSpeech()
     {
-
-        if (_rsoSpeachPitchQuestion.Value != null || !_rsoSpeachPitchQuestion.Value.Any(x => x.ProfilType == _rsoCurrentProfile.Value.ProfilType))
+        
+        if (/*_rsoSpeachPitchQuestion.Value != null ||*/ !_rsoSpeachPitchQuestion.Value.Any(x => x.ProfilType == _rsoCurrentProfile.Value.ProfilType))
         {
             Debug.LogError("Il n y a plus de peech disponible pour le profilType en question");
             return;
@@ -57,6 +80,7 @@ public class S_SpeechQuestionManager : MonoBehaviour
             _rsoSpeechSays.Value.Add(speech);
             _rsoSpeachPitchQuestion.Value.Remove(speech);
             _rseOnSpeechQuestionCreate.RaiseEvent(speech);
+           
         }
         else
         {
@@ -66,12 +90,62 @@ public class S_SpeechQuestionManager : MonoBehaviour
 
     void GeneratQuestionAboutSpeech()
     {
-        var SpeechQuestion = _rsoSpeachPitchQuestion.Value.FirstOrDefault();
-        //_rseOnQuestionSpeechGenerate.RaiseEvent();
+        _rseOnQuestionSpeechGenerate.RaiseEvent(GetUniqueRandomElement());
+        //GetUniqueRandomElement();
+
+
+
     }
 
     void TcheckAnswer(SpeechAnswer speechAnswer)
     {
+        Debug.Log("a");
+        if(speechAnswer.IsAnswerCorrect == true)
+        {
+            _rseUpdateCharm.RaiseEvent(speechAnswer.CharmeAnswerGive);
 
+            _rseOnDateAnswering.RaiseEvent(speechAnswer.ReplyContent);
+
+            _rseProfilStateChange.RaiseEvent(ProfilState.Happy);
+        }
+        else
+        {
+            _rseUpdateCharm.RaiseEvent(speechAnswer.CharmeAnswerGive);
+
+            _rseOnDateAnswering.RaiseEvent(speechAnswer.ReplyContent);
+
+            _rseProfilStateChange.RaiseEvent(ProfilState.Angry);
+        }
+    }
+
+    public SpeechQuestion GetUniqueRandomElement()
+    {
+        if (_rsoSpeachPitchQuestion == null || _rsoSpeachPitchQuestion.Value == null)
+        {
+            Debug.LogError("_rsoSpeachPitchQuestion.Value est null ! Assurez-vous qu'il est bien assigné.");
+            return default;
+        }
+
+        List<SpeechQuestion> availableElements = _rsoSpeechSays.Value
+            .FindAll(item => !_speechQuestionsAlreadyPosed.Contains(item));
+
+        if (availableElements.Count == 0)
+        {
+            Debug.LogWarning("Aucun élément unique disponible !");
+            return default;
+        }
+
+        int randomIndex = Random.Range(0, availableElements.Count);
+        SpeechQuestion selectedElement = availableElements[randomIndex];
+
+        if (selectedElement.PitchQuestionContent == null)
+        {
+            Debug.LogError("L'élément sélectionné a un PitchQuestionContent null ! Vérifiez vos données.");
+            return default;
+        }
+
+        _speechQuestionsAlreadyPosed.Add(selectedElement);
+
+        return selectedElement;
     }
 }

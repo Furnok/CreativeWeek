@@ -31,23 +31,29 @@ public class S_Answer : MonoBehaviour
     public void InitializeAnswer(Answer answer)
     {
         _answer = answer;
+        _speechAnswer = default;
         _textReplyContent.text = answer.ReplyContentText;
     }
     public void InitializeAnswer(SpeechAnswer speechAnswer)
     {
         _speechAnswer = speechAnswer;
+        _answer = default;
         _textReplyContent.text = _speechAnswer.ReplyContent;
     }
 
     public void CallAnswerVerification()
     {
-        if(_answer.Equals(default(SpeechQuestion)) == false)
+        if(_speechAnswer.Equals(default(SpeechQuestion)) == true)
         {
+            Debug.Log("b");
+
             _rseOnAnswerGiveToQuestion.RaiseEvent(_answer);
 
         }
-        else if(_speechAnswer.Equals(default(SpeechQuestion)) == false)
+        if(_answer.Equals(default(Answer)) == true)
         {
+            Debug.Log("c");
+
             _rseOnSpeechAnswerGive.RaiseEvent(_speechAnswer);
         }
         _rseOnAnswerGive.RaiseEvent();
