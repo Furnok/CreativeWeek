@@ -15,10 +15,12 @@ MonoBehaviour:
   _value:
   - QuestionName: 
     QuestionContent: test
+    QuestionDateStep: 0
     Answers:
     - AnswerName: 
-      AnswerPositifContent: a
-      AnswerNegatifContent: b
+      ReplyContentText: gg
+      DateAnswerIfPositifReply: eez
+      DateAnswerIfNegatifReply: ez
       CharmeIfValidAnswer: 10
       CharmeIfUnvalidAnswer: -10
       CanUseItems: 0
@@ -29,8 +31,9 @@ MonoBehaviour:
         BillSeparation: 0
         IntoleranceType: 
     - AnswerName: 
-      AnswerPositifContent: ab
-      AnswerNegatifContent: bb
+      ReplyContentText: gz
+      DateAnswerIfPositifReply: pbl
+      DateAnswerIfNegatifReply: gggjgjg
       CharmeIfValidAnswer: 10
       CharmeIfUnvalidAnswer: -10
       CanUseItems: 0
@@ -40,5 +43,3 @@ MonoBehaviour:
         DietType: 0
         BillSeparation: 0
         IntoleranceType: 
-    QuestionDateStep: 0
-    IsNeedConditionToValid: 1

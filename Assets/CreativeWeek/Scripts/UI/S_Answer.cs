@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class S_Answer : MonoBehaviour
 {
+    [Header("Settings")]
+    [SerializeField] TextMeshProUGUI _textReplyContent;
+
     [Header("RSE")]
     [SerializeField] RSE_OnAnswerGiveToQuestion _rseOnAnswerGiveToQuestion;
     [SerializeField] RSE_OnAnswerGive _rseOnAnswerGive;
@@ -24,6 +28,7 @@ public class S_Answer : MonoBehaviour
     public void InitializeAnswer(Answer answer)
     {
         _answer = answer;
+        _textReplyContent.text = answer.ReplyContentText;
     }
 
     public void CallAnswerVerification()

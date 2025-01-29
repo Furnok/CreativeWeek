@@ -7,6 +7,7 @@ public struct Answer
 {
     public string AnswerName;
     //public string AnswerNeutralContent;
+    public string ReplyContentText;
     public string DateAnswerIfPositifReply;
     public string DateAnswerIfNegatifReply;
     public int CharmeIfValidAnswer;
