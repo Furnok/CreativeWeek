@@ -7,4 +7,5 @@ public struct DisturbingActifEvent
 {
     public string NameEvent;
     public string EventContent;
+    public List<ActifEventAnswer> ActifEventAnswer;
 }
