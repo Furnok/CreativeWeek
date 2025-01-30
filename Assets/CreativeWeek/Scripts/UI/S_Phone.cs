@@ -4,8 +4,6 @@ using UnityEngine.UI;
 
 public class S_Phone : MonoBehaviour
 {
-    //[Header("Parameters")]
-
     [Header("References")]
     [SerializeField] private Image imageProfil;
     [SerializeField] private TextMeshProUGUI textName;
@@ -13,12 +11,8 @@ public class S_Phone : MonoBehaviour
     [SerializeField] private TextMeshProUGUI textType;
     [SerializeField] private TextMeshProUGUI textDescription;
 
-    //[Header("RSE")]
-
     [Header("RSO")]
     [SerializeField] private RSO_CurrentProfile rsoCurrentProfile;
-
-    //[Header("SSO")]
 
     private void OnEnable()
     {
