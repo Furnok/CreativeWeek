@@ -56,6 +56,7 @@ public class S_InventoryManager : MonoBehaviour
             }
         }
     }
+
     private void RemoveItem(int index)
     {
         if (RSO_CurrentListObject.Value.Count > 0)
