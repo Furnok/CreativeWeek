@@ -6,7 +6,17 @@ using System;
 public struct ActifEventAnswer
 {
     public string AnswerName;
-    public bool CanUseItems;
-    public List<ItemUseEffect> ListItems;
+    public List<ReplyByDateType> ReplyByDateTypes;
 
+    public bool CanUseItems;
+    public int ItemIdLink;
+
+}
+
+
+[Serializable]
+public struct ReplyByDateType
+{
+    public string DateReply;
+    public ProfilType ProfilType;
 }
