@@ -15,7 +15,7 @@ MonoBehaviour:
   _value:
   - QuestionName: Starter
     QuestionContent: I'm thirsty.
-    QuestionDateStep: 2
+    QuestionDateStep: 1
     Answers:
     - AnswerName: Water
       ReplyContentText: Water

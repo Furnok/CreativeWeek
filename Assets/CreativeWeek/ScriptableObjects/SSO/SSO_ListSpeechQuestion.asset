@@ -15,10 +15,10 @@ MonoBehaviour:
   _value:
   - SpeechQuestionName: Street_0
     ProfilType: 0
-    SpeechContent: '"I''ve been in the game since back when candy was real. Like
-      before these kids started making sugar-free, organic nonsense. You know the
-      Lakers? I was there when Kobe dropped 81 points, screaming so loud my grandson
-      shit himself! Lil'' punk don''t know nothing about eal basketball." '
+    SpeechContent: I've been in the game since back when candy was real. Like before
+      these kids started making sugar-free, organic nonsense. You know the Lakers?
+      I was there when Kobe dropped 81 points, screaming so loud my grandson shit
+      himself! Lil' punk don't know nothing about eal basketball.
     SpeechQuestionContent: You know what's nonsense to me?
     SpeechAnswers:
     - AnswerName: Good
@@ -31,11 +31,11 @@ MonoBehaviour:
       IsAnswerCorrect: 0
   - SpeechQuestionName: Street_1
     ProfilType: 0
-    SpeechContent: '"The other day, I was at the park with my grand kids. You know,
-      business as usual, deals going down. Then my little one goes, ''Godmother,
-      you gotta modernize your business!'' Like, excuse me?! I may be old but I still
-      got the best eye in the game. I''m leading a large network of senior dealing
-      sugar. I''m the DANGER." '
+    SpeechContent: The other day, I was at the park with my grand kids. You know,
+      business as usual, deals going down. Then my little one goes, 'Godmother, you
+      gotta modernize your business!' Like, excuse me?! I may be old but I still
+      got the best eye in the game. I'm leading a large network of senior dealing
+      sugar. I'm the DANGER.
     SpeechQuestionContent: 'How does my grandchilds calling me? '
     SpeechAnswers:
     - AnswerName: Good
@@ -107,5 +107,204 @@ MonoBehaviour:
       IsAnswerCorrect: 1
     - AnswerName: Bad
       ReplyContent: 'Sure! I love space! '
+      CharmeAnswerGive: -10
+      IsAnswerCorrect: 0
+  - SpeechQuestionName: Babos_0
+    ProfilType: 2
+    SpeechContent: Oh! I have to tell you, yesterday I was at the street infront
+      cars with my diabolo, spreading good energy, when a cop showed up. He gave
+      me this weird look, like, 'Ma'am, you're blocking the traffic'. So, fully aligned
+      with Mercury, I explained I was circulating positive vibes. He fined me, but
+      I know he felt the good energy before leaving. I'm also glad he didn't see
+      the pot in my bag, hahaha.
+    SpeechQuestionContent: You know why did the cop fine me?
+    SpeechAnswers:
+    - AnswerName: Good
+      ReplyContent: Because amusing people driving is prohibited in that city.
+      CharmeAnswerGive: 10
+      IsAnswerCorrect: 1
+    - AnswerName: Bad
+      ReplyContent: Because you are too beautiful.
+      CharmeAnswerGive: -10
+      IsAnswerCorrect: 0
+  - SpeechQuestionName: Babos_1
+    ProfilType: 2
+    SpeechContent: Do you feel the energy here? I swear, there's something special
+      in the air. My astral guide says it's because of the Moon position. It influences
+      emotions and digestion. Oh by the way, I brought an amethyst to cleanse our
+      chakras after this delicious meal. You should touch it as well.
+    SpeechQuestionContent: The moon influences are great you know why?
+    SpeechAnswers:
+    - AnswerName: Good
+      ReplyContent: It influence digestion & emotion
+      CharmeAnswerGive: 10
+      IsAnswerCorrect: 1
+    - AnswerName: Bad
+      ReplyContent: It cleans chakras
+      CharmeAnswerGive: -10
+      IsAnswerCorrect: 0
+  - SpeechQuestionName: Babos_2
+    ProfilType: 2
+    SpeechContent: Did I talk to you about my dogs? Oh you have to see all 7, they
+      are so cute!So there is Saphire she is just so so sweet so cute she's just
+      a furball, On the other hand Emeraude is like very grumpy all the time but
+      i still love her. Ruby is the crazy one she likes to just jump around, Aquamarine
+      is the very quiet type you dont even notice her approaching. Star, Neptune
+      and Ganesh are siblings i got them at the animal shelter when they were just
+      babies poor things but i'm glad they have somewhere to call home now.
+    SpeechQuestionContent: So whats your opinion on Ruby ?
+    SpeechAnswers:
+    - AnswerName: Good
+      ReplyContent: I like energic dogs
+      CharmeAnswerGive: 10
+      IsAnswerCorrect: 1
+    - AnswerName: Bad
+      ReplyContent: She seems very sweet
+      CharmeAnswerGive: -10
+      IsAnswerCorrect: 0
+  - SpeechQuestionName: Babos_3
+    ProfilType: 2
+    SpeechContent: 'Once I met a buddhist monk in my travels and he convince me of
+      his faith. I''d love to go on pilgrimage to open my spirit and upper my mind
+      to a greater will and find inner peace. '
+    SpeechQuestionContent: I think you should come with me, don't you think?
+    SpeechAnswers:
+    - AnswerName: Good
+      ReplyContent: It sounds great
+      CharmeAnswerGive: 10
+      IsAnswerCorrect: 1
+    - AnswerName: Bad
+      ReplyContent: I'm sorry but i am very busy with my work
+      CharmeAnswerGive: -10
+      IsAnswerCorrect: 0
+  - SpeechQuestionName: Babos_4
+    ProfilType: 2
+    SpeechContent: I dreamed about you yesterday. I was full of positive energy when
+      i went to bed and the moon was full to. It was evident that, it was more than
+      a dream. It was a vision. I saw you and me buying a biger caravan to live with
+      our four childrens, three girls and one boy. I wish to call them, Victoire,
+      Astra, Maya and Pirius
+    SpeechQuestionContent: Where do you want to live ?
+    SpeechAnswers:
+    - AnswerName: Good
+      ReplyContent: Close to the forest
+      CharmeAnswerGive: 10
+      IsAnswerCorrect: 1
+    - AnswerName: Bad
+      ReplyContent: Close to the city
+      CharmeAnswerGive: -10
+      IsAnswerCorrect: 0
+  - SpeechQuestionName: Babos_5
+    ProfilType: 2
+    SpeechContent: Few years ago, I met a medium that teach me how to read hand lifeline.
+      It really tells you a lot about the person and his personality. I'd like to
+      learn about read the destiny in the Tarot card.
+    SpeechQuestionContent: Can I read in your hands?
+    SpeechAnswers:
+    - AnswerName: Good
+      ReplyContent: ' Yeah for sure'
+      CharmeAnswerGive: 10
+      IsAnswerCorrect: 1
+    - AnswerName: Bad
+      ReplyContent: I dont think this is an actual thing
+      CharmeAnswerGive: -10
+      IsAnswerCorrect: 0
+  - SpeechQuestionName: Rich_0
+    ProfilType: 1
+    SpeechContent: "My dear, let me tell you something dreadful. The other day, I
+      was in Saint-Tropez relaxing on the yatch of papa, when my personal chief dared
+      to serve me caviar\u2026 at the wrong temperature! I was appaled. Naturally,
+      I fired him on the spot. A man of my statue deserves only the finest. To calm
+      myself I had to take a break in the jacuzzi filled with champain."
+    SpeechQuestionContent: "Can you imagine\u2026 At the wrong temperature, this
+      is nonsense."
+    SpeechAnswers:
+    - AnswerName: Good
+      ReplyContent: What a bad chief.
+      CharmeAnswerGive: 10
+      IsAnswerCorrect: 1
+    - AnswerName: Bad
+      ReplyContent: Yeah jacuzzi at the wrong temperature are horrible.
+      CharmeAnswerGive: -10
+      IsAnswerCorrect: 0
+  - SpeechQuestionName: Rich_1
+    ProfilType: 1
+    SpeechContent: Did you know that I practically own this restrant? Well, not excactly
+      but the owner is a close friend of papa. Let's just say, if I wanted to buy
+      it, I could. It's the same with most things, really. When you live in my world,
+      nothing is truly out of reach... except perhaps true love. But with enough
+      money, nothing is impossible sweetie.
+    SpeechQuestionContent: Can you guess the size of my wallet ?
+    SpeechAnswers:
+    - AnswerName: Good
+      ReplyContent: More than I can imagine
+      CharmeAnswerGive: 10
+      IsAnswerCorrect: 1
+    - AnswerName: Bad
+      ReplyContent: Few million dollars
+      CharmeAnswerGive: -10
+      IsAnswerCorrect: 0
+  - SpeechQuestionName: Rich_2
+    ProfilType: 1
+    SpeechContent: I hope you will be loyal to me, dear. Not like my father who cheated
+      on my mama. That moron thought he could get away like that but I will never
+      forgive him for doing that to the one who gave birth to me. Cheating is unforgivable
+      and you better never try to do th.. (La serveuse arrive) Oh my lord, I've never
+      seen such beautiful creature in my life!! What's your pretty name?
+    SpeechQuestionContent: Anyway, what's your opinion on cheating?
+    SpeechAnswers:
+    - AnswerName: Good
+      ReplyContent: Cheating is unforgivable
+      CharmeAnswerGive: 10
+      IsAnswerCorrect: 1
+    - AnswerName: Bad
+      ReplyContent: "It d\xE9pends on the context I guess?"
+      CharmeAnswerGive: -10
+      IsAnswerCorrect: 0
+  - SpeechQuestionName: Rich_3
+    ProfilType: 1
+    SpeechContent: What's your type of haircut? Have you seen all that punk out there
+      with long dirty hair? In my case, I prefer short hair, they are the norm. My
+      hairdresser is wonderful, he does some massages on my scalp.
+    SpeechQuestionContent: And you? What's your favorite syle?
+    SpeechAnswers:
+    - AnswerName: Good
+      ReplyContent: Short and classic
+      CharmeAnswerGive: 10
+      IsAnswerCorrect: 1
+    - AnswerName: Bad
+      ReplyContent: long and eccentric
+      CharmeAnswerGive: -10
+      IsAnswerCorrect: 0
+  - SpeechQuestionName: Rich_4
+    ProfilType: 1
+    SpeechContent: Every week we go hunting with my dear uncle and his hounds in
+      the family estate. Of course, I was the one to kill that moose without any
+      difficulties. My personal chef cooked it and it was absolutely delicious! It's
+      not my chef for nothing
+    SpeechQuestionContent: Have you ever eat moose?
+    SpeechAnswers:
+    - AnswerName: Good
+      ReplyContent: I'd love to try if you coud get it for me
+      CharmeAnswerGive: 10
+      IsAnswerCorrect: 1
+    - AnswerName: Bad
+      ReplyContent: Hunting doesn't sound that hard
+      CharmeAnswerGive: -10
+      IsAnswerCorrect: 0
+  - SpeechQuestionName: Rich_5
+    ProfilType: 1
+    SpeechContent: "Do you play chess? For my 20th anniversary, my chess master Serguei
+      Belogradska\xEFa offer me a chess board created especially for me in spruce
+      wood made by the last cabinet maker of russia. An d of course, the the king
+      is in my image."
+    SpeechQuestionContent: What's your favorite piece?
+    SpeechAnswers:
+    - AnswerName: Good
+      ReplyContent: The king of course because it reminds me of you
+      CharmeAnswerGive: 10
+      IsAnswerCorrect: 1
+    - AnswerName: Bad
+      ReplyContent: So cool could you make me your queen?
       CharmeAnswerGive: -10
       IsAnswerCorrect: 0
