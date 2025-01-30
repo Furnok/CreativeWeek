@@ -50,6 +50,7 @@ public class S_InventoryManager : MonoBehaviour
             }
             if (isNotInCurrentList)
             {
+                Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
                 RSO_CurrentListObject.Value.Add(SSO_ListObject.Value.FirstOrDefault(x=> x.Index == index));
                 RSE_UpdateInventory.RaiseEvent(index);
                 rseHideInScene.RaiseEvent(index);

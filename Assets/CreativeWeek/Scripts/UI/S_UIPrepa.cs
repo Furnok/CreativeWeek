@@ -13,6 +13,7 @@ public class S_UIPrepa : MonoBehaviour
     [SerializeField] private List<Button> buttonItems;
     [SerializeField] private List<Button> buttonObjects;
     [SerializeField] private List<int> itemPosses;
+    [SerializeField] private List<GameObject> panelViews;
 
     [Header("RSE")]
     [SerializeField] private RSE_UpdateTimer rseUpdateTimer;
@@ -21,6 +22,9 @@ public class S_UIPrepa : MonoBehaviour
     [SerializeField] private RSE_ShowInScene rseShowInScene;
     [SerializeField] private RSE_HideInScene rseHideInScene;
     [SerializeField] private RSE_ClickItem rseClickItem;
+    [SerializeField] private RSE_ArrowLeft rseArrowLeft;
+    [SerializeField] private RSE_ArrowRight rseArrowRight;
+    [SerializeField] private RSE_Placard rsePlacard;
 
     [Header("RSO")]
     [SerializeField] private RSO_TimerPreparation rsoTimerPreparation;
@@ -28,6 +32,8 @@ public class S_UIPrepa : MonoBehaviour
 
     [Header("SSO")]
     [SerializeField] private SSO_TimerPreparation ssoTimerPreparation;
+
+    private int view;
 
     private void Start()
     {
@@ -43,6 +49,9 @@ public class S_UIPrepa : MonoBehaviour
         rseShowInScene.action += ShowInScene;
         rseHideInScene.action += HideInScene;
         rseClickItem.action += ClickItem;
+        rseArrowLeft.action += ArrowLeft;
+        rseArrowRight.action += ArrowRight;
+        rsePlacard.action += Placard;
     }
 
     private void OnDisable()
@@ -52,6 +61,9 @@ public class S_UIPrepa : MonoBehaviour
         rseShowInScene.action -= ShowInScene;
         rseHideInScene.action -= HideInScene;
         rseClickItem.action -= ClickItem;
+        rseArrowLeft.action -= ArrowLeft;
+        rseArrowRight.action -= ArrowRight;
+        rsePlacard.action -= Placard;
     }
 
     private void UpdateTime()
@@ -99,5 +111,70 @@ public class S_UIPrepa : MonoBehaviour
     private void HideInScene(int index)
     {
         buttonObjects[index].gameObject.SetActive(false);
+    }
+
+    private void ArrowLeft()
+    {
+        EventSystem.current.SetSelectedGameObject(null);
+
+        for (int i = 0; i < panelViews.Count; i++)
+        {
+            panelViews[i].gameObject.SetActive(false);
+        }
+
+        if(view == 0)
+        {
+            view = 1;
+            panelViews[view].gameObject.SetActive(true);
+        }
+        else if(view == 2)
+        {
+            view = 1;
+            panelViews[view].gameObject.SetActive(true);
+        }
+        else
+        {
+            view = 0;
+            panelViews[view].gameObject.SetActive(true);
+        }
+    }
+
+    private void ArrowRight()
+    {
+        EventSystem.current.SetSelectedGameObject(null);
+
+        for (int i = 0; i < panelViews.Count; i++)
+        {
+            panelViews[i].gameObject.SetActive(false);
+        }
+
+        if (view == 0)
+        {
+            view = 1;
+            panelViews[view].gameObject.SetActive(true);
+        }
+        else if (view == 2)
+        {
+            view = 1;
+            panelViews[view].gameObject.SetActive(true);
+        }
+        else
+        {
+            view = 0;
+            panelViews[view].gameObject.SetActive(true);
+        }
+    }
+
+    private void Placard()
+    {
+        EventSystem.current.SetSelectedGameObject(null);
+
+        for (int i = 0; i < panelViews.Count; i++)
+        {
+            panelViews[i].gameObject.SetActive(false);
+        }
+
+        view = 2;
+        panelViews[view].gameObject.SetActive(true);
     }
 }

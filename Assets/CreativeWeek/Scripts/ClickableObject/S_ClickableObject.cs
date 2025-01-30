@@ -24,7 +24,11 @@ public class S_ClickableObject : MonoBehaviour, IPointerEnterHandler, IPointerEx
     {
         GetComponent<Image>().color = Color.white;
         GetComponent<RectTransform>().localScale = new Vector3(1f, 1f, 1f);
-        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
         transform.GetChild(0).gameObject.SetActive(false);
+    }
+
+    private void Start()
+    {
+        GetComponent<Image>().alphaHitTestMinimumThreshold = 0.1f;
     }
 }
