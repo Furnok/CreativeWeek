@@ -63,6 +63,8 @@ public class S_UIPrepaManager : MonoBehaviour
         panelPause.SetActive(false);
 
         Time.timeScale = 1;
+
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
     }
 
     private void LauchDate()

@@ -32,5 +32,7 @@ public class S_UIMainMenuManager : MonoBehaviour
     private void CloseCredit()
     {
         creditPanel.SetActive(false);
+
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
     }
 }
