@@ -17,6 +17,9 @@ public class S_QuestionManager : MonoBehaviour
     [SerializeField] RSE_UpdateCharm _rseUpdateCharm;
     [SerializeField] RSE_ProfilStateChange _rseProfilStateChange;
 
+    [SerializeField] RSE_GenerateQuestion _rseGenerateQuestion;
+
+
 
     [Header("RSO")]
     [SerializeField] RSO_CurrentDateStep _rsoCurrentStep;
@@ -33,13 +36,17 @@ public class S_QuestionManager : MonoBehaviour
         _rseOnAnswerGiveToQuestion.action += TcheckAnswer;
         _rseTimerQuestionEnd.action += RemoveCharmeWhenNotAnswearing;
 
-        CreateQuestion();
+        _rseGenerateQuestion.action += CreateQuestion;
+        //CreateQuestion();
     }
 
     private void OnDestroy()
     {
         _rseOnAnswerGiveToQuestion.action -= TcheckAnswer;
         _rseTimerQuestionEnd.action -= RemoveCharmeWhenNotAnswearing;
+
+        _rseGenerateQuestion.action -= CreateQuestion;
+
     }
     void CreateQuestion()
     {

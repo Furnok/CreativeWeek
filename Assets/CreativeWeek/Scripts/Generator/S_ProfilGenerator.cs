@@ -19,6 +19,7 @@ public class S_ProfilGenerator : MonoBehaviour
 
     void CreateProfil()
     {
+        
         var profil = GetRandomItem(_ssoListProfile.Value);
         profil.DietType = GetRandomEnumValue<DietType>();
         profil.DrinkPreference = GetRandomEnumValue<DrinkPreference>();
@@ -35,7 +36,7 @@ public class S_ProfilGenerator : MonoBehaviour
         return list[randomIndex];
     }
 
-    T GetRandomEnumValue<T>()
+    T GetRandomEnumValue<T>() /*where T : Enum */
     {
         Array values = Enum.GetValues(typeof(T));
 
