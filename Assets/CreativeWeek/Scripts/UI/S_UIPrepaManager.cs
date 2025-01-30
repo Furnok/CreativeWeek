@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -5,6 +6,11 @@ public class S_UIPrepaManager : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private GameObject panelPause;
+    [SerializeField] private GameObject panelFond;
+    [SerializeField] private GameObject panelPhone;
+    [SerializeField] private GameObject panelTel;
+    [SerializeField] private GameObject panelMatch;
+    [SerializeField] private GameObject panelProfil;
 
     [Header("RSE")]
     [SerializeField] private RSE_StartTimerPrepa rseStartTimerPrepa;
@@ -13,9 +19,37 @@ public class S_UIPrepaManager : MonoBehaviour
     [SerializeField] private RSE_UnCallPause unCallPause;
 
 
+    private IEnumerator StartIntro()
+    {
+        yield return new WaitForSeconds(2f);
+
+        panelPhone.SetActive(true);
+        panelTel.SetActive(true);
+
+        yield return new WaitForSeconds(2f);
+
+        panelMatch.SetActive(true);
+
+        yield return new WaitForSeconds(2f);
+
+        panelProfil.SetActive(true);
+
+        yield return new WaitForSeconds(10f);
+
+        panelFond.SetActive(false);
+        panelPhone.SetActive(false);
+        panelTel.SetActive(false);
+        panelMatch.SetActive(false);
+        panelProfil.SetActive(false);
+
+        rseStartTimerPrepa?.RaiseEvent();
+    }
+
     private void Start()
     {
-        rseStartTimerPrepa?.RaiseEvent();
+        panelFond.SetActive(true);
+        
+        StartCoroutine(StartIntro());
     }
 
     private void OnEnable()
