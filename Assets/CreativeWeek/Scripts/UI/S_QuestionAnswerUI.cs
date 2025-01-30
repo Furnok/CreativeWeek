@@ -36,6 +36,8 @@ public class S_QuestionAnswerUI : MonoBehaviour
     [SerializeField] RSE_OnBadPresentation _OnBadPresentation;
     [SerializeField] RSE_OnGoodPresentation _OnGoodPresentation;
 
+    [SerializeField] RSE_IsTextDisturbed _rseIsTextDisturbEvent;
+
     [Header("RSO")] RSO_CurrentDateStep _rsoCurrentDateStep;
 
 
@@ -45,6 +47,8 @@ public class S_QuestionAnswerUI : MonoBehaviour
 
     List<S_Answer>  _answersList = new List<S_Answer>();
     Coroutine _timerCoroutine;
+    bool _isTextDisturbingEventActive = false;
+
     private void Start()
     {
         _rseQuestionGenerate.action += DisplayQuestionAnswer;
@@ -55,6 +59,8 @@ public class S_QuestionAnswerUI : MonoBehaviour
 
         _OnBadPresentation.action += StartDisplayingPresentationBad;
         _OnGoodPresentation.action += StartDisplayingPresentationGood;
+
+        _rseIsTextDisturbEvent.action += SetIsTextDisturb;
     }
 
     private void OnDestroy()
@@ -67,6 +73,9 @@ public class S_QuestionAnswerUI : MonoBehaviour
 
         _OnBadPresentation.action -= StartDisplayingPresentationBad;
         _OnGoodPresentation.action -= StartDisplayingPresentationGood;
+
+        _rseIsTextDisturbEvent.action -= SetIsTextDisturb;
+
     }
     void DisplayQuestionAnswer(Question question)
     {
@@ -106,9 +115,33 @@ public class S_QuestionAnswerUI : MonoBehaviour
 
         for (int i = 0; i < question.QuestionContent.Length; i++)
         {
-            _textDate.text += question.QuestionContent[i];
+            if(_isTextDisturbingEventActive == false)
+            {
+                _textDate.text += question.QuestionContent[i];
+
+            }
+            else
+            {
+                int randomCharacter = Random.Range(0, 4);
+                if (randomCharacter == 0 && question.QuestionContent[i] != ' ')
+                {
+                    if (i > 0 && _textDate.text[i - 1] != '#')
+                    {
+                        _textDate.text += "#";
+                    }
+                    else
+                    {
+                        _textDate.text += question.QuestionContent[i];
+                    }
+                }
+                else
+                {
+                    _textDate.text += question.QuestionContent[i];
+                }
+            }
 
             yield return new WaitForSeconds(_ssoTimeBetweenCharactereDisplay.Value);
+
         }
         DisplayResponseOption(question);
 
@@ -123,9 +156,33 @@ public class S_QuestionAnswerUI : MonoBehaviour
 
         for (int i = 0; i < speechQuestion.SpeechQuestionContent.Length; i++)
         {
-            _textDate.text += speechQuestion.SpeechQuestionContent[i];
+            if (_isTextDisturbingEventActive == false)
+            {
+                _textDate.text += speechQuestion.SpeechQuestionContent[i];
+
+            }
+            else
+            {
+                int randomCharacter = Random.Range(0, 4);
+                if (randomCharacter == 0 && speechQuestion.SpeechQuestionContent[i] != ' ')
+                {
+                    if (i > 0 && _textDate.text[i - 1] != '#')
+                    {
+                        _textDate.text += "#";
+                    }
+                    else
+                    {
+                        _textDate.text += speechQuestion.SpeechQuestionContent[i];
+                    }
+                }
+                else
+                {
+                    _textDate.text += speechQuestion.SpeechQuestionContent[i];
+                }
+            }
 
             yield return new WaitForSeconds(_ssoTimeBetweenCharactereDisplay.Value);
+
         }
         DisplaySpeechResponseOption(speechQuestion);
 
@@ -139,9 +196,33 @@ public class S_QuestionAnswerUI : MonoBehaviour
 
         for (int i = 0; i < textToDIsplay.Length; i++)
         {
-            _textDate.text += textToDIsplay[i];
+            if (_isTextDisturbingEventActive == false)
+            {
+                _textDate.text += textToDIsplay[i];
+
+            }
+            else
+            {
+                int randomCharacter = Random.Range(0, 4);
+                if (randomCharacter == 0 && textToDIsplay[i] != ' ')
+                {
+                    if (i > 0 && _textDate.text[i - 1] != '#')
+                    {
+                        _textDate.text += "#";
+                    }
+                    else
+                    {
+                        _textDate.text += textToDIsplay[i];
+                    }
+                }
+                else
+                {
+                    _textDate.text += textToDIsplay[i];
+                }
+            }
 
             yield return new WaitForSeconds(_ssoTimeBetweenCharactereDisplay.Value);
+
         }
 
         yield return new WaitForSeconds(2f);
@@ -190,6 +271,10 @@ public class S_QuestionAnswerUI : MonoBehaviour
         yield return null;
     }
 
+    void SetIsTextDisturb(bool state)
+    {
+        _isTextDisturbingEventActive = state;
+    }
     void StopTimerCoroutine()
     {
         StopCoroutine(_timerCoroutine);

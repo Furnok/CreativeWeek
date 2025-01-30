@@ -41,7 +41,7 @@ public class S_DateManager : MonoBehaviour
         _rseDelayGenerateSpeechQuestion.action += GenerateSpeechQuestion;
 
 
-        StartCoroutine(StartPresentation());
+        StartDate();
     }
 
     private void OnDestroy()
@@ -53,7 +53,12 @@ public class S_DateManager : MonoBehaviour
         _rseDelayGenerateSpeechQuestion.action -= GenerateSpeechQuestion;
     }
 
-    //Need id items to do 
+    void StartDate()
+    {
+
+
+        StartCoroutine(StartPresentation());
+    }
     IEnumerator StartPresentation()
     {
         yield return new WaitForSeconds(2f);

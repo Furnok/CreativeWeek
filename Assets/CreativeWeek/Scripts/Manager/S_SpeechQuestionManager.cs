@@ -30,6 +30,8 @@ public class S_SpeechQuestionManager : MonoBehaviour
 
     List<SpeechQuestion> _speechQuestionsAlreadyPosed = new List<SpeechQuestion>();
 
+
+
     private void Start()
     {
         _rsoSpeachPitchQuestion.Value.Clear();

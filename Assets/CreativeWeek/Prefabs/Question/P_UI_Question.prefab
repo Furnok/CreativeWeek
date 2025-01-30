@@ -312,6 +312,7 @@ MonoBehaviour:
   _rseUpdateCharm: {fileID: 11400000, guid: e41c6646dbbcac6499fd8e50b3eea620, type: 2}
   _OnBadPresentation: {fileID: 11400000, guid: fb4c04be6a9d3f848b1499f366257b7a, type: 2}
   _OnGoodPresentation: {fileID: 11400000, guid: e0b89d49e5f059541bd548cd882b53d2, type: 2}
+  _rseIsTextDisturbEvent: {fileID: 11400000, guid: e0beecb9fa8a14e41a86ac9e521a31fb, type: 2}
   _ssoTimeBetweenCharactereDisplay: {fileID: 11400000, guid: a7a3b86abc75d4c43b23e14c0b510fc1, type: 2}
   _ssoTimeToAnswer: {fileID: 11400000, guid: c0d55d14e14e1094aa8d64d001e79a01, type: 2}
 --- !u!114 &9163845714377163854
@@ -332,8 +333,8 @@ MonoBehaviour:
   _rseUpdateCharm: {fileID: 11400000, guid: e41c6646dbbcac6499fd8e50b3eea620, type: 2}
   _rseOnDateAnswering: {fileID: 11400000, guid: 180a832f308f727448c01f07ea3bc668, type: 2}
   _rseProfilStateChange: {fileID: 11400000, guid: 982e136023cfbcc43bb5a5a05b53ee1f, type: 2}
-  _rseGenerateSpeech: {fileID: 0}
-  _rseGenerateQuestionSpeech: {fileID: 0}
+  _rseGenerateSpeech: {fileID: 11400000, guid: 204f49e05a4961c4587d9487c94c7635, type: 2}
+  _rseGenerateQuestionSpeech: {fileID: 11400000, guid: 690381b15223eef4283b9c42457d2ebd, type: 2}
   _rsoSpeachPitchQuestion: {fileID: 11400000, guid: db73cb886f022274f9157db8705b160c, type: 2}
   _rsoSpeechSays: {fileID: 11400000, guid: ea1dfc451fc900c4dad7af287c76d335, type: 2}
   _rsoCurrentProfile: {fileID: 11400000, guid: eb35386258e8e7e448ebc31f81ace3a3, type: 2}
