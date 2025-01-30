@@ -38,7 +38,8 @@ public class S_QuestionAnswerUI : MonoBehaviour
 
     [SerializeField] RSE_IsTextDisturbed _rseIsTextDisturbEvent;
 
-    [Header("RSO")] RSO_CurrentDateStep _rsoCurrentDateStep;
+    [Header("RSO")]
+    [SerializeField] RSO_CurrentDateStep _rsoCurrentDateStep;
 
 
     [Header("SSO")]
@@ -84,7 +85,7 @@ public class S_QuestionAnswerUI : MonoBehaviour
     void DisplaySpeechContent(SpeechQuestion speechQuestion)
     {
 
-        StartCoroutine(TextDisplay(speechQuestion.SpeechContent));
+        StartCoroutine(DsiplayContent(speechQuestion.SpeechContent));
     }
     IEnumerator DsiplayContent(string speechContent)
     {
@@ -106,8 +107,8 @@ public class S_QuestionAnswerUI : MonoBehaviour
         yield return StartCoroutine(SpeechQuestionDisplay(speechQuestion));
 
 
-        _rseDelayGenerateSpeech.RaiseEvent();
-    }
+        //_rseDelayGenerateSpeech.RaiseEvent(); //the buggg!!!
+    } 
     IEnumerator QuestionDisplay(Question question)
     {
         
@@ -278,6 +279,7 @@ public class S_QuestionAnswerUI : MonoBehaviour
     void StopTimerCoroutine()
     {
         StopCoroutine(_timerCoroutine);
+        StopAllCoroutines();
         ClearAnswer();
     }
 
@@ -318,21 +320,34 @@ public class S_QuestionAnswerUI : MonoBehaviour
 
     IEnumerator DisplayDate(string textToDisplay)
     {
-        yield return StartCoroutine(TextDisplay(textToDisplay));
+        Debug.Log("1");
+        Debug.Log($"{_rsoCurrentDateStep.Value}");
 
-        if(_rsoCurrentDateStep.Value == DateStep.Bill)
+
+        yield return StartCoroutine(TextDisplay(textToDisplay));
+        Debug.Log("1.5");
+        Debug.Log(_rsoCurrentDateStep.Value.ToString());
+        if (_rsoCurrentDateStep.Value == DateStep.Bill)
         {
             //rseGameTcheckVlaueCharmIfWinOrNotEvent
             _rseCheckWinDate.RaiseEvent();
+
+            yield break;
+
         }
         else
         {
             _rsoCurrentDateStep.Value = (DateStep)((int)_rsoCurrentDateStep.Value + 1);
+            Debug.Log("3");
 
         }
+        Debug.Log("4");
 
+        if (_rsoCurrentDateStep.Value != DateStep.Bill)
+        {
+            
+        }
         _rseDelayGenerateSpeechQuestion.RaiseEvent();
-
     }
 
     void ClearAnswer()

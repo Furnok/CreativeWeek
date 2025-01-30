@@ -30,7 +30,8 @@ public class S_DateManager : MonoBehaviour
     [SerializeField] RSO_CurrentListObject _rsoCurrentListObject;
 
 
-    //[Header("SSO")]
+    [Header("SSO")]
+    [SerializeField] SSO_ListProfile _ssoListProfile;
 
     private void Start()
     {
@@ -55,6 +56,12 @@ public class S_DateManager : MonoBehaviour
 
     void StartDate()
     {
+        var item = new Item();
+        item.Index = 0;
+        _rsoCurrentProfile.Value = _ssoListProfile.Value[0];
+        _rsoCurrentProfile.Value.ProfilType = ProfilType.Street;
+        _rsoCurrentListObject.Value.Add(item);
+
 
 
         StartCoroutine(StartPresentation());
@@ -88,6 +95,8 @@ public class S_DateManager : MonoBehaviour
 
     IEnumerator DelayGenerateSpeech()
     {
+        Debug.Log("b");
+
         yield return new WaitForSeconds(2f);
 
         _rseGenerateSpeech.RaiseEvent();
@@ -97,6 +106,8 @@ public class S_DateManager : MonoBehaviour
 
     IEnumerator DelayGenerateQuestion()
     {
+        Debug.Log("c");
+
         yield return new WaitForSeconds(2f);
 
         _rseGenerateQuestion.RaiseEvent();
@@ -106,6 +117,8 @@ public class S_DateManager : MonoBehaviour
 
     IEnumerator DelayGenerateSpeechQuestion()
     {
+        Debug.Log("d");
+
         yield return new WaitForSeconds(2f);
 
         _rseGenerateQuestionSpeech.RaiseEvent();
@@ -160,6 +173,13 @@ public class S_DateManager : MonoBehaviour
 
 
         }
+        Debug.Log("a");
+
+        TtcheckDress(_rsoCurrentProfile.Value.ProfilType);
+
+        _rsoCurrentDateStep.Value = DateStep.Starter;
+
+        Debug.Log($"{_rsoCurrentDateStep.Value}");
     }
 
     void TtcheckDress(ProfilType profilTyep)

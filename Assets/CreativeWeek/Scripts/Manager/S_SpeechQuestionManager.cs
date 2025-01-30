@@ -20,10 +20,14 @@ public class S_SpeechQuestionManager : MonoBehaviour
     [SerializeField] RSE_GenerateSpeech _rseGenerateSpeech;
     [SerializeField] RSE_GenerateQuestionSpeech _rseGenerateQuestionSpeech;
 
+    [SerializeField] RSE_DelayGenerateSpeech _rseDelayGenerateSpeech;
+    [SerializeField] RSE_DelayGenerateQuestion _rseDelayGenerateQuestion;
+
     [Header("RSO")]
     [SerializeField] RSO_SpeetchPitchQuestion _rsoSpeachPitchQuestion;
     [SerializeField] RSO_SpeechsSays _rsoSpeechSays;
     [SerializeField] RSO_CurrentProfile _rsoCurrentProfile;
+    [SerializeField] RSO_CurrentDateStep _rsoCurrentDateStep;
 
     [Header("SSO")]
     [SerializeField] SSO_SpeechPitchQuestion _ssoSpeachPitchQuestion;
@@ -49,6 +53,8 @@ public class S_SpeechQuestionManager : MonoBehaviour
     private void OnDestroy()
     {
         _rsoSpeachPitchQuestion.Value.Clear();
+        _rsoSpeechSays.Value.Clear();
+
         _rseOnSpeechAnswerGive.action -= TcheckAnswer;
 
         _rseGenerateSpeech.action -= GenerateSpeech;
@@ -86,7 +92,6 @@ public class S_SpeechQuestionManager : MonoBehaviour
             _rsoSpeechSays.Value.Add(speech);
             _rsoSpeachPitchQuestion.Value.Remove(speech);
             _rseOnSpeechQuestionCreate.RaiseEvent(speech);
-           
         }
         else
         {
@@ -111,6 +116,7 @@ public class S_SpeechQuestionManager : MonoBehaviour
             _rseUpdateCharm.RaiseEvent(speechAnswer.CharmeAnswerGive);
 
             //_rseOnDateAnswering.RaiseEvent(speechAnswer.ReplyContent);
+            
 
             _rseProfilStateChange.RaiseEvent(ProfilState.Happy);
         }
@@ -118,9 +124,23 @@ public class S_SpeechQuestionManager : MonoBehaviour
         {
             _rseUpdateCharm.RaiseEvent(speechAnswer.CharmeAnswerGive);
 
+            //if (_rsoCurrentDateStep.Value != DateStep.Bill)
+            //{
+            //    _rseDelayGenerateSpeech.RaiseEvent();
+
+            //}
             //_rseOnDateAnswering.RaiseEvent(speechAnswer.ReplyContent);
 
             _rseProfilStateChange.RaiseEvent(ProfilState.Angry);
+        }
+        if (_rsoCurrentDateStep.Value != DateStep.Bill)
+        {
+            _rseDelayGenerateSpeech.RaiseEvent();
+
+        }
+        else
+        {
+            _rseDelayGenerateQuestion.RaiseEvent();
         }
     }
 

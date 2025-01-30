@@ -57,9 +57,11 @@ public class S_QuestionManager : MonoBehaviour
 
     void TcheckAnswer(Answer answer)
     {
-        //var currentProfil = _rsoCurrentProfile.Value;
-        var currentProfil = new Profil();
-        currentProfil.Intolerances.Add(IntoleranceType.Gluten);
+        var currentProfil = _rsoCurrentProfile.Value;
+
+
+        //var currentProfil = new Profil();
+        //currentProfil.Intolerances.Add(IntoleranceType.Gluten);
         //currentProfil.Intolerances.Add(IntoleranceType.Lactose);
         //currentProfil.Intolerances.Add(IntoleranceType.NutsFruits);
 
@@ -177,7 +179,7 @@ public class S_QuestionManager : MonoBehaviour
 
         if (filteredList.Count == 0)
         {
-            Debug.LogWarning("Aucun élément ne correspond à l'enum spécifié !");
+            Debug.LogWarning($"Aucun élément ne correspond à l'enum spécifié : {targetEnum.ToString()}!");
             return default;
         }
 

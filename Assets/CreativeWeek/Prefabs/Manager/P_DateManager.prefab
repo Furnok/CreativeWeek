@@ -58,3 +58,4 @@ MonoBehaviour:
   _rsoCurrentProfile: {fileID: 11400000, guid: eb35386258e8e7e448ebc31f81ace3a3, type: 2}
   _rsoCurrentDateStep: {fileID: 11400000, guid: 8027ce831cfa44d47a13fd5047f94313, type: 2}
   _rsoCurrentListObject: {fileID: 11400000, guid: 0f3e026b0611e6f48a359d9d7b55928d, type: 2}
+  _ssoListProfile: {fileID: 11400000, guid: 856016f07008fa342988e0625352b70b, type: 2}
