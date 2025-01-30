@@ -9,7 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31c1a90b2ff03e64ebb2934c5eea4b95, type: 3}
-  m_Name: SSO_TimerPreparation
+  m_Script: {fileID: 11500000, guid: 455bf22ca1511504f94198e5c76a24cf, type: 3}
+  m_Name: RSE_ClickItem
   m_EditorClassIdentifier: 
-  _value: 500000
