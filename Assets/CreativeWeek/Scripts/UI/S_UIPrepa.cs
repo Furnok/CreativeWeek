@@ -12,11 +12,14 @@ public class S_UIPrepa : MonoBehaviour
     [SerializeField] private TextMeshProUGUI textTimer;
     [SerializeField] private Slider sliderTimer;
     [SerializeField] private List<Button> buttonItems;
+    [SerializeField] private List<Button> buttonObjects;
 
     [Header("RSE")]
     [SerializeField] private RSE_UpdateTimer rseUpdateTimer;
     [SerializeField] private RSE_UpdateInventory rseUpdateInventory;
     [SerializeField] private RSE_RemoveItem rseRemoveItem;
+    [SerializeField] private RSE_ShowInScene rseShowInScene;
+    [SerializeField] private RSE_HideInScene rseHideInScene;
 
     [Header("RSO")]
     [SerializeField] private RSO_TimerPreparation rsoTimerPreparation;
@@ -36,12 +39,16 @@ public class S_UIPrepa : MonoBehaviour
     {
         rseUpdateTimer.action += UpdateTime;
         rseUpdateInventory.action += UpdateInventory;
+        rseShowInScene.action += ShowInScene;
+        rseHideInScene.action += HideInScene;
     }
 
     private void OnDisable()
     {
         rseUpdateTimer.action -= UpdateTime;
         rseUpdateInventory.action -= UpdateInventory;
+        rseShowInScene.action -= ShowInScene;
+        rseHideInScene.action -= HideInScene;
     }
 
     private void UpdateTime()
@@ -50,7 +57,7 @@ public class S_UIPrepa : MonoBehaviour
         sliderTimer.value = rsoTimerPreparation.Value;
     }
 
-    private void UpdateInventory()
+    private void UpdateInventory(int index)
     {
         EventSystem.current.SetSelectedGameObject(null);
 
@@ -67,5 +74,15 @@ public class S_UIPrepa : MonoBehaviour
             buttonItems[i].onClick.RemoveAllListeners();
             buttonItems[i].onClick.AddListener(() => rseRemoveItem.RaiseEvent(rsoCurrentListObject.Value[i].Index));
         }
+    }
+
+    private void ShowInScene(int index)
+    {
+        buttonObjects[index].gameObject.SetActive(true);
+    }
+
+    private void HideInScene(int index)
+    {
+        buttonObjects[index].gameObject.SetActive(false);
     }
 }

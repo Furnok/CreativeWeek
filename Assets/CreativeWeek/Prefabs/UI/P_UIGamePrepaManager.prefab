@@ -640,9 +640,14 @@ MonoBehaviour:
   - {fileID: 792004001407385027}
   - {fileID: 721410505923599058}
   - {fileID: 505424485402114510}
+  buttonObjects:
+  - {fileID: 2784022648498885543}
+  - {fileID: 1641933782910194126}
   rseUpdateTimer: {fileID: 11400000, guid: 98a2f0ee1fb5af3479a63a3471fbd281, type: 2}
   rseUpdateInventory: {fileID: 11400000, guid: df1e9a576051afc419e2dceb3ddc227f, type: 2}
   rseRemoveItem: {fileID: 11400000, guid: a232e5e5aaab96b469bb23e600206838, type: 2}
+  rseShowInScene: {fileID: 11400000, guid: 163ae9abe37df0849abeadae7da838a8, type: 2}
+  rseHideInScene: {fileID: 11400000, guid: bacb20455b9f257458546454d69b3f88, type: 2}
   rsoTimerPreparation: {fileID: 11400000, guid: efcd73165415f284d9ffb00315319da6, type: 2}
   rsoCurrentListObject: {fileID: 11400000, guid: 0f3e026b0611e6f48a359d9d7b55928d, type: 2}
   ssoTimerPreparation: {fileID: 11400000, guid: 63dcae4f45ef88847a0458a05d5ebf46, type: 2}

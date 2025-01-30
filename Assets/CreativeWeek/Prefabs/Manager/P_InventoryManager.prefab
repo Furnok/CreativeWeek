@@ -44,12 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b25e02fbb38af04e88ad0716b29fd69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonObjects:
-  - {fileID: 0}
-  - {fileID: 0}
   RSE_PickUpItem: {fileID: 11400000, guid: 5db31ffd00c36e94ebf6a57bcb9e44be, type: 2}
   RSE_RemoveItem: {fileID: 11400000, guid: a232e5e5aaab96b469bb23e600206838, type: 2}
   RSE_UpdateInventory: {fileID: 11400000, guid: df1e9a576051afc419e2dceb3ddc227f, type: 2}
+  rseShowInScene: {fileID: 11400000, guid: 163ae9abe37df0849abeadae7da838a8, type: 2}
+  rseHideInScene: {fileID: 11400000, guid: bacb20455b9f257458546454d69b3f88, type: 2}
   RSO_CurrentListObject: {fileID: 11400000, guid: 0f3e026b0611e6f48a359d9d7b55928d, type: 2}
   SSO_ListObject: {fileID: 11400000, guid: 5c4d74e026e883844ae0efff5eeeda00, type: 2}
   SSO_MaxObject: {fileID: 11400000, guid: 82ddda6db59d3be448ea2585848c9769, type: 2}

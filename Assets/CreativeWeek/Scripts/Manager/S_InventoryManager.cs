@@ -7,12 +7,12 @@ using UnityEngine.UI;
 
 public class S_InventoryManager : MonoBehaviour
 {
-    [Header("References")]
-    [SerializeField] private List<Button> buttonObjects;
     [Header("RSE")]
     [SerializeField] RSE_PickUpItem RSE_PickUpItem;
     [SerializeField] RSE_RemoveItem RSE_RemoveItem;
     [SerializeField] RSE_UpdateInventory RSE_UpdateInventory;
+    [SerializeField] RSE_ShowInScene rseShowInScene;
+    [SerializeField] RSE_HideInScene rseHideInScene;
     [Header("RSO")]
     [SerializeField] RSO_CurrentListObject RSO_CurrentListObject;
     [Header("SSO")]
@@ -50,10 +50,9 @@ public class S_InventoryManager : MonoBehaviour
             }
             if (isNotInCurrentList)
             {
-                buttonObjects[index].gameObject.SetActive(false);
-
                 RSO_CurrentListObject.Value.Add(SSO_ListObject.Value.FirstOrDefault(x=> x.Index == index));
-                RSE_UpdateInventory.RaiseEvent();
+                RSE_UpdateInventory.RaiseEvent(index);
+                rseHideInScene.RaiseEvent(index);
             }
         }
     }
@@ -73,10 +72,9 @@ public class S_InventoryManager : MonoBehaviour
 
             if (isInCurrentList)
             {
-                buttonObjects[index].gameObject.SetActive(true);
-
                 RSO_CurrentListObject.Value.Remove(SSO_ListObject.Value.FirstOrDefault(x => x.Index == index));
-                RSE_UpdateInventory.RaiseEvent();
+                RSE_UpdateInventory.RaiseEvent(index);
+                rseShowInScene.RaiseEvent(index);
             }
         }
     }

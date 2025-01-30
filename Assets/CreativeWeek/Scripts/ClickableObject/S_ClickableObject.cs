@@ -19,5 +19,6 @@ public class S_ClickableObject : MonoBehaviour, IPointerEnterHandler, IPointerEx
     private void OnDisable()
     {
         GetComponent<Image>().color = Color.white;
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
     }
 }
