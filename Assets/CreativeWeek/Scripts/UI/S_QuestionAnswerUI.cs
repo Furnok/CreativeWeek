@@ -25,7 +25,12 @@ public class S_QuestionAnswerUI : MonoBehaviour
     [SerializeField] RSE_OnSpeechQuestionCreate _rseOnSpeechQuestionCreate;
     [SerializeField] RSE_OnQuestionSpeechGenerate _rseOnQuestionSpeechGenerate;
 
+    [SerializeField] RSE_DelayGenerateQuestion _rseDelayGenerateQuestion;
+    [SerializeField] RSE_DelayGenerateSpeechQuestion _rseDelayGenerateSpeechQuestion;
+    [SerializeField] RSE_DelayGenerateSpeech _rseDelayGenerateSpeech;
 
+
+    [Header("RSO")] RSO_CurrentDateStep _rsoCurrentDateStep;
 
 
     [Header("SSO")]
@@ -59,15 +64,30 @@ public class S_QuestionAnswerUI : MonoBehaviour
     void DisplaySpeechContent(SpeechQuestion speechQuestion)
     {
 
-        StartCoroutine(TextDisplay(speechQuestion.PitchContent));
+        StartCoroutine(TextDisplay(speechQuestion.SpeechContent));
+    }
+    IEnumerator DsiplayContent(string speechContent)
+    {
+        yield return StartCoroutine(TextDisplay(speechContent));
+
+        _rseDelayGenerateQuestion.RaiseEvent();
+        //callEvent to go to generate a question
     }
 
     void DisplaySpeechQuestionAnswer(SpeechQuestion speechQuestion)
     {
 
-       
+        StartCoroutine(DisplaySpeechQuestion(speechQuestion));
 
-        StartCoroutine(SpeechQuestionDisplay(speechQuestion));
+
+    }
+
+    IEnumerator DisplaySpeechQuestion(SpeechQuestion speechQuestion)
+    {
+        yield return StartCoroutine(SpeechQuestionDisplay(speechQuestion));
+
+
+        _rseDelayGenerateSpeech.RaiseEvent();
     }
     IEnumerator QuestionDisplay(Question question)
     {
@@ -91,9 +111,9 @@ public class S_QuestionAnswerUI : MonoBehaviour
 
         _textDate.text = "";
 
-        for (int i = 0; i < speechQuestion.PitchQuestionContent.Length; i++)
+        for (int i = 0; i < speechQuestion.SpeechQuestionContent.Length; i++)
         {
-            _textDate.text += speechQuestion.PitchQuestionContent[i];
+            _textDate.text += speechQuestion.SpeechQuestionContent[i];
 
             yield return new WaitForSeconds(_ssoTimeBetweenCharactereDisplay.Value);
         }
@@ -181,7 +201,7 @@ public class S_QuestionAnswerUI : MonoBehaviour
 
     void DisplaySpeechResponseOption(SpeechQuestion speechQuestion)
     {
-        foreach (SpeechAnswer answer in speechQuestion.PitchAnswers)
+        foreach (SpeechAnswer answer in speechQuestion.SpeechAnswers)
         {
             var answerScript = Instantiate(_answer, Vector3.zero, Quaternion.identity, _answerContentParents);
 
@@ -195,7 +215,27 @@ public class S_QuestionAnswerUI : MonoBehaviour
     void DisplayDateAnswer(string textToDisplay)
     {
 
-        StartCoroutine(TextDisplay(textToDisplay));
+        StartCoroutine(DisplayDate(textToDisplay));
+
+    }
+
+    //IEnumerator
+
+    IEnumerator DisplayDate(string textToDisplay)
+    {
+        yield return StartCoroutine(TextDisplay(textToDisplay));
+
+        if(_rsoCurrentDateStep.Value == DateStep.Bill)
+        {
+            //rseGameTcheckVlaueCharmIfWinOrNotEvent
+        }
+        else
+        {
+            _rsoCurrentDateStep.Value = (DateStep)((int)_rsoCurrentDateStep.Value + 1);
+
+        }
+
+        _rseDelayGenerateSpeechQuestion.RaiseEvent();
 
     }
 

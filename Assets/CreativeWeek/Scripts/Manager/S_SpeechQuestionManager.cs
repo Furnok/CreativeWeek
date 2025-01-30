@@ -17,7 +17,8 @@ public class S_SpeechQuestionManager : MonoBehaviour
     [SerializeField] RSE_OnDateAnswering _rseOnDateAnswering;
     [SerializeField] RSE_ProfilStateChange _rseProfilStateChange;
 
-
+    [SerializeField] RSE_GenerateSpeech _rseGenerateSpeech;
+    [SerializeField] RSE_GenerateQuestionSpeech _rseGenerateQuestionSpeech;
 
     [Header("RSO")]
     [SerializeField] RSO_SpeetchPitchQuestion _rsoSpeachPitchQuestion;
@@ -38,7 +39,8 @@ public class S_SpeechQuestionManager : MonoBehaviour
 
         _rseOnSpeechAnswerGive.action += TcheckAnswer;
 
-
+        _rseGenerateSpeech.action += GenerateSpeech;
+        _rseGenerateQuestionSpeech.action += GeneratQuestionAboutSpeech;
         //StartCoroutine(test());
     }
 
@@ -47,7 +49,9 @@ public class S_SpeechQuestionManager : MonoBehaviour
         _rsoSpeachPitchQuestion.Value.Clear();
         _rseOnSpeechAnswerGive.action -= TcheckAnswer;
 
-        
+        _rseGenerateSpeech.action -= GenerateSpeech;
+        _rseGenerateQuestionSpeech.action -= GeneratQuestionAboutSpeech;
+
     }
 
     IEnumerator test()
@@ -138,7 +142,7 @@ public class S_SpeechQuestionManager : MonoBehaviour
         int randomIndex = Random.Range(0, availableElements.Count);
         SpeechQuestion selectedElement = availableElements[randomIndex];
 
-        if (selectedElement.PitchQuestionContent == null)
+        if (selectedElement.SpeechQuestionContent == null)
         {
             Debug.LogError("L'élément sélectionné a un PitchQuestionContent null ! Vérifiez vos données.");
             return default;

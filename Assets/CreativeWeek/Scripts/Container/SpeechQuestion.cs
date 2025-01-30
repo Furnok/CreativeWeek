@@ -5,10 +5,10 @@ using System;
 [Serializable]
 public struct SpeechQuestion
 {
-    public string PitchQuestionName;
+    public string SpeechQuestionName;
     public ProfilType ProfilType;
-    public string PitchContent;
-    public string PitchQuestionContent;
-    public List<SpeechAnswer> PitchAnswers;
+    public string SpeechContent;
+    public string SpeechQuestionContent;
+    public List<SpeechAnswer> SpeechAnswers;
     //[HideInInspector] public bool IsQuestionAlreadySay = false;
 }

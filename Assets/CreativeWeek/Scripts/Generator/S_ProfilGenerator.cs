@@ -10,15 +10,17 @@ public class S_ProfilGenerator : MonoBehaviour
     [SerializeField] RSO_CurrentProfile _rsoCurrentProfile;
     [SerializeField] SSO_ListProfile _ssoListProfile;
     [SerializeField] SSO_MaxIntoleranceType _maxIntoleranceType;
+    [SerializeField] RSE_OnProfilCreate _rseOnProfilCreate;
 
 
     private void Start()
     {
-        
+        CreateProfil();
     }
 
     void CreateProfil()
     {
+        
         var profil = GetRandomItem(_ssoListProfile.Value);
         profil.DietType = GetRandomEnumValue<DietType>();
         profil.DrinkPreference = GetRandomEnumValue<DrinkPreference>();
@@ -26,6 +28,8 @@ public class S_ProfilGenerator : MonoBehaviour
         var randomNumberOfIntolerances = UnityEngine.Random.Range(0, _maxIntoleranceType.Value);
         profil.Intolerances = GetUniqueRandomEnumValues<IntoleranceType>(randomNumberOfIntolerances);
         _rsoCurrentProfile.Value = profil;
+        _rseOnProfilCreate.RaiseEvent();
+
     }
 
 
@@ -35,7 +39,7 @@ public class S_ProfilGenerator : MonoBehaviour
         return list[randomIndex];
     }
 
-    T GetRandomEnumValue<T>()
+    T GetRandomEnumValue<T>() /*where T : Enum */
     {
         Array values = Enum.GetValues(typeof(T));
 

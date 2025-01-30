@@ -211,7 +211,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 3004786127364826803}
   m_Direction: 2
   m_Value: 1.0000005
-  m_Size: 0.60999995
+  m_Size: 0.61
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -275,6 +275,7 @@ MonoBehaviour:
   _rseTimerQuestionEnd: {fileID: 11400000, guid: 8dadb020ec7a7fc4e806b8fec189a603, type: 2}
   _rseUpdateCharm: {fileID: 11400000, guid: e41c6646dbbcac6499fd8e50b3eea620, type: 2}
   _rseProfilStateChange: {fileID: 11400000, guid: 982e136023cfbcc43bb5a5a05b53ee1f, type: 2}
+  _rseGenerateQuestion: {fileID: 11400000, guid: 2d23cecaf8fb71e48a4de3590be6da0a, type: 2}
   _rsoCurrentStep: {fileID: 11400000, guid: 8027ce831cfa44d47a13fd5047f94313, type: 2}
   _rsoCurrentProfile: {fileID: 11400000, guid: eb35386258e8e7e448ebc31f81ace3a3, type: 2}
   _ssoListQuestionAnswer: {fileID: 11400000, guid: 773055b622acdbb49a6538f6eba1626b, type: 2}
@@ -304,6 +305,9 @@ MonoBehaviour:
   _rseTimerQuestionEnd: {fileID: 11400000, guid: 8dadb020ec7a7fc4e806b8fec189a603, type: 2}
   _rseOnSpeechQuestionCreate: {fileID: 11400000, guid: 975afc85fe5f99442a7f164511b34e36, type: 2}
   _rseOnQuestionSpeechGenerate: {fileID: 11400000, guid: 84f0e6e2b10752f4ea018903156a2de7, type: 2}
+  _rseDelayGenerateQuestion: {fileID: 11400000, guid: 7dcb8095443eac445b8db64915e21ce6, type: 2}
+  _rseDelayGenerateSpeechQuestion: {fileID: 11400000, guid: b13dc4447fff07e40b3fd61948d5958b, type: 2}
+  _rseDelayGenerateSpeech: {fileID: 11400000, guid: 56a579fa2d09e9b4dbcae137428b9dcc, type: 2}
   _ssoTimeBetweenCharactereDisplay: {fileID: 11400000, guid: a7a3b86abc75d4c43b23e14c0b510fc1, type: 2}
   _ssoTimeToAnswer: {fileID: 11400000, guid: c0d55d14e14e1094aa8d64d001e79a01, type: 2}
 --- !u!114 &9163845714377163854
@@ -324,6 +328,8 @@ MonoBehaviour:
   _rseUpdateCharm: {fileID: 11400000, guid: e41c6646dbbcac6499fd8e50b3eea620, type: 2}
   _rseOnDateAnswering: {fileID: 11400000, guid: 180a832f308f727448c01f07ea3bc668, type: 2}
   _rseProfilStateChange: {fileID: 11400000, guid: 982e136023cfbcc43bb5a5a05b53ee1f, type: 2}
+  _rseGenerateSpeech: {fileID: 0}
+  _rseGenerateQuestionSpeech: {fileID: 0}
   _rsoSpeachPitchQuestion: {fileID: 11400000, guid: db73cb886f022274f9157db8705b160c, type: 2}
   _rsoSpeechSays: {fileID: 11400000, guid: ea1dfc451fc900c4dad7af287c76d335, type: 2}
   _rsoCurrentProfile: {fileID: 11400000, guid: eb35386258e8e7e448ebc31f81ace3a3, type: 2}
