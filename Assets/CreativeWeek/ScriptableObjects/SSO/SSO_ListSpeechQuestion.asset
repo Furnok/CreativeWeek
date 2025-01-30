@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e5de3285f78b074dba8d6dbc51d8f5b, type: 3}
+  m_Name: SSO_ListSpeechQuestion
+  m_EditorClassIdentifier: 
+  _value:
+  - SpeechQuestionName: Street_0
+    ProfilType: 0
+    SpeechContent: '"I''ve been in the game since back when candy was real. Like
+      before these kids started making sugar-free, organic nonsense. You know the
+      Lakers? I was there when Kobe dropped 81 points, screaming so loud my grandson
+      shit himself! Lil'' punk don''t know nothing about eal basketball." '
+    SpeechQuestionContent: You know what's nonsense to me?
+    SpeechAnswers:
+    - AnswerName: Good
+      ReplyContent: Sugar-free candy tasting like shit.
+      CharmeAnswerGive: 10
+      IsAnswerCorrect: 1
+    - AnswerName: Bad
+      ReplyContent: 'Your grandson is a huge fan of the Lakers. '
+      CharmeAnswerGive: -10
+      IsAnswerCorrect: 0
+  - SpeechQuestionName: Street_1
+    ProfilType: 0
+    SpeechContent: '"The other day, I was at the park with my grand kids. You know,
+      business as usual, deals going down. Then my little one goes, ''Godmother,
+      you gotta modernize your business!'' Like, excuse me?! I may be old but I still
+      got the best eye in the game. I''m leading a large network of senior dealing
+      sugar. I''m the DANGER." '
+    SpeechQuestionContent: 'How does my grandchilds calling me? '
+    SpeechAnswers:
+    - AnswerName: Good
+      ReplyContent: 'Godmother, you have my respect. '
+      CharmeAnswerGive: 10
+      IsAnswerCorrect: 1
+    - AnswerName: Bad
+      ReplyContent: The Danger.
+      CharmeAnswerGive: -10
+      IsAnswerCorrect: 0
+  - SpeechQuestionName: Street_2
+    ProfilType: 0
+    SpeechContent: 'Hey see that waitress over there ?? She''s ugly as fuck damn
+      she must have a hard time finding  a partner she wouldnt have been the one
+      to find you. If it was me, a ten out of ten, i will need minimum one week of
+      abstinence before thinking about dating her. '
+    SpeechQuestionContent: What do you think about me ?
+    SpeechAnswers:
+    - AnswerName: Good
+      ReplyContent: 'Eleven out of ten '
+      CharmeAnswerGive: 10
+      IsAnswerCorrect: 1
+    - AnswerName: Bad
+      ReplyContent: 'As beautifull as the waitress '
+      CharmeAnswerGive: -10
+      IsAnswerCorrect: 0
+  - SpeechQuestionName: Street_3
+    ProfilType: 0
+    SpeechContent: 'You know, at first, I installed Tinder because I was bored but
+      I''ve made the right choice! I didn''t think I''d find someone as cool as you
+      on a lame app. I prefer to flirt on the street, whistle at people and use the
+      best catch phrase. Hey baby you are as sweet as my merchandise. '
+    SpeechQuestionContent: 'Will you make the right choice? '
+    SpeechAnswers:
+    - AnswerName: Good
+      ReplyContent: 'I really apreciate you '
+      CharmeAnswerGive: 10
+      IsAnswerCorrect: 1
+    - AnswerName: Bad
+      ReplyContent: 'Yeah I''d like to enter your gang '
+      CharmeAnswerGive: -10
+      IsAnswerCorrect: 0
+  - SpeechQuestionName: Street_4
+    ProfilType: 0
+    SpeechContent: The last guy I met was really disrespectfull. I have a streetcred
+      to maintain. This bastard told me that I was too old for him and not his type.
+      The only compliment i recieved was that I'm the best user of filters that he
+      ever met. I don't see what he talkin about.
+    SpeechQuestionContent: 'Do you understand what he means? '
+    SpeechAnswers:
+    - AnswerName: Good
+      ReplyContent: 'Nah he''s crazy '
+      CharmeAnswerGive: 10
+      IsAnswerCorrect: 1
+    - AnswerName: Bad
+      ReplyContent: 'Yeah you''re a bit different from your picture '
+      CharmeAnswerGive: -20
+      IsAnswerCorrect: 0
+  - SpeechQuestionName: Street_5
+    ProfilType: 0
+    SpeechContent: 'In my gang, we use to celebrate Christmas with a some good stuff.
+      You know what I mean? Yeah of course a space buche de Noel. after that every
+      dude believe again in Santa Claus.  '
+    SpeechQuestionContent: 'Wanna come next time? '
+    SpeechAnswers:
+    - AnswerName: Good
+      ReplyContent: 'Sure! I miss Santa Claus too '
+      CharmeAnswerGive: 10
+      IsAnswerCorrect: 1
+    - AnswerName: Bad
+      ReplyContent: 'Sure! I love space! '
+      CharmeAnswerGive: -10
+      IsAnswerCorrect: 0

@@ -14,11 +14,59 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _value:
   - QuestionName: Starter
-    QuestionContent: test
-    QuestionDateStep: 1
+    QuestionContent: I'm thirsty.
+    QuestionDateStep: 2
     Answers:
-    - AnswerName: 
-      ReplyContentText: gg
+    - AnswerName: Water
+      ReplyContentText: Water
+      DateAnswerIfPositifReply: yes
+      DateAnswerIfNegatifReply: no
+      CharmeIfValidAnswer: 10
+      CharmeIfUnvalidAnswer: -10
+      ConditionIn:
+        DrinkPreference: 2
+        DietType: 0
+        BillSeparation: 0
+        IntoleranceType: 
+    - AnswerName: Soda
+      ReplyContentText: Soda
+      DateAnswerIfPositifReply: yay
+      DateAnswerIfNegatifReply: nine
+      CharmeIfValidAnswer: 10
+      CharmeIfUnvalidAnswer: -10
+      ConditionIn:
+        DrinkPreference: 3
+        DietType: 0
+        BillSeparation: 0
+        IntoleranceType: 
+    - AnswerName: Wine
+      ReplyContentText: Wine
+      DateAnswerIfPositifReply: yay
+      DateAnswerIfNegatifReply: nine
+      CharmeIfValidAnswer: 10
+      CharmeIfUnvalidAnswer: -10
+      ConditionIn:
+        DrinkPreference: 1
+        DietType: 0
+        BillSeparation: 0
+        IntoleranceType: 
+  - QuestionName: Dinner
+    QuestionContent: It's time to do the dinner order.
+    QuestionDateStep: 2
+    Answers:
+    - AnswerName: Beefteck
+      ReplyContentText: Beefteck
+      DateAnswerIfPositifReply: yes
+      DateAnswerIfNegatifReply: no
+      CharmeIfValidAnswer: 10
+      CharmeIfUnvalidAnswer: -10
+      ConditionIn:
+        DrinkPreference: 0
+        DietType: 1
+        BillSeparation: 0
+        IntoleranceType: 
+    - AnswerName: Chili Vege
+      ReplyContentText: Chili Vege
       DateAnswerIfPositifReply: yes
       DateAnswerIfNegatifReply: no
       CharmeIfValidAnswer: 10
@@ -28,14 +76,88 @@ MonoBehaviour:
         DietType: 2
         BillSeparation: 0
         IntoleranceType: 
-    - AnswerName: 
-      ReplyContentText: gz
-      DateAnswerIfPositifReply: yay
-      DateAnswerIfNegatifReply: nine
+    - AnswerName: Chickpear Falafel Burgers
+      ReplyContentText: Chickpear Falafel Burgers
+      DateAnswerIfPositifReply: yes
+      DateAnswerIfNegatifReply: no
+      CharmeIfValidAnswer: 10
+      CharmeIfUnvalidAnswer: -10
+      ConditionIn:
+        DrinkPreference: 0
+        DietType: 3
+        BillSeparation: 0
+        IntoleranceType: 
+  - QuestionName: Dessert
+    QuestionContent: Suprise me for the desert.
+    QuestionDateStep: 3
+    Answers:
+    - AnswerName: Cake
+      ReplyContentText: Cake
+      DateAnswerIfPositifReply: yes
+      DateAnswerIfNegatifReply: no
       CharmeIfValidAnswer: 10
       CharmeIfUnvalidAnswer: -10
       ConditionIn:
         DrinkPreference: 0
         DietType: 0
         BillSeparation: 0
-        IntoleranceType: 03000000
+        IntoleranceType: 
+    - AnswerName: Coffe
+      ReplyContentText: Coffe
+      DateAnswerIfPositifReply: yes
+      DateAnswerIfNegatifReply: no
+      CharmeIfValidAnswer: 10
+      CharmeIfUnvalidAnswer: -10
+      ConditionIn:
+        DrinkPreference: 0
+        DietType: 0
+        BillSeparation: 0
+        IntoleranceType: 
+    - AnswerName: Burger
+      ReplyContentText: Burger
+      DateAnswerIfPositifReply: yes
+      DateAnswerIfNegatifReply: no
+      CharmeIfValidAnswer: 10
+      CharmeIfUnvalidAnswer: -10
+      ConditionIn:
+        DrinkPreference: 0
+        DietType: 0
+        BillSeparation: 0
+        IntoleranceType: 
+  - QuestionName: Billy
+    QuestionContent: How do you want to pay?
+    QuestionDateStep: 4
+    Answers:
+    - AnswerName: 100
+      ReplyContentText: Pay everything
+      DateAnswerIfPositifReply: yes
+      DateAnswerIfNegatifReply: no
+      CharmeIfValidAnswer: 10
+      CharmeIfUnvalidAnswer: -10
+      ConditionIn:
+        DrinkPreference: 0
+        DietType: 0
+        BillSeparation: 1
+        IntoleranceType: 
+    - AnswerName: 50
+      ReplyContentText: Split Bill
+      DateAnswerIfPositifReply: yes
+      DateAnswerIfNegatifReply: no
+      CharmeIfValidAnswer: 10
+      CharmeIfUnvalidAnswer: -10
+      ConditionIn:
+        DrinkPreference: 0
+        DietType: 0
+        BillSeparation: 2
+        IntoleranceType: 
+    - AnswerName: Rat
+      ReplyContentText: Squeek
+      DateAnswerIfPositifReply: yes
+      DateAnswerIfNegatifReply: no
+      CharmeIfValidAnswer: 10
+      CharmeIfUnvalidAnswer: -10
+      ConditionIn:
+        DrinkPreference: 0
+        DietType: 0
+        BillSeparation: 3
+        IntoleranceType: 

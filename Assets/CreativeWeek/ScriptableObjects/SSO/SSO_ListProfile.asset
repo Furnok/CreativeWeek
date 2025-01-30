@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: SSO_ListProfile
   m_EditorClassIdentifier: 
   _value:
-  - Age: 0
-    Name: 
+  - Age: 27
+    Name: Kathleen
     ProfilType: 0
     CurrentProfilState: 0
     ListProfilStates:
@@ -24,14 +24,15 @@ MonoBehaviour:
       Sprite: {fileID: 0}
     - State: 2
       Sprite: {fileID: 0}
-    Description: 
-    ItemsWantedAndUnwanted: []
+    Description: 'Imma funky young girl with drips not to be slept on I like stayin
+      in street with my homies and smoke dope I''m lookin for the GOAT cuz Don''t
+      forget I''m built different Here for brat summer b*tch! '
     DietType: 0
     DrinkPreference: 0
     Intolerances: 
     BillSeparation: 0
-  - Age: 0
-    Name: 
+  - Age: 25
+    Name: Baltazar
     ProfilType: 1
     CurrentProfilState: 0
     ListProfilStates:
@@ -41,14 +42,16 @@ MonoBehaviour:
       Sprite: {fileID: 0}
     - State: 2
       Sprite: {fileID: 0}
-    Description: 
-    ItemsWantedAndUnwanted: []
+    Description: 'My greatest salutations, dear I am looking for the diamond I shall
+      polish My favorite color is gold I  eagerly anticipate to bring you to my 3
+      floors yachts (with pools) I shall offer you perls that mirror the very essence
+      of My Eyes '
     DietType: 0
     DrinkPreference: 0
     Intolerances: 
     BillSeparation: 0
-  - Age: 0
-    Name: 
+  - Age: 21
+    Name: Meloe
     ProfilType: 2
     CurrentProfilState: 0
     ListProfilStates:
@@ -58,8 +61,10 @@ MonoBehaviour:
       Sprite: {fileID: 0}
     - State: 2
       Sprite: {fileID: 0}
-    Description: 
-    ItemsWantedAndUnwanted: []
+    Description: Aquarius ascending Scorpio Fire eater in my wasted time We are a
+      travelling troop and I got place in my caravan for a second person I can read
+      your future in your hand and make the lunar horoscope I won't date if Mercury
+      is in retrograde.
     DietType: 0
     DrinkPreference: 0
     Intolerances: 

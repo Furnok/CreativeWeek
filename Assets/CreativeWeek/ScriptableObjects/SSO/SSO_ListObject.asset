@@ -15,9 +15,53 @@ MonoBehaviour:
   _value:
   - CanUse: 1
     Index: 0
-    Name: Gourde
-    Sprite: {fileID: 21300000, guid: a46f21041926f2e49abb3158d0b026c3, type: 3}
+    Name: Street Outfit
+    Sprite: {fileID: 21300000, guid: 4ffe406b21d50c047afe3ea59b05c3a6, type: 3}
   - CanUse: 1
     Index: 1
-    Name: Background
-    Sprite: {fileID: 21300000, guid: 11ef02952b5296440be78831e5b9ddec, type: 3}
+    Name: Babos Outfit
+    Sprite: {fileID: 21300000, guid: 194ad33831a66da44bdb2f1d9fb15989, type: 3}
+  - CanUse: 1
+    Index: 2
+    Name: Rich Outfit
+    Sprite: {fileID: 21300000, guid: 010ec7bbb89cf5049b4e186825fae6d4, type: 3}
+  - CanUse: 1
+    Index: 3
+    Name: Bone
+    Sprite: {fileID: 21300000, guid: 0f79d5a4ca22f164ca0bdaad5b7dbad8, type: 3}
+  - CanUse: 1
+    Index: 4
+    Name: Cash
+    Sprite: {fileID: 21300000, guid: 0cf4dc9e640d25a4e8d5fb0d3f8fa655, type: 3}
+  - CanUse: 1
+    Index: 5
+    Name: Casio Watch
+    Sprite: {fileID: 21300000, guid: 8680e60505397254fb8c96acf56cf313, type: 3}
+  - CanUse: 1
+    Index: 6
+    Name: Djembe
+    Sprite: {fileID: 21300000, guid: cc67d744c845ecf40b3df576da6c2763, type: 3}
+  - CanUse: 1
+    Index: 7
+    Name: Gameboy
+    Sprite: {fileID: 21300000, guid: 6bb2e785b22e82147a8ebcb3b48c9cb9, type: 3}
+  - CanUse: 1
+    Index: 8
+    Name: Parfum
+    Sprite: {fileID: 21300000, guid: 759bcb53ffb4c4044a74f81718d47bbb, type: 3}
+  - CanUse: 1
+    Index: 9
+    Name: Pepper Spray
+    Sprite: {fileID: 21300000, guid: b6697a4c530612f41afa061497cd1a22, type: 3}
+  - CanUse: 1
+    Index: 10
+    Name: Police Emblem
+    Sprite: {fileID: 21300000, guid: 6fee9a41f3532d0458146eb9f0e98c72, type: 3}
+  - CanUse: 1
+    Index: 11
+    Name: Rolex Watch
+    Sprite: {fileID: 21300000, guid: 46d3ec5dc47454e4da2743456ef24cb2, type: 3}
+  - CanUse: 1
+    Index: 12
+    Name: Wallet
+    Sprite: {fileID: 21300000, guid: b80d52e9de1aa0a46b757d8fd326bb62, type: 3}
