@@ -6,6 +6,7 @@ using System;
 public struct ActifEventAnswer
 {
     public string AnswerName;
+    public string AnswerButtonContent;
     public List<ReplyByDateType> ReplyByDateTypes;
 
     public bool CanUseItems;
@@ -17,6 +18,8 @@ public struct ActifEventAnswer
 [Serializable]
 public struct ReplyByDateType
 {
-    public string DateReply;
     public ProfilType ProfilType;
+    public string DateReplyThought;
+    public int CharmeAdd;
+
 }

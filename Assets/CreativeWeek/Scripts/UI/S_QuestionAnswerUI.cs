@@ -353,6 +353,8 @@ public class S_QuestionAnswerUI : MonoBehaviour
     void ClearAnswer()
     {
         _textDate.text = "";
+        _textTimeLeft.text = "";
+        _sliderTimeToAnwser.value = 0;
 
         foreach (var answer in _answersList)
         {

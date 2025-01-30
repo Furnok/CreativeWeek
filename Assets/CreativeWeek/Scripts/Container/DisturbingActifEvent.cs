@@ -8,5 +8,6 @@ public struct DisturbingActifEvent
     public string NameEvent;
     public string EventContent;
     public float TimeToAnswer;
+    public Sprite Sprite;
     public List<ActifEventAnswer> ActifEventAnswer;
 }
