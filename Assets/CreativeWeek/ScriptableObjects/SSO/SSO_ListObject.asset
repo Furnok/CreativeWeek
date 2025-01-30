@@ -65,3 +65,63 @@ MonoBehaviour:
     Index: 12
     Name: Wallet
     Sprite: {fileID: 21300000, guid: b80d52e9de1aa0a46b757d8fd326bb62, type: 3}
+  - CanUse: 1
+    Index: 13
+    Name: Chocolate
+    Sprite: {fileID: 21300000, guid: f014ff9588fac2c4fbce1bd47690e28f, type: 3}
+  - CanUse: 1
+    Index: 14
+    Name: Flower
+    Sprite: {fileID: 21300000, guid: 0dc977549d03ca74083df9e438fa1804, type: 3}
+  - CanUse: 1
+    Index: 15
+    Name: AlarmClock
+    Sprite: {fileID: 21300000, guid: c59e0ccafecb6a84481dafd9e587c9a3, type: 3}
+  - CanUse: 1
+    Index: 16
+    Name: AlcoholFlask
+    Sprite: {fileID: 21300000, guid: a82adb716087a63478dd377cf91bebc9, type: 3}
+  - CanUse: 1
+    Index: 17
+    Name: GoldChain
+    Sprite: {fileID: 21300000, guid: 2b0d949bb06d56643a9ea98dab8188b6, type: 3}
+  - CanUse: 1
+    Index: 18
+    Name: Joint
+    Sprite: {fileID: 21300000, guid: 9a96ffca9e7cfcb40822c81231c52956, type: 3}
+  - CanUse: 1
+    Index: 19
+    Name: Underwear
+    Sprite: {fileID: 21300000, guid: 5a80c141de485bd4592ee4960f32352c, type: 3}
+  - CanUse: 1
+    Index: 20
+    Name: WaterBottle
+    Sprite: {fileID: 21300000, guid: f93d42bc33ff07949a1d7cd8eb17bc5d, type: 3}
+  - CanUse: 1
+    Index: 21
+    Name: Plant
+    Sprite: {fileID: 21300000, guid: ab077b6e8e4847149a9df5e0a1c79ce2, type: 3}
+  - CanUse: 1
+    Index: 22
+    Name: Playboy
+    Sprite: {fileID: 21300000, guid: aeb2e8867621ab74a8014e49031ee21f, type: 3}
+  - CanUse: 1
+    Index: 23
+    Name: PongCup
+    Sprite: {fileID: 21300000, guid: 6a6c8407ec9ffd74d98375d3cadba8f4, type: 3}
+  - CanUse: 1
+    Index: 24
+    Name: Recorder
+    Sprite: {fileID: 21300000, guid: 250620e1e47204f4a8b484df79e968e0, type: 3}
+  - CanUse: 1
+    Index: 25
+    Name: SelfDevBook
+    Sprite: {fileID: 21300000, guid: f1bc1b24908e9494e83bcbb4e02315cd, type: 3}
+  - CanUse: 1
+    Index: 26
+    Name: Sock
+    Sprite: {fileID: 21300000, guid: bd7a2a2c35846c24eb60014270ef81f6, type: 3}
+  - CanUse: 1
+    Index: 27
+    Name: Speaker
+    Sprite: {fileID: 21300000, guid: fe0c406703cc8fd4089c454240a2926b, type: 3}
