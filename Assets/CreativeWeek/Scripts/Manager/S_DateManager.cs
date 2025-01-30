@@ -3,7 +3,9 @@ using UnityEngine;
 
 public class S_DateManager : MonoBehaviour
 {
-    //[Header("Parameters")]
+    [Header("Parameters")]
+    [SerializeField] int _charmAddGoodPresentation;
+    [SerializeField] int _charmRemoveBadPresentation;
 
     //[Header("References")]
 
@@ -51,6 +53,8 @@ public class S_DateManager : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
 
+        PresentationTcheck();
+
         yield return null;
 
         _rsoCurrentDateStep.Value = DateStep.Starter;
@@ -97,5 +101,10 @@ public class S_DateManager : MonoBehaviour
         _rseGenerateQuestionSpeech.RaiseEvent();
 
         yield return null;
+    }
+
+    void PresentationTcheck()
+    {
+
     }
 }

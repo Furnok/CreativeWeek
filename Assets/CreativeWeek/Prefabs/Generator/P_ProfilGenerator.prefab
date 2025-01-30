@@ -47,3 +47,4 @@ MonoBehaviour:
   _rsoCurrentProfile: {fileID: 11400000, guid: eb35386258e8e7e448ebc31f81ace3a3, type: 2}
   _ssoListProfile: {fileID: 11400000, guid: 856016f07008fa342988e0625352b70b, type: 2}
   _maxIntoleranceType: {fileID: 11400000, guid: 3cee19ba6be009143b4b1165e4dea5ec, type: 2}
+  _rseOnProfilCreate: {fileID: 11400000, guid: ffb9021c36e50d849ad3fd0dfafc8222, type: 2}

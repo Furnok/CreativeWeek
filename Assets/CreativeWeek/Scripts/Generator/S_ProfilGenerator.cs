@@ -10,11 +10,12 @@ public class S_ProfilGenerator : MonoBehaviour
     [SerializeField] RSO_CurrentProfile _rsoCurrentProfile;
     [SerializeField] SSO_ListProfile _ssoListProfile;
     [SerializeField] SSO_MaxIntoleranceType _maxIntoleranceType;
+    [SerializeField] RSE_OnProfilCreate _rseOnProfilCreate;
 
 
     private void Start()
     {
-        
+        CreateProfil();
     }
 
     void CreateProfil()
@@ -27,6 +28,8 @@ public class S_ProfilGenerator : MonoBehaviour
         var randomNumberOfIntolerances = UnityEngine.Random.Range(0, _maxIntoleranceType.Value);
         profil.Intolerances = GetUniqueRandomEnumValues<IntoleranceType>(randomNumberOfIntolerances);
         _rsoCurrentProfile.Value = profil;
+        _rseOnProfilCreate.RaiseEvent();
+
     }
 
 
