@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: SSO_ListQuestionAnswer
   m_EditorClassIdentifier: 
   _value:
-  - QuestionName: 
+  - QuestionName: Starter
     QuestionContent: test
-    QuestionDateStep: 0
+    QuestionDateStep: 1
     Answers:
     - AnswerName: 
       ReplyContentText: gg
@@ -24,8 +24,8 @@ MonoBehaviour:
       CharmeIfValidAnswer: 10
       CharmeIfUnvalidAnswer: -10
       ConditionIn:
-        DrinkPreference: 1
-        DietType: 0
+        DrinkPreference: 0
+        DietType: 2
         BillSeparation: 0
         IntoleranceType: 
     - AnswerName: 
