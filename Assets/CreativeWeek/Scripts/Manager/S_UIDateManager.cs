@@ -1,5 +1,4 @@
 using UnityEngine;
-using static System.Net.Mime.MediaTypeNames;
 
 public class S_UIDateManager : MonoBehaviour
 {
