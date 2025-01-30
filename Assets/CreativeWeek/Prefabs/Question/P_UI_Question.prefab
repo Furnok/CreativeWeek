@@ -211,7 +211,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 3004786127364826803}
   m_Direction: 2
   m_Value: 1.0000005
-  m_Size: 0.61
+  m_Size: 0.60999995
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -308,6 +308,10 @@ MonoBehaviour:
   _rseDelayGenerateQuestion: {fileID: 11400000, guid: 7dcb8095443eac445b8db64915e21ce6, type: 2}
   _rseDelayGenerateSpeechQuestion: {fileID: 11400000, guid: b13dc4447fff07e40b3fd61948d5958b, type: 2}
   _rseDelayGenerateSpeech: {fileID: 11400000, guid: 56a579fa2d09e9b4dbcae137428b9dcc, type: 2}
+  _rseCheckWinDate: {fileID: 11400000, guid: 49fcbd3f6560a694eacc8dfbfa4cf8a1, type: 2}
+  _rseUpdateCharm: {fileID: 11400000, guid: e41c6646dbbcac6499fd8e50b3eea620, type: 2}
+  _OnBadPresentation: {fileID: 11400000, guid: fb4c04be6a9d3f848b1499f366257b7a, type: 2}
+  _OnGoodPresentation: {fileID: 11400000, guid: e0b89d49e5f059541bd548cd882b53d2, type: 2}
   _ssoTimeBetweenCharactereDisplay: {fileID: 11400000, guid: a7a3b86abc75d4c43b23e14c0b510fc1, type: 2}
   _ssoTimeToAnswer: {fileID: 11400000, guid: c0d55d14e14e1094aa8d64d001e79a01, type: 2}
 --- !u!114 &9163845714377163854

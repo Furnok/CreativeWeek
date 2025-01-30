@@ -29,6 +29,12 @@ public class S_QuestionAnswerUI : MonoBehaviour
     [SerializeField] RSE_DelayGenerateSpeechQuestion _rseDelayGenerateSpeechQuestion;
     [SerializeField] RSE_DelayGenerateSpeech _rseDelayGenerateSpeech;
 
+    [SerializeField] RSE_CheckWinDate _rseCheckWinDate;
+
+    [SerializeField] RSE_UpdateCharm _rseUpdateCharm;
+
+    [SerializeField] RSE_OnBadPresentation _OnBadPresentation;
+    [SerializeField] RSE_OnGoodPresentation _OnGoodPresentation;
 
     [Header("RSO")] RSO_CurrentDateStep _rsoCurrentDateStep;
 
@@ -46,6 +52,9 @@ public class S_QuestionAnswerUI : MonoBehaviour
         _rseOnDateAnswering.action += DisplayDateAnswer;
         _rseOnAnswerGive.action += StopTimerCoroutine;
         _rseOnQuestionSpeechGenerate.action += DisplaySpeechQuestionAnswer;
+
+        _OnBadPresentation.action += StartDisplayingPresentationBad;
+        _OnGoodPresentation.action += StartDisplayingPresentationGood;
     }
 
     private void OnDestroy()
@@ -56,6 +65,8 @@ public class S_QuestionAnswerUI : MonoBehaviour
         _rseOnAnswerGive.action -= StopTimerCoroutine;
         _rseOnQuestionSpeechGenerate.action -= DisplaySpeechQuestionAnswer;
 
+        _OnBadPresentation.action -= StartDisplayingPresentationBad;
+        _OnGoodPresentation.action -= StartDisplayingPresentationGood;
     }
     void DisplayQuestionAnswer(Question question)
     {
@@ -71,7 +82,6 @@ public class S_QuestionAnswerUI : MonoBehaviour
         yield return StartCoroutine(TextDisplay(speechContent));
 
         _rseDelayGenerateQuestion.RaiseEvent();
-        //callEvent to go to generate a question
     }
 
     void DisplaySpeechQuestionAnswer(SpeechQuestion speechQuestion)
@@ -228,6 +238,7 @@ public class S_QuestionAnswerUI : MonoBehaviour
         if(_rsoCurrentDateStep.Value == DateStep.Bill)
         {
             //rseGameTcheckVlaueCharmIfWinOrNotEvent
+            _rseCheckWinDate.RaiseEvent();
         }
         else
         {
@@ -248,5 +259,52 @@ public class S_QuestionAnswerUI : MonoBehaviour
             Destroy(answer.gameObject);
         }
         _answersList.Clear();
+    }
+
+    void StartDisplayingPresentationBad(string text)
+    {
+        StartCoroutine(TextPresentationDisplayIfBad(text));
+    }
+
+    void StartDisplayingPresentationGood(string text)
+    {
+        StartCoroutine(TextPresentationDisplayIfGood(text));
+    }
+
+
+    IEnumerator TextPresentationDisplayIfGood(string textToDIsplay)
+    {
+        _textDate.text = "";
+
+        for (int i = 0; i < textToDIsplay.Length; i++)
+        {
+            _textDate.text += textToDIsplay[i];
+
+            yield return new WaitForSeconds(_ssoTimeBetweenCharactereDisplay.Value);
+        }
+
+        yield return new WaitForSeconds(1f);
+
+        _textDate.text = "";
+
+        _rseDelayGenerateSpeech.RaiseEvent();
+    }
+
+    IEnumerator TextPresentationDisplayIfBad(string textToDIsplay)
+    {
+        _textDate.text = "";
+
+        for (int i = 0; i < textToDIsplay.Length; i++)
+        {
+            _textDate.text += textToDIsplay[i];
+
+            yield return new WaitForSeconds(_ssoTimeBetweenCharactereDisplay.Value);
+        }
+
+        yield return new WaitForSeconds(1f);
+
+        _textDate.text = "";
+
+        _rseUpdateCharm.RaiseEvent(-100);
     }
 }

@@ -9,7 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e93cd79275be1a41825f4548c1755eb, type: 3}
-  m_Name: SSO_MaxIntoleranceType
+  m_Script: {fileID: 11500000, guid: 75e4c9b6f042f34409057dc1a91088d0, type: 3}
+  m_Name: RSE_ChoosePassiveEvent
   m_EditorClassIdentifier: 
-  _value: 2

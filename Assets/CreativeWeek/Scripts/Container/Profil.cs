@@ -64,10 +64,10 @@ public class Profil
     public ProfilState CurrentProfilState;
     public List<ProfilStateDictionary> ListProfilStates;
     public string Description;
-    public List<ItemUseEffect> ItemsWantedAndUnwanted;
-    public DietType DietType;
-    public DrinkPreference DrinkPreference;
-    public List<IntoleranceType> Intolerances = new List<IntoleranceType>();
-    public BillSeparation BillSeparation;
+    //public List<ItemUseEffect> ItemsWantedAndUnwanted;
+    [HideInInspector] public DietType DietType;
+    [HideInInspector] public DrinkPreference DrinkPreference;
+    [HideInInspector] public List<IntoleranceType> Intolerances = new List<IntoleranceType>();
+    [HideInInspector] public BillSeparation BillSeparation;
 
 }
