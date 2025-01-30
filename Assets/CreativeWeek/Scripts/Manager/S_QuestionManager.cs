@@ -50,10 +50,9 @@ public class S_QuestionManager : MonoBehaviour
 
     void TcheckAnswer(Answer answer)
     {
-        var currentProfil = _rsoCurrentProfile.Value;
-        //var currentProfil = new Profil();
-        //currentProfil.Intolerances = new List<IntoleranceType>();
-        //currentProfil.Intolerances.Add(IntoleranceType.Gluten);
+        //var currentProfil = _rsoCurrentProfile.Value;
+        var currentProfil = new Profil();
+        currentProfil.Intolerances.Add(IntoleranceType.Gluten);
         //currentProfil.Intolerances.Add(IntoleranceType.Lactose);
         //currentProfil.Intolerances.Add(IntoleranceType.NutsFruits);
 

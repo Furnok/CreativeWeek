@@ -201,7 +201,7 @@ public class S_QuestionAnswerUI : MonoBehaviour
 
     void ClearAnswer()
     {
-        //_textQuestion.text = "";
+        _textDate.text = "";
 
         foreach (var answer in _answersList)
         {

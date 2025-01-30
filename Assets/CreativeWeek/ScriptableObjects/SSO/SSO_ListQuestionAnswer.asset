@@ -24,7 +24,7 @@ MonoBehaviour:
       CharmeIfValidAnswer: 10
       CharmeIfUnvalidAnswer: -10
       ConditionIn:
-        DrinkPreference: 0
+        DrinkPreference: 1
         DietType: 0
         BillSeparation: 0
         IntoleranceType: 

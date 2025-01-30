@@ -43,19 +43,24 @@ public class S_Answer : MonoBehaviour
 
     public void CallAnswerVerification()
     {
-        if(_speechAnswer.Equals(default(SpeechQuestion)) == true)
+        if(_speechAnswer.Equals(default(SpeechAnswer)) == false)
         {
             Debug.Log("b");
+            _rseOnAnswerGive.RaiseEvent();
+
+
+            _rseOnSpeechAnswerGive.RaiseEvent(_speechAnswer);
+
+
+        }
+        if (_answer.Equals(default(Answer)) == false)
+        {
+            Debug.Log("c");
+            _rseOnAnswerGive.RaiseEvent();
 
             _rseOnAnswerGiveToQuestion.RaiseEvent(_answer);
 
-        }
-        if(_answer.Equals(default(Answer)) == true)
-        {
-            Debug.Log("c");
 
-            _rseOnSpeechAnswerGive.RaiseEvent(_speechAnswer);
         }
-        _rseOnAnswerGive.RaiseEvent();
     }
 }

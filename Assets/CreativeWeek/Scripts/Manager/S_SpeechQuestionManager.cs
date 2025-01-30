@@ -104,7 +104,7 @@ public class S_SpeechQuestionManager : MonoBehaviour
         {
             _rseUpdateCharm.RaiseEvent(speechAnswer.CharmeAnswerGive);
 
-            _rseOnDateAnswering.RaiseEvent(speechAnswer.ReplyContent);
+            //_rseOnDateAnswering.RaiseEvent(speechAnswer.ReplyContent);
 
             _rseProfilStateChange.RaiseEvent(ProfilState.Happy);
         }
@@ -112,7 +112,7 @@ public class S_SpeechQuestionManager : MonoBehaviour
         {
             _rseUpdateCharm.RaiseEvent(speechAnswer.CharmeAnswerGive);
 
-            _rseOnDateAnswering.RaiseEvent(speechAnswer.ReplyContent);
+            //_rseOnDateAnswering.RaiseEvent(speechAnswer.ReplyContent);
 
             _rseProfilStateChange.RaiseEvent(ProfilState.Angry);
         }
