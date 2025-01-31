@@ -305,14 +305,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIGamePrepaManager
       objectReference: {fileID: 0}
-    - target: {fileID: 6337310724446720010, guid: 1620c71982c04634e9721a4649f7775f, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6337310724446720010, guid: 1620c71982c04634e9721a4649f7775f, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7409823416880679172, guid: 1620c71982c04634e9721a4649f7775f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
