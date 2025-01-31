@@ -13,48 +13,10 @@ MonoBehaviour:
   m_Name: SSO_ListDisturbingEvent
   m_EditorClassIdentifier: 
   _value:
-<<<<<<< Updated upstream
-  - NameEvent: Serveur
-    EventContent: Apporte un plat
-    TimeToAnswer: 0
-    Sprite: {fileID: 21300000, guid: 48ab50dd11c2af84fb2796e57949c63f, type: 3}
-    PositionSprite: {x: -100, y: 0}
-    ActifEventAnswer: []
-  - NameEvent: Vendeur de Rose
-    EventContent: Vend des roses
-    TimeToAnswer: 0
-    Sprite: {fileID: 21300000, guid: 65520ac5608184347a8cc81abf92ef61, type: 3}
-    PositionSprite: {x: -100, y: 0}
-    ActifEventAnswer: []
-  - NameEvent: SDF
-    EventContent: Veut de l'argent
-    TimeToAnswer: 0
-    Sprite: {fileID: 21300000, guid: a1b4e4c044405f54bab144d27847afa5, type: 3}
-    PositionSprite: {x: -100, y: 0}
-    ActifEventAnswer: []
-  - NameEvent: Chien
-    EventContent: "Joue \xE0 la balle"
-    TimeToAnswer: 0
-    Sprite: {fileID: 21300000, guid: 32d0ad51698190a4bb8fd41fbb7059ab, type: 3}
-    PositionSprite: {x: -100, y: 0}
-    ActifEventAnswer: []
-  - NameEvent: Enfant
-    EventContent: Chiant
-    TimeToAnswer: 0
-    Sprite: {fileID: 21300000, guid: d8c8ba83060f94e44a6fe5995027cb18, type: 3}
-    PositionSprite: {x: -100, y: 0}
-    ActifEventAnswer: []
-  - NameEvent: Mariachis
-    EventContent: Chiant
-    TimeToAnswer: 0
-    Sprite: {fileID: 21300000, guid: 71c15a0510df4784791d2c302fb0e47a, type: 3}
-    PositionSprite: {x: -100, y: 0}
-    ActifEventAnswer: []
-=======
   - NameEvent: Server Beer Pong Fan
     EventContent: It seems the server is fan of your dark beer pong past.
     TimeToAnswer: 10
-    Sprite: {fileID: 0}
+    Sprite: {fileID: 21300000, guid: 48ab50dd11c2af84fb2796e57949c63f, type: 3}
     PositionSprite: {x: -100, y: 0}
     ActifEventAnswer:
     - AnswerName: Admit
@@ -88,7 +50,7 @@ MonoBehaviour:
   - NameEvent: Roses Seller
     EventContent: A roses seller appeared, should I buy one?
     TimeToAnswer: 10
-    Sprite: {fileID: 0}
+    Sprite: {fileID: 21300000, guid: 65520ac5608184347a8cc81abf92ef61, type: 3}
     PositionSprite: {x: -100, y: 0}
     ActifEventAnswer:
     - AnswerName: Send Away
@@ -150,7 +112,7 @@ MonoBehaviour:
   - NameEvent: SDF Encounter
     EventContent: An homeless grandpa stare at you.
     TimeToAnswer: 10
-    Sprite: {fileID: 0}
+    Sprite: {fileID: 21300000, guid: a1b4e4c044405f54bab144d27847afa5, type: 3}
     PositionSprite: {x: -100, y: 0}
     ActifEventAnswer:
     - AnswerName: Send Away
@@ -212,7 +174,7 @@ MonoBehaviour:
   - NameEvent: Barking Dog
     EventContent: A barking dog appeared! What should I do!?
     TimeToAnswer: 10
-    Sprite: {fileID: 0}
+    Sprite: {fileID: 21300000, guid: 32d0ad51698190a4bb8fd41fbb7059ab, type: 3}
     PositionSprite: {x: -100, y: 0}
     ActifEventAnswer:
     - AnswerName: Send Away
@@ -257,4 +219,3 @@ MonoBehaviour:
         CharmeAdd: 10
       CanUseItems: 1
       ItemIdLink: 3
->>>>>>> Stashed changes
