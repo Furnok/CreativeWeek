@@ -34,7 +34,7 @@ public class S_UIPrepaManager : MonoBehaviour
 
         panelProfil.SetActive(true);
 
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(100000f);
 
         panelFond.SetActive(false);
         panelPhone.SetActive(false);
