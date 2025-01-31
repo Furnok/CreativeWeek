@@ -30,9 +30,11 @@ public class S_UIToilet : MonoBehaviour
     private void EnterToilet()
     {
         toiletPanel.SetActive(true);
+        audioMixer.SetFloat("SFX_Volume", -20);
     }
     private void ExitToilet()
     {
         toiletPanel.SetActive(false);
+        audioMixer.SetFloat("SFX_Volume", 0);
     }
 }
