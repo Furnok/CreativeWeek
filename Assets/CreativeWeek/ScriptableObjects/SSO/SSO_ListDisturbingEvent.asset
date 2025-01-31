@@ -17,7 +17,7 @@ MonoBehaviour:
     EventContent: It seems the server is fan of your dark beer pong past.
     TimeToAnswer: 10
     Sprite: {fileID: 21300000, guid: 35bd378d758dfcf42b70fc9e59e80cd9, type: 3}
-    AudioClip: {fileID: 0}
+    AudioClip: {fileID: 8300000, guid: 27821e5c8d9cd3f42a52db68808d9260, type: 3}
     PositionSprite: {x: -100, y: 0}
     ActifEventAnswer:
     - AnswerName: Admit
@@ -38,21 +38,35 @@ MonoBehaviour:
       AnswerButtonContent: Send away with dry manner
       ReplyByDateTypes:
       - ProfilType: 0
-        DateReplyThought: We all have a dark past.
-        CharmeAdd: 20
+        DateReplyThought: Respect the staff dude!
+        CharmeAdd: -10
       - ProfilType: 2
-        DateReplyThought: I hate athletes!
-        CharmeAdd: -20
+        DateReplyThought: Is he lying?
+        CharmeAdd: -30
       - ProfilType: 1
-        DateReplyThought: I hope he hasn't lost his touch!
+        DateReplyThought: Where are the manners of the small staff!
         CharmeAdd: 20
       CanUseItems: 0
       ItemIdLink: 0
+    - AnswerName: Beer Pong
+      AnswerButtonContent: Autograph on Plastic Cup
+      ReplyByDateTypes:
+      - ProfilType: 0
+        DateReplyThought: Respect the staff dude!
+        CharmeAdd: 20
+      - ProfilType: 2
+        DateReplyThought: Is he lying?
+        CharmeAdd: 20
+      - ProfilType: 1
+        DateReplyThought: Where are the manners of the small staff!
+        CharmeAdd: -20
+      CanUseItems: 1
+      ItemIdLink: 23
   - NameEvent: Roses Seller
     EventContent: A roses seller appeared, should I buy one?
     TimeToAnswer: 10
     Sprite: {fileID: 21300000, guid: 65520ac5608184347a8cc81abf92ef61, type: 3}
-    AudioClip: {fileID: 0}
+    AudioClip: {fileID: 8300000, guid: b764f0a2426d1274a97c37ba9b15cc18, type: 3}
     PositionSprite: {x: -100, y: 0}
     ActifEventAnswer:
     - AnswerName: Send Away
@@ -115,7 +129,7 @@ MonoBehaviour:
     EventContent: An homeless grandpa stare at you.
     TimeToAnswer: 10
     Sprite: {fileID: 21300000, guid: 2153abf242996e44493f37b20e75fe1f, type: 3}
-    AudioClip: {fileID: 0}
+    AudioClip: {fileID: 8300000, guid: 76765b7f7986f374d8e28d8921ae143a, type: 3}
     PositionSprite: {x: -100, y: 0}
     ActifEventAnswer:
     - AnswerName: Send Away
@@ -178,7 +192,7 @@ MonoBehaviour:
     EventContent: A barking dog appeared! What should I do!?
     TimeToAnswer: 10
     Sprite: {fileID: 21300000, guid: d913c01a1850c0e4db10fe7ca6086926, type: 3}
-    AudioClip: {fileID: 0}
+    AudioClip: {fileID: 8300000, guid: 83bd3d994b512744bbc4c00fc6688f0c, type: 3}
     PositionSprite: {x: -100, y: 0}
     ActifEventAnswer:
     - AnswerName: Send Away
@@ -223,3 +237,354 @@ MonoBehaviour:
         CharmeAdd: 10
       CanUseItems: 1
       ItemIdLink: 3
+  - NameEvent: Kid Encounter
+    EventContent: A kids come watch you
+    TimeToAnswer: 10
+    Sprite: {fileID: 21300000, guid: d79ec968774a1a54a9b7f4591233ffd0, type: 3}
+    AudioClip: {fileID: 8300000, guid: 1c13f8362c423074f88f6f7cc80f152a, type: 3}
+    PositionSprite: {x: -100, y: 0}
+    ActifEventAnswer:
+    - AnswerName: Send Away
+      AnswerButtonContent: Send Away
+      ReplyByDateTypes:
+      - ProfilType: 0
+        DateReplyThought: Bad Boy!
+        CharmeAdd: -10
+      - ProfilType: 2
+        DateReplyThought: That's not cool dude!
+        CharmeAdd: -10
+      - ProfilType: 1
+        DateReplyThought: Yeah! Go back to the street!
+        CharmeAdd: 10
+      CanUseItems: 0
+      ItemIdLink: 0
+    - AnswerName: Pepper Spray
+      AnswerButtonContent: Use a Pepper Spray
+      ReplyByDateTypes:
+      - ProfilType: 0
+        DateReplyThought: Oh No! Bad boy! Bad!
+        CharmeAdd: -20
+      - ProfilType: 2
+        DateReplyThought: '*Shocked*'
+        CharmeAdd: -20
+      - ProfilType: 1
+        DateReplyThought: That's violent.
+        CharmeAdd: -10
+      CanUseItems: 1
+      ItemIdLink: 9
+    - AnswerName: Give Joint
+      AnswerButtonContent: Give Joint
+      ReplyByDateTypes:
+      - ProfilType: 0
+        DateReplyThought: "Ooooh\u2026"
+        CharmeAdd: 10
+      - ProfilType: 2
+        DateReplyThought: Take that zoot kiddo!
+        CharmeAdd: 10
+      - ProfilType: 1
+        DateReplyThought: Filthy kids I hate drugs!
+        CharmeAdd: -100
+      CanUseItems: 1
+      ItemIdLink: 18
+    - AnswerName: Gameboy
+      AnswerButtonContent: Give Gameboy
+      ReplyByDateTypes:
+      - ProfilType: 0
+        DateReplyThought: What a nice person.
+        CharmeAdd: 10
+      - ProfilType: 2
+        DateReplyThought: I wanted this vintage gameboy.
+        CharmeAdd: -10
+      - ProfilType: 1
+        DateReplyThought: "Giving away its stuff\u2026 What a bad invest."
+        CharmeAdd: -10
+      CanUseItems: 1
+      ItemIdLink: 7
+  - NameEvent: Kid Dessert
+    EventContent: A kids come ask you
+    TimeToAnswer: 10
+    Sprite: {fileID: 21300000, guid: d79ec968774a1a54a9b7f4591233ffd0, type: 3}
+    AudioClip: {fileID: 8300000, guid: b4e8d063647294e4cb83517caf05a682, type: 3}
+    PositionSprite: {x: -100, y: 0}
+    ActifEventAnswer:
+    - AnswerName: Send Away
+      AnswerButtonContent: Send Away
+      ReplyByDateTypes:
+      - ProfilType: 0
+        DateReplyThought: Too bad!
+        CharmeAdd: -10
+      - ProfilType: 2
+        DateReplyThought: He can share is dessert! Cad!
+        CharmeAdd: -10
+      - ProfilType: 1
+        DateReplyThought: Ask to your mom filthy brat!
+        CharmeAdd: 10
+      CanUseItems: 0
+      ItemIdLink: 0
+    - AnswerName: Choco
+      AnswerButtonContent: Give Chocolate
+      ReplyByDateTypes:
+      - ProfilType: 0
+        DateReplyThought: Cool!
+        CharmeAdd: 10
+      - ProfilType: 2
+        DateReplyThought: So sweet!
+        CharmeAdd: 20
+      - ProfilType: 1
+        DateReplyThought: What a waste!
+        CharmeAdd: -20
+      CanUseItems: 1
+      ItemIdLink: 13
+    - AnswerName: Plant
+      AnswerButtonContent: Give Plant
+      ReplyByDateTypes:
+      - ProfilType: 0
+        DateReplyThought: 'Not cool men! '
+        CharmeAdd: -20
+      - ProfilType: 2
+        DateReplyThought: It's a kid, not a goat.
+        CharmeAdd: -20
+      - ProfilType: 1
+        DateReplyThought: Haha, you'll see, it makes you grow.
+        CharmeAdd: 20
+      CanUseItems: 1
+      ItemIdLink: 21
+    - AnswerName: Slap
+      AnswerButtonContent: Slap Kid
+      ReplyByDateTypes:
+      - ProfilType: 0
+        DateReplyThought: I've been through some tough ones too.
+        CharmeAdd: -10
+      - ProfilType: 2
+        DateReplyThought: '*Shocked*'
+        CharmeAdd: -30
+      - ProfilType: 1
+        DateReplyThought: I'd like you slap me!
+        CharmeAdd: 20
+      CanUseItems: 0
+      ItemIdLink: 0
+  - NameEvent: SDF Want Drink
+    EventContent: Homeless guy entering in the restrant looking for something to
+      drink
+    TimeToAnswer: 10
+    Sprite: {fileID: 21300000, guid: 2153abf242996e44493f37b20e75fe1f, type: 3}
+    AudioClip: {fileID: 8300000, guid: 0dfbdd73a344bfd4c87ea7cb6e29c71b, type: 3}
+    PositionSprite: {x: -100, y: 0}
+    ActifEventAnswer:
+    - AnswerName: Send Away
+      AnswerButtonContent: Send Away
+      ReplyByDateTypes:
+      - ProfilType: 0
+        DateReplyThought: He just has a dry throat.
+        CharmeAdd: -10
+      - ProfilType: 2
+        DateReplyThought: Selfish!
+        CharmeAdd: -10
+      - ProfilType: 1
+        DateReplyThought: If you share something, it's with me!
+        CharmeAdd: 10
+      CanUseItems: 0
+      ItemIdLink: 0
+    - AnswerName: Water
+      AnswerButtonContent: Give Water Bottle
+      ReplyByDateTypes:
+      - ProfilType: 0
+        DateReplyThought: "Hmm\u2026"
+        CharmeAdd: 0
+      - ProfilType: 2
+        DateReplyThought: This man needed it!
+        CharmeAdd: 10
+      - ProfilType: 1
+        DateReplyThought: He doesn't pay enough attention to me!
+        CharmeAdd: -10
+      CanUseItems: 1
+      ItemIdLink: 20
+    - AnswerName: Flask
+      AnswerButtonContent: Give Alcohol Flask
+      ReplyByDateTypes:
+      - ProfilType: 0
+        DateReplyThought: Fight fire with fire, I like that!
+        CharmeAdd: 10
+      - ProfilType: 2
+        DateReplyThought: Poor men.
+        CharmeAdd: -10
+      - ProfilType: 1
+        DateReplyThought: He is already cooked.
+        CharmeAdd: -20
+      CanUseItems: 1
+      ItemIdLink: 16
+  - NameEvent: SDF Book
+    EventContent: Homeless guy entering in the restrant selling his book
+    TimeToAnswer: 10
+    Sprite: {fileID: 21300000, guid: 2153abf242996e44493f37b20e75fe1f, type: 3}
+    AudioClip: {fileID: 8300000, guid: e0cf8d1f530d7a94db79945a8607e830, type: 3}
+    PositionSprite: {x: -100, y: 0}
+    ActifEventAnswer:
+    - AnswerName: Send Away
+      AnswerButtonContent: Send Away
+      ReplyByDateTypes:
+      - ProfilType: 0
+        DateReplyThought: You can't learn life from books.
+        CharmeAdd: -10
+      - ProfilType: 2
+        DateReplyThought: 'Is focus on me. '
+        CharmeAdd: 0
+      - ProfilType: 1
+        DateReplyThought: He misses an opportunity.
+        CharmeAdd: -10
+      CanUseItems: 0
+      ItemIdLink: 0
+    - AnswerName: Book
+      AnswerButtonContent: Show Book
+      ReplyByDateTypes:
+      - ProfilType: 0
+        DateReplyThought: That's not rolling paper.
+        CharmeAdd: -20
+      - ProfilType: 2
+        DateReplyThought: Personal development... It's spiritually interesting.
+        CharmeAdd: 20
+      - ProfilType: 1
+        DateReplyThought: I'm sure is a selfmademan.
+        CharmeAdd: 20
+      CanUseItems: 1
+      ItemIdLink: 25
+    - AnswerName: Cash
+      AnswerButtonContent: Buy Book
+      ReplyByDateTypes:
+      - ProfilType: 0
+        DateReplyThought: I'd rather he bought toilet paper than this shit!
+        CharmeAdd: -20
+      - ProfilType: 2
+        DateReplyThought: He want to impress me?
+        CharmeAdd: 10
+      - ProfilType: 1
+        DateReplyThought: He knows how to spot a good deal.
+        CharmeAdd: 20
+      CanUseItems: 1
+      ItemIdLink: 4
+  - NameEvent: Kid read
+    EventContent: A kids come ask you
+    TimeToAnswer: 10
+    Sprite: {fileID: 21300000, guid: d79ec968774a1a54a9b7f4591233ffd0, type: 3}
+    AudioClip: {fileID: 8300000, guid: 3fc756a25be2a244b88a39814196f9b4, type: 3}
+    PositionSprite: {x: -100, y: 0}
+    ActifEventAnswer:
+    - AnswerName: no read
+      AnswerButtonContent: I don't read
+      ReplyByDateTypes:
+      - ProfilType: 0
+        DateReplyThought: Same!
+        CharmeAdd: 20
+      - ProfilType: 2
+        DateReplyThought: Reading is soul fuel!
+        CharmeAdd: -20
+      - ProfilType: 1
+        DateReplyThought: Shakespear rolls over in his grave!
+        CharmeAdd: 20
+      CanUseItems: 0
+      ItemIdLink: 0
+    - AnswerName: No book
+      AnswerButtonContent: I don't have a book with me
+      ReplyByDateTypes:
+      - ProfilType: 0
+        DateReplyThought: What's a book for?
+        CharmeAdd: 10
+      - ProfilType: 2
+        DateReplyThought: Not even a pocket book?
+        CharmeAdd: -20
+      - ProfilType: 1
+        DateReplyThought: At least he can read.
+        CharmeAdd: -10
+      CanUseItems: 0
+      ItemIdLink: 0
+    - AnswerName: Playboy
+      AnswerButtonContent: Give Playboy
+      ReplyByDateTypes:
+      - ProfilType: 0
+        DateReplyThought: That's my boy!
+        CharmeAdd: 20
+      - ProfilType: 2
+        DateReplyThought: Disgusting!
+        CharmeAdd: -30
+      - ProfilType: 1
+        DateReplyThought: Classic!
+        CharmeAdd: 30
+      CanUseItems: 1
+      ItemIdLink: 22
+    - AnswerName: Personal development book
+      AnswerButtonContent: Give personal development book
+      ReplyByDateTypes:
+      - ProfilType: 0
+        DateReplyThought: Education is not good for my business.
+        CharmeAdd: -20
+      - ProfilType: 2
+        DateReplyThought: Open your chakra!
+        CharmeAdd: 20
+      - ProfilType: 1
+        DateReplyThought: Let him develop his mindset!
+        CharmeAdd: 20
+      CanUseItems: 1
+      ItemIdLink: 25
+  - NameEvent: Mariachi
+    EventContent: Mariachi come to your table, he play music.
+    TimeToAnswer: 10
+    Sprite: {fileID: 21300000, guid: 71c15a0510df4784791d2c302fb0e47a, type: 3}
+    AudioClip: {fileID: 8300000, guid: 92351d30e60bfd14dad62e155af6bdd6, type: 3}
+    PositionSprite: {x: -100, y: 0}
+    ActifEventAnswer:
+    - AnswerName: Applaud
+      AnswerButtonContent: Applaud
+      ReplyByDateTypes:
+      - ProfilType: 0
+        DateReplyThought: 'He like this? '
+        CharmeAdd: 0
+      - ProfilType: 2
+        DateReplyThought: World music!
+        CharmeAdd: 20
+      - ProfilType: 1
+        DateReplyThought: There's already too much noise  over here
+        CharmeAdd: -20
+      CanUseItems: 0
+      ItemIdLink: 0
+    - AnswerName: Rant
+      AnswerButtonContent: Rant
+      ReplyByDateTypes:
+      - ProfilType: 0
+        DateReplyThought: He's something else.
+        CharmeAdd: 10
+      - ProfilType: 2
+        DateReplyThought: He doesn't know how to enjoy.
+        CharmeAdd: -20
+      - ProfilType: 1
+        DateReplyThought: He knows how to get over the problems.
+        CharmeAdd: 20
+      CanUseItems: 0
+      ItemIdLink: 0
+    - AnswerName: Underwear throwing
+      AnswerButtonContent: Throw Underwear
+      ReplyByDateTypes:
+      - ProfilType: 0
+        DateReplyThought: What was that?
+        CharmeAdd: 0
+      - ProfilType: 2
+        DateReplyThought: He's so into it!
+        CharmeAdd: 20
+      - ProfilType: 1
+        DateReplyThought: He could have keep it for me.
+        CharmeAdd: -20
+      CanUseItems: 1
+      ItemIdLink: 19
+    - AnswerName: Recorder
+      AnswerButtonContent: Use Recorder
+      ReplyByDateTypes:
+      - ProfilType: 0
+        DateReplyThought: Copyright dude!
+        CharmeAdd: -20
+      - ProfilType: 2
+        DateReplyThought: We will listen it again later.
+        CharmeAdd: 0
+      - ProfilType: 1
+        DateReplyThought: I know a good producer, he could use that recording.
+        CharmeAdd: 20
+      CanUseItems: 1
+      ItemIdLink: 24
