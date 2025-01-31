@@ -5,7 +5,8 @@ public class S_MariachiEvent : MonoBehaviour
 {
     [Header("Parameters")]
     [SerializeField] float delayMariachiSound;
-    //[Header("References")]
+    [Header("References")]
+    [SerializeField] GameObject SpriteMariachi;
 
     [Header("RSE")]
     [SerializeField] RSE_IsTextDisturbed RSE_IsTextDisturbed;
@@ -26,6 +27,7 @@ public class S_MariachiEvent : MonoBehaviour
     }
     private void MariachiEvent()
     {
+        SpriteMariachi.SetActive(true);
         RSE_PlaySoundMariachi?.RaiseEvent();
         StartCoroutine(DisplayDisturbedText(delayMariachiSound));
     }
@@ -34,5 +36,6 @@ public class S_MariachiEvent : MonoBehaviour
         RSE_IsTextDisturbed?.RaiseEvent(true);
         yield return new WaitForSeconds(delay);
         RSE_IsTextDisturbed?.RaiseEvent(false);
+        SpriteMariachi.SetActive(false);
     }
 }
