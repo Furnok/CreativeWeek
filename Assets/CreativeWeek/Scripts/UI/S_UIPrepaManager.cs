@@ -11,6 +11,7 @@ public class S_UIPrepaManager : MonoBehaviour
     [SerializeField] private GameObject panelTel;
     [SerializeField] private GameObject panelMatch;
     [SerializeField] private GameObject panelProfil;
+    [SerializeField] private GameObject panelButtonPhone;
 
     [Header("RSE")]
     [SerializeField] private RSE_StartTimerPrepa rseStartTimerPrepa;
@@ -20,6 +21,7 @@ public class S_UIPrepaManager : MonoBehaviour
     [SerializeField] private RSE_PlaySound rsePlaySoundNotif;
     [SerializeField] private RSE_PlaySound rsePlaySoundMatch;
     [SerializeField] private RSE_PlaySound rsePlaySoundMusic;
+    [SerializeField] private RSE_RemovePhone rseRemovePhone;
 
     private IEnumerator StartIntro()
     {
@@ -41,24 +43,12 @@ public class S_UIPrepaManager : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         panelProfil.SetActive(true);
-
-        yield return new WaitForSeconds(100000f);
-
-        panelFond.SetActive(false);
-        panelPhone.SetActive(false);
-        panelTel.SetActive(false);
-        panelMatch.SetActive(false);
-        panelProfil.SetActive(false);
-
-        rsePlaySoundMusic.RaiseEvent();
-
-        rseStartTimerPrepa?.RaiseEvent();
+        panelButtonPhone.SetActive(true);
     }
 
     private void Start()
     {
-        //StartCoroutine(StartIntro());
-        rseStartTimerPrepa?.RaiseEvent();
+        StartCoroutine(StartIntro());
     }
 
     private void OnEnable()
@@ -66,6 +56,7 @@ public class S_UIPrepaManager : MonoBehaviour
         rseEndTimer.action += LauchDate;
         callPause.action += ShowPause;
         unCallPause.action += UnShowPause;
+        rseRemovePhone.action += LauchPrepa;
     }
 
     private void OnDisable()
@@ -73,6 +64,7 @@ public class S_UIPrepaManager : MonoBehaviour
         rseEndTimer.action -= LauchDate;
         callPause.action -= ShowPause;
         unCallPause.action -= UnShowPause;
+        rseRemovePhone.action -= LauchPrepa;
 
         Time.timeScale = 1;
     }
@@ -113,5 +105,18 @@ public class S_UIPrepaManager : MonoBehaviour
     private void LauchDate()
     {
         SceneManager.LoadScene("Scene_Date");
+    }
+
+    private void LauchPrepa()
+    {
+        panelFond.SetActive(false);
+        panelPhone.SetActive(false);
+        panelTel.SetActive(false);
+        panelMatch.SetActive(false);
+        panelProfil.SetActive(false);
+
+        rsePlaySoundMusic.RaiseEvent();
+
+        rseStartTimerPrepa?.RaiseEvent();
     }
 }
