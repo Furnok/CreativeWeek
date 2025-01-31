@@ -18,7 +18,7 @@ MonoBehaviour:
     TimeToAnswer: 10
     Sprite: {fileID: 21300000, guid: 35bd378d758dfcf42b70fc9e59e80cd9, type: 3}
     AudioClip: {fileID: 8300000, guid: 27821e5c8d9cd3f42a52db68808d9260, type: 3}
-    PositionSprite: {x: -100, y: 0}
+    PositionSprite: {x: 80, y: -220}
     ActifEventAnswer:
     - AnswerName: Admit
       AnswerButtonContent: Admit it's your dark past
@@ -67,7 +67,7 @@ MonoBehaviour:
     TimeToAnswer: 10
     Sprite: {fileID: 21300000, guid: 65520ac5608184347a8cc81abf92ef61, type: 3}
     AudioClip: {fileID: 8300000, guid: b764f0a2426d1274a97c37ba9b15cc18, type: 3}
-    PositionSprite: {x: -100, y: 0}
+    PositionSprite: {x: 80, y: -220}
     ActifEventAnswer:
     - AnswerName: Send Away
       AnswerButtonContent: Send Away
@@ -130,7 +130,7 @@ MonoBehaviour:
     TimeToAnswer: 10
     Sprite: {fileID: 21300000, guid: 2153abf242996e44493f37b20e75fe1f, type: 3}
     AudioClip: {fileID: 8300000, guid: 76765b7f7986f374d8e28d8921ae143a, type: 3}
-    PositionSprite: {x: -100, y: 0}
+    PositionSprite: {x: 80, y: -220}
     ActifEventAnswer:
     - AnswerName: Send Away
       AnswerButtonContent: Send Away
@@ -193,7 +193,7 @@ MonoBehaviour:
     TimeToAnswer: 10
     Sprite: {fileID: 21300000, guid: d913c01a1850c0e4db10fe7ca6086926, type: 3}
     AudioClip: {fileID: 8300000, guid: 83bd3d994b512744bbc4c00fc6688f0c, type: 3}
-    PositionSprite: {x: -100, y: 0}
+    PositionSprite: {x: 80, y: -220}
     ActifEventAnswer:
     - AnswerName: Send Away
       AnswerButtonContent: Send Away
@@ -242,7 +242,7 @@ MonoBehaviour:
     TimeToAnswer: 10
     Sprite: {fileID: 21300000, guid: d79ec968774a1a54a9b7f4591233ffd0, type: 3}
     AudioClip: {fileID: 8300000, guid: 1c13f8362c423074f88f6f7cc80f152a, type: 3}
-    PositionSprite: {x: -100, y: 0}
+    PositionSprite: {x: 80, y: -220}
     ActifEventAnswer:
     - AnswerName: Send Away
       AnswerButtonContent: Send Away
@@ -305,7 +305,7 @@ MonoBehaviour:
     TimeToAnswer: 10
     Sprite: {fileID: 21300000, guid: d79ec968774a1a54a9b7f4591233ffd0, type: 3}
     AudioClip: {fileID: 8300000, guid: b4e8d063647294e4cb83517caf05a682, type: 3}
-    PositionSprite: {x: -100, y: 0}
+    PositionSprite: {x: 80, y: -220}
     ActifEventAnswer:
     - AnswerName: Send Away
       AnswerButtonContent: Send Away
@@ -369,7 +369,7 @@ MonoBehaviour:
     TimeToAnswer: 10
     Sprite: {fileID: 21300000, guid: 2153abf242996e44493f37b20e75fe1f, type: 3}
     AudioClip: {fileID: 8300000, guid: 0dfbdd73a344bfd4c87ea7cb6e29c71b, type: 3}
-    PositionSprite: {x: -100, y: 0}
+    PositionSprite: {x: 80, y: -220}
     ActifEventAnswer:
     - AnswerName: Send Away
       AnswerButtonContent: Send Away
@@ -418,7 +418,7 @@ MonoBehaviour:
     TimeToAnswer: 10
     Sprite: {fileID: 21300000, guid: 2153abf242996e44493f37b20e75fe1f, type: 3}
     AudioClip: {fileID: 8300000, guid: e0cf8d1f530d7a94db79945a8607e830, type: 3}
-    PositionSprite: {x: -100, y: 0}
+    PositionSprite: {x: 80, y: -220}
     ActifEventAnswer:
     - AnswerName: Send Away
       AnswerButtonContent: Send Away
@@ -467,7 +467,7 @@ MonoBehaviour:
     TimeToAnswer: 10
     Sprite: {fileID: 21300000, guid: d79ec968774a1a54a9b7f4591233ffd0, type: 3}
     AudioClip: {fileID: 8300000, guid: 3fc756a25be2a244b88a39814196f9b4, type: 3}
-    PositionSprite: {x: -100, y: 0}
+    PositionSprite: {x: 80, y: -220}
     ActifEventAnswer:
     - AnswerName: no read
       AnswerButtonContent: I don't read
@@ -530,7 +530,7 @@ MonoBehaviour:
     TimeToAnswer: 10
     Sprite: {fileID: 21300000, guid: 71c15a0510df4784791d2c302fb0e47a, type: 3}
     AudioClip: {fileID: 8300000, guid: 92351d30e60bfd14dad62e155af6bdd6, type: 3}
-    PositionSprite: {x: -100, y: 0}
+    PositionSprite: {x: 80, y: -160}
     ActifEventAnswer:
     - AnswerName: Applaud
       AnswerButtonContent: Applaud
