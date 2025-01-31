@@ -231,22 +231,22 @@ public class S_DateManager : MonoBehaviour
             case ProfilType.Babos:
                 if (_rsoCurrentListObject.Value.Exists(item => item.Index == 0))
                 {
-                    _OnGoodPresentation.RaiseEvent("I don't like your style but I'm open minded.\r\nI'm Meloe.");
+                    _OnBadPresentation.RaiseEvent("I don't like your style but I'm open minded.\r\nI'm Meloe.");
 
                 }
                 else if (_rsoCurrentListObject.Value.Exists(item => item.Index == 1))
                 {
-                    _OnBadPresentation.RaiseEvent("Hey! Nice to meet you my name is Meloe\r\nI love your outfit, is it made of vegetal fibers?!");
+                    _OnGoodPresentation.RaiseEvent("Hey! Nice to meet you my name is Meloe\r\nI love your outfit, is it made of vegetal fibers?!");
 
                 }
                 else if (_rsoCurrentListObject.Value.Exists(item => item.Index == 2))
                 {
-                    _OnGoodPresentation.RaiseEvent("You look like you would destroy the planet for your own profit.\r\nNope, I'm out of here!");
+                    _OnBadPresentation.RaiseEvent("You look like you would destroy the planet for your own profit.\r\nNope, I'm out of here!");
 
                 }
                 else if (_rsoCurrentListObject.Value.Exists(item => item.Index == 0) == false && _rsoCurrentListObject.Value.Exists(item => item.Index == 1) == false && _rsoCurrentListObject.Value.Exists(item => item.Index == 2) == false)
                 {
-                    _OnBadPresentation.RaiseEvent("Natural, I love it!\r\nI'm Meloe, nice to meet you.");
+                    _OnGoodPresentation.RaiseEvent("Natural, I love it!\r\nI'm Meloe, nice to meet you.");
 
                 }
                 break;

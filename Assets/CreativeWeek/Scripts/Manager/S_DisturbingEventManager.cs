@@ -123,7 +123,7 @@ public class S_DisturbingEventManager : MonoBehaviour
     {
         _uiElementEvent.anchoredPosition = _offscreenPosition;
 
-        //_playSoundActifEvent.RaiseEvent(disturbingActifEvent?.AudioClip); // enlever le point quand les auio clip sont mis
+        _playSoundActifEvent.RaiseEvent(disturbingActifEvent?.AudioClip); // enlever le point quand les auio clip sont mis
 
         StartCoroutine(MoveToPosition(disturbingActifEvent.PositionSprite, _moveDuration));
     }
@@ -289,6 +289,8 @@ public class S_DisturbingEventManager : MonoBehaviour
 
 
         ClearAnswer();
+        StartCoroutine(MoveBackoffScreen(_offscreenPosition, _moveDuration));
+
         //_audioSource.Stop();
 
         _sliderTimeToAnwser.value = 0;
