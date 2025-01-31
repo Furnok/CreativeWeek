@@ -366,6 +366,8 @@ MonoBehaviour:
   RSE_ChooseDoEvent: {fileID: 11400000, guid: e7d1dd0c100d221489347ae8848b37f6, type: 2}
   _rseOnActifEventAnswerGive: {fileID: 11400000, guid: 970c229f922fb17458e496d5af4cd359, type: 2}
   _rseOnActiveEventAnswerGiveToQuestion: {fileID: 11400000, guid: 1ccc6e8745560f947b1b75bf76a1d148, type: 2}
+  _rseUpdateCharm: {fileID: 11400000, guid: e41c6646dbbcac6499fd8e50b3eea620, type: 2}
+  _rseProfilStateChange: {fileID: 11400000, guid: 982e136023cfbcc43bb5a5a05b53ee1f, type: 2}
   RSO_DistrubingEventDone: {fileID: 11400000, guid: eee5cf92d5686f14894cd2d96a456f0f, type: 2}
   _rsoCureentProfil: {fileID: 11400000, guid: eb35386258e8e7e448ebc31f81ace3a3, type: 2}
   _rsoCureentListObject: {fileID: 11400000, guid: 0f3e026b0611e6f48a359d9d7b55928d, type: 2}

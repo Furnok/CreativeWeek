@@ -185,6 +185,7 @@ MonoBehaviour:
   _OnBadPresentation: {fileID: 11400000, guid: fb4c04be6a9d3f848b1499f366257b7a, type: 2}
   _OnGoodPresentation: {fileID: 11400000, guid: e0b89d49e5f059541bd548cd882b53d2, type: 2}
   _rseIsTextDisturbEvent: {fileID: 11400000, guid: e0beecb9fa8a14e41a86ac9e521a31fb, type: 2}
+  _onDateStepChange: {fileID: 11400000, guid: 01fdbe97f9f07434e840732540dde4c4, type: 2}
   _rsoCurrentDateStep: {fileID: 11400000, guid: 8027ce831cfa44d47a13fd5047f94313, type: 2}
   _ssoTimeBetweenCharactereDisplay: {fileID: 11400000, guid: a7a3b86abc75d4c43b23e14c0b510fc1, type: 2}
   _ssoTimeToAnswer: {fileID: 11400000, guid: c0d55d14e14e1094aa8d64d001e79a01, type: 2}
@@ -288,7 +289,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.000061035156, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1002.4813, y: 471.5023}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &5192739904355461616
@@ -538,7 +539,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 1, g: 0.08962262, b: 0.08962262, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

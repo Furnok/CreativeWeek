@@ -24,6 +24,7 @@ public class S_DateManager : MonoBehaviour
     [SerializeField] RSE_OnBadPresentation _OnBadPresentation;
     [SerializeField] RSE_OnGoodPresentation _OnGoodPresentation;
 
+
     [Header("RSO")]
     [SerializeField] RSO_CurrentProfile _rsoCurrentProfile;
     [SerializeField] RSO_CurrentDateStep _rsoCurrentDateStep;

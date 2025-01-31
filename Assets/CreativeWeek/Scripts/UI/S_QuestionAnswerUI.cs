@@ -38,6 +38,9 @@ public class S_QuestionAnswerUI : MonoBehaviour
 
     [SerializeField] RSE_IsTextDisturbed _rseIsTextDisturbEvent;
 
+    [SerializeField] RSE_OnDateStepChange _onDateStepChange;
+
+
     [Header("RSO")]
     [SerializeField] RSO_CurrentDateStep _rsoCurrentDateStep;
 
@@ -338,6 +341,7 @@ public class S_QuestionAnswerUI : MonoBehaviour
         else
         {
             _rsoCurrentDateStep.Value = (DateStep)((int)_rsoCurrentDateStep.Value + 1);
+            _onDateStepChange.RaiseEvent();
             Debug.Log("3");
 
         }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -33,6 +34,9 @@ public class S_DisturbingEventManager : MonoBehaviour
     [SerializeField] RSE_OnActifEventAnswerGive _rseOnActifEventAnswerGive;
     [SerializeField] RSE_OnActifEventAnswerGiveToEvent _rseOnActiveEventAnswerGiveToQuestion;
 
+    [SerializeField] RSE_UpdateCharm _rseUpdateCharm;
+    [SerializeField] RSE_ProfilStateChange _rseProfilStateChange;
+
     [Header("RSO")]
     [SerializeField] RSO_DistrubingEventDone RSO_DistrubingEventDone;
     [SerializeField] RSO_CurrentProfile _rsoCureentProfil;
@@ -54,11 +58,14 @@ public class S_DisturbingEventManager : MonoBehaviour
     {
         RSE_ChooseDoEvent.action += ChooseDoEvent;
         _rseOnActifEventAnswerGive.action += StopTimerCoroutine;
+        _rseOnActiveEventAnswerGiveToQuestion.action += TceckAnswerEventActif;
     }
     private void OnDisable()
     {
         RSE_ChooseDoEvent.action -= ChooseDoEvent;
         _rseOnActifEventAnswerGive.action -= StopTimerCoroutine;
+        _rseOnActiveEventAnswerGiveToQuestion.action -= TceckAnswerEventActif;
+
 
     }
     private void OnDestroy()
@@ -71,7 +78,7 @@ public class S_DisturbingEventManager : MonoBehaviour
 
         _uiElementEvent.anchoredPosition = _offscreenPosition;
 
-        StartCoroutine(MoveToPosition(_targetPosition, _moveDuration));
+        //StartCoroutine(MoveToPosition(_targetPosition, _moveDuration));
     }
     private void ChooseDoEvent()
     {
@@ -93,7 +100,41 @@ public class S_DisturbingEventManager : MonoBehaviour
         {
             RSO_DistrubingEventDone.Value.Add(disturbingActifEvent);
             RSE_CallDoEvent?.RaiseEvent(disturbingActifEvent);
+            MakeEvent();
         }
+    }
+
+    void MakeEvent()
+    {
+        _uiElementEvent.anchoredPosition = _offscreenPosition;
+
+        MoveToPosition(disturbingActifEvent.PositionSprite, _moveDuration);
+    }
+
+    void TceckAnswerEventActif(ActifEventAnswer actifEventAnswer)
+    {
+
+        
+        switch (_rsoCureentProfil.Value.ProfilType)
+        {
+            case ProfilType.Street:
+               
+                break;
+
+            case ProfilType.Babos:
+                
+                break;
+
+            case ProfilType.Rich:
+                
+                break;
+        }
+    
+
+
+    _rseUpdateCharm.RaiseEvent(actifEventAnswer.ReplyByDateTypes[0].CharmeAdd); //will change
+
+        _rseProfilStateChange.RaiseEvent(ProfilState.Happy);
     }
 
     IEnumerator EventTextDisplaying(DisturbingActifEvent disturbingActifEvent)
@@ -111,6 +152,8 @@ public class S_DisturbingEventManager : MonoBehaviour
 
         }
 
+        DisplayResponseOption(disturbingActifEvent);
+
         _timerCoroutine = StartCoroutine(SliderTimerToAnwer(disturbingActifEvent));
     }
 
@@ -119,11 +162,23 @@ public class S_DisturbingEventManager : MonoBehaviour
     {
         foreach (ActifEventAnswer answer in disturbingActifEvent.ActifEventAnswer)
         {
-            var answerScript = Instantiate(_answerActifEvent, Vector3.zero, Quaternion.identity, _answerContentParents);
+            if (answer.CanUseItems == false)
+            {
+                var answerScript = Instantiate(_answerActifEvent, Vector3.zero, Quaternion.identity, _answerContentParents);
 
-            _answersActifEventList.Add(answerScript);
+                _answersActifEventList.Add(answerScript);
 
-            answerScript.InitializeAnswer(answer);
+                answerScript.InitializeAnswer(answer);
+            }
+            else if (answer.CanUseItems == true  && _rsoCureentListObject.Value.Any(item => item.Index == answer.ItemIdLink) == true)
+            {
+                var answerScript = Instantiate(_answerActifEvent, Vector3.zero, Quaternion.identity, _answerContentParents);
+
+                _answersActifEventList.Add(answerScript);
+
+                answerScript.InitializeAnswer(answer);
+            }
+            
 
         }
     }
@@ -171,6 +226,11 @@ public class S_DisturbingEventManager : MonoBehaviour
         StopCoroutine(_timerCoroutine);
         StopAllCoroutines();
         ClearAnswer();
+
+        _uiElementEvent.gameObject.SetActive(false);
+        _uiElementEvent.anchoredPosition = _offscreenPosition;
+
+
     }
 
     void ClearAnswer()
@@ -188,6 +248,10 @@ public class S_DisturbingEventManager : MonoBehaviour
 
     IEnumerator MoveToPosition(Vector2 destination, float duration)
     {
+        _eventImage.sprite = disturbingActifEvent?.Sprite; //needd spriite
+         
+        _uiElementEvent.gameObject.SetActive(true);
+
         float elapsedTime = 0f;
         Vector2 startPosition = _uiElementEvent.anchoredPosition;
 
@@ -202,5 +266,7 @@ public class S_DisturbingEventManager : MonoBehaviour
         }
 
         _uiElementEvent.anchoredPosition = destination;
+
+        StartCoroutine(EventTextDisplaying(disturbingActifEvent));
     }
 }
