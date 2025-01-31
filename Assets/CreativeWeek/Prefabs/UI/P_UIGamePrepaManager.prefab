@@ -13616,14 +13616,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_UIPhone
       objectReference: {fileID: 0}
-    - target: {fileID: 1385571159973828544, guid: cb27704bca2897e4ea8b583c711c429c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4493608884974989771, guid: cb27704bca2897e4ea8b583c711c429c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7199022741969922608, guid: cb27704bca2897e4ea8b583c711c429c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
