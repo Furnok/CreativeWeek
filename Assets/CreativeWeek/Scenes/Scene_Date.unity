@@ -236,14 +236,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5565195252058574567, guid: da1f385a880f88e47bf2668323f953d9, type: 3}
-      propertyPath: Mute
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5565195252058574567, guid: da1f385a880f88e47bf2668323f953d9, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: e5bc0be3656c0c241b82e614acd5b61e, type: 3}
     - target: {fileID: 6562947955938043028, guid: da1f385a880f88e47bf2668323f953d9, type: 3}
       propertyPath: m_Name
       value: P_AudioManager
@@ -605,13 +597,13 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5285738978604110902, guid: 28d0b6703ed1f9e4c9af27925baef63b, type: 3}
-      insertIndex: 3
+      insertIndex: 6
       addedObject: {fileID: 272772891}
     - targetCorrespondingSourceObject: {fileID: 5285738978604110902, guid: 28d0b6703ed1f9e4c9af27925baef63b, type: 3}
-      insertIndex: 4
+      insertIndex: 7
       addedObject: {fileID: 1350634125}
     - targetCorrespondingSourceObject: {fileID: 5285738978604110902, guid: 28d0b6703ed1f9e4c9af27925baef63b, type: 3}
-      insertIndex: 7
+      insertIndex: 10
       addedObject: {fileID: 1808064043}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28d0b6703ed1f9e4c9af27925baef63b, type: 3}
