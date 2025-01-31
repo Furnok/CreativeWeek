@@ -13516,7 +13516,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1385571159973828544, guid: cb27704bca2897e4ea8b583c711c429c, type: 3}
       propertyPath: m_Name
-      value: PanelPhone
+      value: P_UIPhone
       objectReference: {fileID: 0}
     - target: {fileID: 1385571159973828544, guid: cb27704bca2897e4ea8b583c711c429c, type: 3}
       propertyPath: m_IsActive
@@ -13782,7 +13782,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5616813878517294389, guid: 935ba22e3c32585498b3241ddc7dc58c, type: 3}
       propertyPath: m_Name
-      value: PanelPause
+      value: P_UIPauseMenu
       objectReference: {fileID: 0}
     - target: {fileID: 8837902745901985839, guid: 935ba22e3c32585498b3241ddc7dc58c, type: 3}
       propertyPath: m_Pivot.x
