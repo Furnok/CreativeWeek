@@ -22,10 +22,23 @@ public class S_ProfilGenerator : MonoBehaviour
     {
         
         var profil = GetRandomItem(_ssoListProfile.Value);
-        profil.DietType = GetRandomEnumValue<DietType>();
-        profil.DrinkPreference = GetRandomEnumValue<DrinkPreference>();
-        profil.BillSeparation = GetRandomEnumValue<BillSeparation>();
-        var randomNumberOfIntolerances = UnityEngine.Random.Range(0, _maxIntoleranceType.Value);
+
+        while(profil.DietType == DietType.None)
+        {
+            profil.DietType = GetRandomEnumValue<DietType>();
+        }
+
+        while(profil.DrinkPreference == DrinkPreference.None)
+        {
+            profil.DrinkPreference = GetRandomEnumValue<DrinkPreference>();
+        }
+
+        while (profil.BillSeparation == BillSeparation.None)
+        {
+            profil.BillSeparation = GetRandomEnumValue<BillSeparation>();
+        }
+
+        var randomNumberOfIntolerances = UnityEngine.Random.Range(1, _maxIntoleranceType.Value);
         profil.Intolerances = GetUniqueRandomEnumValues<IntoleranceType>(randomNumberOfIntolerances);
         _rsoCurrentProfile.Value = profil;
         _rseOnProfilCreate.RaiseEvent();

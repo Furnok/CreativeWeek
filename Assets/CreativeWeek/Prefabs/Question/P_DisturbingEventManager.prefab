@@ -350,10 +350,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dee36e72f423ad54daf77dca297bb097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _textActifEvent: {fileID: 4182003364335007433}
+  _textTimeLeft: {fileID: 5127265884067498876}
+  _textThought: {fileID: 5738410730236674663}
+  _sliderTimeToAnwser: {fileID: 4752417793884549589}
+  _sliderTimeFill: {fileID: 1118344851629796153}
+  _answerContentParents: {fileID: 2334641988323974262}
+  _answerActifEvent: {fileID: 5728403666320532791, guid: af647065c351ccc4eae28d316f42181b, type: 3}
   RSE_CallDoEvent: {fileID: 11400000, guid: 98437dd6c4210e141b0801eb87e62deb, type: 2}
   RSE_ChooseDoEvent: {fileID: 11400000, guid: e7d1dd0c100d221489347ae8848b37f6, type: 2}
   RSO_DistrubingEventDone: {fileID: 11400000, guid: eee5cf92d5686f14894cd2d96a456f0f, type: 2}
+  _rsoCureentProfil: {fileID: 11400000, guid: eb35386258e8e7e448ebc31f81ace3a3, type: 2}
+  _rsoCureentListObject: {fileID: 11400000, guid: 0f3e026b0611e6f48a359d9d7b55928d, type: 2}
   SSO_ListDisturbingEvent: {fileID: 11400000, guid: e241473612aad3e4f8013f0ec80ed991, type: 2}
+  _ssoTimeBetweenCharactereDisplay: {fileID: 11400000, guid: a7a3b86abc75d4c43b23e14c0b510fc1, type: 2}
 --- !u!1 &4978745296543203008
 GameObject:
   m_ObjectHideFlags: 0
@@ -815,7 +825,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -68, y: -0}
+  m_AnchoredPosition: {x: -68, y: 0}
   m_SizeDelta: {x: 296.73, y: 530.35}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &4997495909872452326
