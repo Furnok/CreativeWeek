@@ -19,6 +19,7 @@ public class S_InventoryManager : MonoBehaviour
     [SerializeField] SSO_ListObject SSO_ListObject;
     [SerializeField] SSO_MaxObject SSO_MaxObject;
     private bool isNotInCurrentList = true;
+    private bool haveAlreadyTenue = false;
 
     private void OnEnable()
     {
@@ -41,17 +42,23 @@ public class S_InventoryManager : MonoBehaviour
         if (RSO_CurrentListObject.Value.Count < SSO_MaxObject.Value)
         {
             isNotInCurrentList = true;
-            foreach(var item in RSO_CurrentListObject.Value)
+            haveAlreadyTenue = false;
+            foreach (var item in RSO_CurrentListObject.Value)
             {
                 if(item.Index == index)
                 {
                     isNotInCurrentList = false;
                 }
+
+                if (item.Index == index)
+                {
+                    haveAlreadyTenue = true;
+                }
             }
-            if (isNotInCurrentList)
+            if (isNotInCurrentList && !haveAlreadyTenue)
             {
                 Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
-                RSO_CurrentListObject.Value.Add(SSO_ListObject.Value.FirstOrDefault(x=> x.Index == index));
+                RSO_CurrentListObject.Value.Add(SSO_ListObject.Value.FirstOrDefault(x => x.Index == index));
                 RSE_UpdateInventory.RaiseEvent(index);
                 rseHideInScene.RaiseEvent(index);
             }

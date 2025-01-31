@@ -21,6 +21,8 @@ public class S_UIPrepaManager : MonoBehaviour
 
     private IEnumerator StartIntro()
     {
+        panelFond.SetActive(true);
+
         yield return new WaitForSeconds(2f);
 
         panelPhone.SetActive(true);
@@ -47,9 +49,8 @@ public class S_UIPrepaManager : MonoBehaviour
 
     private void Start()
     {
-        panelFond.SetActive(true);
-        
-        StartCoroutine(StartIntro());
+        //StartCoroutine(StartIntro());
+        rseStartTimerPrepa?.RaiseEvent();
     }
 
     private void OnEnable()

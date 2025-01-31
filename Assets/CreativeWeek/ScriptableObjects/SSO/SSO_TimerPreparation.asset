@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31c1a90b2ff03e64ebb2934c5eea4b95, type: 3}
   m_Name: SSO_TimerPreparation
   m_EditorClassIdentifier: 
-  _value: 30
+  _value: 60
