@@ -31,10 +31,14 @@ public class S_UIToilet : MonoBehaviour
     {
         toiletPanel.SetActive(true);
         audioMixer.SetFloat("SFX_Volume", -20);
+
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
     }
     private void ExitToilet()
     {
         toiletPanel.SetActive(false);
         audioMixer.SetFloat("SFX_Volume", 0);
+
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
     }
 }
