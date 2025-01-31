@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: CreativeWeek
-  productName: CreativeWeek
+  companyName: CreativeWeek2025
+  productName: DateMePerfect
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.05490196, g: 0.05490196, b: 0.05490196, a: 1}
