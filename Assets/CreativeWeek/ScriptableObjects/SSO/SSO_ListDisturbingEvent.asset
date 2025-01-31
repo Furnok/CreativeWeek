@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: SSO_ListDisturbingEvent
   m_EditorClassIdentifier: 
   _value:
+<<<<<<< Updated upstream
   - NameEvent: Serveur
     EventContent: Apporte un plat
     TimeToAnswer: 0
@@ -49,3 +50,211 @@ MonoBehaviour:
     Sprite: {fileID: 21300000, guid: 71c15a0510df4784791d2c302fb0e47a, type: 3}
     PositionSprite: {x: -100, y: 0}
     ActifEventAnswer: []
+=======
+  - NameEvent: Server Beer Pong Fan
+    EventContent: It seems the server is fan of your dark beer pong past.
+    TimeToAnswer: 10
+    Sprite: {fileID: 0}
+    PositionSprite: {x: -100, y: 0}
+    ActifEventAnswer:
+    - AnswerName: Admit
+      AnswerButtonContent: Admit it's your dark past
+      ReplyByDateTypes:
+      - ProfilType: 0
+        DateReplyThought: We all have a dark past.
+        CharmeAdd: 20
+      - ProfilType: 2
+        DateReplyThought: I hate athletes!
+        CharmeAdd: -20
+      - ProfilType: 1
+        DateReplyThought: I hope he hasn't lost his touch!
+        CharmeAdd: 20
+      CanUseItems: 0
+      ItemIdLink: 0
+    - AnswerName: Send Away
+      AnswerButtonContent: Send away with dry manner
+      ReplyByDateTypes:
+      - ProfilType: 0
+        DateReplyThought: We all have a dark past.
+        CharmeAdd: 20
+      - ProfilType: 2
+        DateReplyThought: I hate athletes!
+        CharmeAdd: -20
+      - ProfilType: 1
+        DateReplyThought: I hope he hasn't lost his touch!
+        CharmeAdd: 20
+      CanUseItems: 0
+      ItemIdLink: 0
+  - NameEvent: Roses Seller
+    EventContent: A roses seller appeared, should I buy one?
+    TimeToAnswer: 10
+    Sprite: {fileID: 0}
+    PositionSprite: {x: -100, y: 0}
+    ActifEventAnswer:
+    - AnswerName: Send Away
+      AnswerButtonContent: Send Away
+      ReplyByDateTypes:
+      - ProfilType: 0
+        DateReplyThought: Are you skint sweetie?
+        CharmeAdd: -20
+      - ProfilType: 2
+        DateReplyThought: That's not cool dude!
+        CharmeAdd: -20
+      - ProfilType: 1
+        DateReplyThought: Yeah! Go back to the street!
+        CharmeAdd: 20
+      CanUseItems: 0
+      ItemIdLink: 0
+    - AnswerName: Pepper Spray
+      AnswerButtonContent: Use Pepper Spray
+      ReplyByDateTypes:
+      - ProfilType: 0
+        DateReplyThought: Oh No!
+        CharmeAdd: -30
+      - ProfilType: 2
+        DateReplyThought: "What the \u2026?!"
+        CharmeAdd: -30
+      - ProfilType: 1
+        DateReplyThought: Oh oh oh, this is funny!
+        CharmeAdd: 30
+      CanUseItems: 1
+      ItemIdLink: 9
+    - AnswerName: Police Emblem
+      AnswerButtonContent: Show Police Emblem
+      ReplyByDateTypes:
+      - ProfilType: 0
+        DateReplyThought: F$%k the police!
+        CharmeAdd: -100
+      - ProfilType: 2
+        DateReplyThought: Fascist!
+        CharmeAdd: -50
+      - ProfilType: 1
+        DateReplyThought: "Oh you're from the police\u2026 I feel safe now."
+        CharmeAdd: 50
+      CanUseItems: 1
+      ItemIdLink: 10
+    - AnswerName: Cash
+      AnswerButtonContent: Buy a Rose with Cash
+      ReplyByDateTypes:
+      - ProfilType: 0
+        DateReplyThought: I love roses
+        CharmeAdd: 20
+      - ProfilType: 2
+        DateReplyThought: I do not support deforestation.
+        CharmeAdd: -20
+      - ProfilType: 1
+        DateReplyThought: A dirty rose for me!? Who do you think I am?
+        CharmeAdd: -20
+      CanUseItems: 1
+      ItemIdLink: 4
+  - NameEvent: SDF Encounter
+    EventContent: An homeless grandpa stare at you.
+    TimeToAnswer: 10
+    Sprite: {fileID: 0}
+    PositionSprite: {x: -100, y: 0}
+    ActifEventAnswer:
+    - AnswerName: Send Away
+      AnswerButtonContent: Send Away
+      ReplyByDateTypes:
+      - ProfilType: 0
+        DateReplyThought: What a bad person!
+        CharmeAdd: -10
+      - ProfilType: 2
+        DateReplyThought: This is so impolite
+        CharmeAdd: -10
+      - ProfilType: 1
+        DateReplyThought: What a relieve! No money given.
+        CharmeAdd: 10
+      CanUseItems: 0
+      ItemIdLink: 0
+    - AnswerName: Joint
+      AnswerButtonContent: Give a Joint
+      ReplyByDateTypes:
+      - ProfilType: 0
+        DateReplyThought: Yeah bun that zoot bruv!
+        CharmeAdd: 20
+      - ProfilType: 2
+        DateReplyThought: And me!? Hello ?
+        CharmeAdd: -20
+      - ProfilType: 1
+        DateReplyThought: Oh my god! I don't date with a drug dealer!
+        CharmeAdd: -100
+      CanUseItems: 1
+      ItemIdLink: 18
+    - AnswerName: Sock
+      AnswerButtonContent: Give a Sock
+      ReplyByDateTypes:
+      - ProfilType: 0
+        DateReplyThought: 'He probably lost the second. '
+        CharmeAdd: 0
+      - ProfilType: 2
+        DateReplyThought: He was a house elf from the start.
+        CharmeAdd: 20
+      - ProfilType: 1
+        DateReplyThought: Why a sock ?
+        CharmeAdd: -20
+      CanUseItems: 1
+      ItemIdLink: 26
+    - AnswerName: Give Cash
+      AnswerButtonContent: Give a Sock
+      ReplyByDateTypes:
+      - ProfilType: 0
+        DateReplyThought: Good Boy!
+        CharmeAdd: 20
+      - ProfilType: 2
+        DateReplyThought: That's so sweet.
+        CharmeAdd: 20
+      - ProfilType: 1
+        DateReplyThought: "Eew\u2026 That's discusting."
+        CharmeAdd: -20
+      CanUseItems: 1
+      ItemIdLink: 4
+  - NameEvent: Barking Dog
+    EventContent: A barking dog appeared! What should I do!?
+    TimeToAnswer: 10
+    Sprite: {fileID: 0}
+    PositionSprite: {x: -100, y: 0}
+    ActifEventAnswer:
+    - AnswerName: Send Away
+      AnswerButtonContent: Send Away
+      ReplyByDateTypes:
+      - ProfilType: 0
+        DateReplyThought: Bad Boy!
+        CharmeAdd: -10
+      - ProfilType: 2
+        DateReplyThought: That's not cool dude!
+        CharmeAdd: -10
+      - ProfilType: 1
+        DateReplyThought: Yeah! Go back to the street!
+        CharmeAdd: 10
+      CanUseItems: 0
+      ItemIdLink: 0
+    - AnswerName: Pepper Spray
+      AnswerButtonContent: Use a Pepper Spray
+      ReplyByDateTypes:
+      - ProfilType: 0
+        DateReplyThought: Oh No! Bad boy! Bad!
+        CharmeAdd: -20
+      - ProfilType: 2
+        DateReplyThought: '*Shocked*'
+        CharmeAdd: -20
+      - ProfilType: 1
+        DateReplyThought: That's violent.
+        CharmeAdd: -10
+      CanUseItems: 1
+      ItemIdLink: 9
+    - AnswerName: Bone
+      AnswerButtonContent: Give a Bone
+      ReplyByDateTypes:
+      - ProfilType: 0
+        DateReplyThought: "It remind me my old days inside the Gang\u2026"
+        CharmeAdd: 20
+      - ProfilType: 2
+        DateReplyThought: Nature's cycle, beautiful.
+        CharmeAdd: 10
+      - ProfilType: 1
+        DateReplyThought: "This reminds me my butler\u2026"
+        CharmeAdd: 10
+      CanUseItems: 1
+      ItemIdLink: 3
+>>>>>>> Stashed changes
