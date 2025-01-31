@@ -54,6 +54,7 @@ MonoBehaviour:
   SFX_Mariachi: {fileID: 8300000, guid: c51dab5ee39ad334f8682baa9aa537a8, type: 3}
   SFX_Notification: {fileID: 8300000, guid: ff765962ff01b164981047251aa3a7c5, type: 3}
   SFX_MatchDate: {fileID: 8300000, guid: 49bbd5fc4598fd04cb373bb425d21cb9, type: 3}
+  RSE_PlaySoundActifEvent: {fileID: 11400000, guid: 47a074d61ff2ac2458f60b24a1ea481f, type: 2}
   RSE_PlaySoundAmbulance: {fileID: 11400000, guid: d31a678a8f398794ead237effb0690ce, type: 2}
   RSE_PlaySoundFriend: {fileID: 11400000, guid: a9c3e8abcf377974fb83f35604013572, type: 2}
   RSE_PlaySoundMariachi: {fileID: 11400000, guid: 80cded50b6d0d614f98a97e0e5960b6a, type: 2}

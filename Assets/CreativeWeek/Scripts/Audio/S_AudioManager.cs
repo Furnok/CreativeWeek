@@ -15,6 +15,7 @@ public class S_AudioManager : MonoBehaviour
     [SerializeField] AudioClip SFX_MatchDate;
 
     [Header("RSE")]
+    [SerializeField] RSE_PlaySoundActifEvent RSE_PlaySoundActifEvent;
     [SerializeField] RSE_PlaySound RSE_PlaySoundAmbulance;
     [SerializeField] RSE_PlaySound RSE_PlaySoundFriend;
     [SerializeField] RSE_PlaySound RSE_PlaySoundMariachi;
@@ -28,6 +29,7 @@ public class S_AudioManager : MonoBehaviour
 
     private void OnEnable()
     {
+        RSE_PlaySoundActifEvent.action += PlaySoundActifEvent;
         RSE_PlaySoundAmbulance.action += PlaySoundAmbulance;
         RSE_PlaySoundFriend.action += PlaySoundFriend;
         RSE_PlaySoundMariachi.action += PlaySoundMariachi;
@@ -37,6 +39,7 @@ public class S_AudioManager : MonoBehaviour
     }
     private void OnDisable()
     {
+        RSE_PlaySoundActifEvent.action -= PlaySoundActifEvent;
         RSE_PlaySoundAmbulance.action -= PlaySoundAmbulance;
         RSE_PlaySoundFriend.action -= PlaySoundFriend;
         RSE_PlaySoundMariachi.action -= PlaySoundMariachi;
@@ -67,5 +70,9 @@ public class S_AudioManager : MonoBehaviour
     private void PlayMusicPreparation()
     {
         MusicAudioSource.PlayOneShot(Music_Preparation);
+    }
+    private void PlaySoundActifEvent(AudioClip audioClip)
+    {
+        SFXAudioSource.PlayOneShot(audioClip);
     }
 }
