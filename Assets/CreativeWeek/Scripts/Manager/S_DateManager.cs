@@ -96,7 +96,6 @@ public class S_DateManager : MonoBehaviour
 
     IEnumerator DelayGenerateSpeech()
     {
-        Debug.Log("b");
 
         yield return new WaitForSeconds(2f);
 
@@ -107,7 +106,6 @@ public class S_DateManager : MonoBehaviour
 
     IEnumerator DelayGenerateQuestion()
     {
-        Debug.Log("c");
 
         yield return new WaitForSeconds(2f);
 
@@ -118,7 +116,6 @@ public class S_DateManager : MonoBehaviour
 
     IEnumerator DelayGenerateSpeechQuestion()
     {
-        Debug.Log("d");
 
         yield return new WaitForSeconds(2f);
 
@@ -174,7 +171,6 @@ public class S_DateManager : MonoBehaviour
 
 
         }
-        Debug.Log("a");
 
         TtcheckDress(_rsoCurrentProfile.Value.ProfilType);
 

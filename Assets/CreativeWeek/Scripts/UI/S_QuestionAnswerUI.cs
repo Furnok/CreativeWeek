@@ -40,6 +40,8 @@ public class S_QuestionAnswerUI : MonoBehaviour
 
     [SerializeField] RSE_OnDateStepChange _onDateStepChange;
 
+    [SerializeField] RSE_ChooseDoEvent _rseChooseDoEvent;
+
 
     [Header("RSO")]
     [SerializeField] RSO_CurrentDateStep _rsoCurrentDateStep;
@@ -341,6 +343,9 @@ public class S_QuestionAnswerUI : MonoBehaviour
         else
         {
             _rsoCurrentDateStep.Value = (DateStep)((int)_rsoCurrentDateStep.Value + 1);
+
+            _rseChooseDoEvent.RaiseEvent();
+
             _onDateStepChange.RaiseEvent();
             Debug.Log("3");
 

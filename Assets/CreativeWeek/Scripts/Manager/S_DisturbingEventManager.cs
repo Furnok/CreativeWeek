@@ -18,7 +18,8 @@ public class S_DisturbingEventManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI _textTimeLeft;
     [SerializeField] TextMeshProUGUI _textThought;
 
-
+    [SerializeField] GameObject _thoughtGameObject;
+    [SerializeField] GameObject _panelActifEvent;
     [SerializeField] Slider _sliderTimeToAnwser;
     [SerializeField] GameObject _sliderTimeFill;
     [SerializeField] Transform _answerContentParents;
@@ -36,6 +37,8 @@ public class S_DisturbingEventManager : MonoBehaviour
 
     [SerializeField] RSE_UpdateCharm _rseUpdateCharm;
     [SerializeField] RSE_ProfilStateChange _rseProfilStateChange;
+
+    [SerializeField] RSE_PlaySoundActifEvent _playSoundActifEvent;
 
     [Header("RSO")]
     [SerializeField] RSO_DistrubingEventDone RSO_DistrubingEventDone;
@@ -78,15 +81,21 @@ public class S_DisturbingEventManager : MonoBehaviour
 
         _uiElementEvent.anchoredPosition = _offscreenPosition;
 
+        _panelActifEvent.SetActive(false);
+        _thoughtGameObject.SetActive(false);
+
+
         //StartCoroutine(MoveToPosition(_targetPosition, _moveDuration));
+        //ChooseRandomDisturbingEvent();
     }
     private void ChooseDoEvent()
     {
-        doEvent = Random.Range(0, 2);
-        if (doEvent == 1)
-        {
-            ChooseRandomDisturbingEvent();
-        }
+        //doEvent = Random.Range(0, 2);
+        //if (doEvent == 1)
+        //{
+        //    ChooseRandomDisturbingEvent();
+        //}
+        ChooseRandomDisturbingEvent();
     }
     private void ChooseRandomDisturbingEvent()
     {
@@ -99,47 +108,88 @@ public class S_DisturbingEventManager : MonoBehaviour
         else
         {
             RSO_DistrubingEventDone.Value.Add(disturbingActifEvent);
-            RSE_CallDoEvent?.RaiseEvent(disturbingActifEvent);
+            //RSE_CallDoEvent?.RaiseEvent(disturbingActifEvent);
             MakeEvent();
         }
     }
 
     void MakeEvent()
     {
+        Debug.Log("dodododod");
         _uiElementEvent.anchoredPosition = _offscreenPosition;
 
-        MoveToPosition(disturbingActifEvent.PositionSprite, _moveDuration);
+        //_playSoundActifEvent.RaiseEvent(disturbingActifEvent?.AudioClip); // enlever le point quand les auio clip sont mis
+
+        StartCoroutine(MoveToPosition(disturbingActifEvent.PositionSprite, _moveDuration));
     }
 
     void TceckAnswerEventActif(ActifEventAnswer actifEventAnswer)
     {
 
-        
         switch (_rsoCureentProfil.Value.ProfilType)
         {
             case ProfilType.Street:
-               
+
+                string textReplyStreet = actifEventAnswer.ReplyByDateTypes.FirstOrDefault(x => x.ProfilType == ProfilType.Street).DateReplyThought;
+                int ammountCharmStreet = actifEventAnswer.ReplyByDateTypes.FirstOrDefault(x => x.ProfilType == ProfilType.Street).CharmeAdd;
+
+                StartCoroutine(TextThoughtDisplay(textReplyStreet));
+
+                TcheckProfilDisplay(ammountCharmStreet);
+
                 break;
 
             case ProfilType.Babos:
-                
+
+                string textReplyBabos = actifEventAnswer.ReplyByDateTypes.FirstOrDefault(x => x.ProfilType == ProfilType.Babos).DateReplyThought;
+                int ammountCharmBabos = actifEventAnswer.ReplyByDateTypes.FirstOrDefault(x => x.ProfilType == ProfilType.Babos).CharmeAdd;
+
+                StartCoroutine(TextThoughtDisplay(textReplyBabos));
+
+                TcheckProfilDisplay(ammountCharmBabos);
+
+
                 break;
 
             case ProfilType.Rich:
-                
+
+                string textReplyRich = actifEventAnswer.ReplyByDateTypes.FirstOrDefault(x => x.ProfilType == ProfilType.Rich).DateReplyThought;
+                int ammountCharmRich = actifEventAnswer.ReplyByDateTypes.FirstOrDefault(x => x.ProfilType == ProfilType.Rich).CharmeAdd;
+
+                StartCoroutine(TextThoughtDisplay(textReplyRich));
+
+                TcheckProfilDisplay(ammountCharmRich);
+
+
                 break;
         }
     
 
 
-    _rseUpdateCharm.RaiseEvent(actifEventAnswer.ReplyByDateTypes[0].CharmeAdd); //will change
+    }
 
-        _rseProfilStateChange.RaiseEvent(ProfilState.Happy);
+    void TcheckProfilDisplay(int charmAdd)
+    {
+        if (charmAdd > 0)
+        {
+             _rseProfilStateChange.RaiseEvent(ProfilState.Happy);
+        }
+        else if(charmAdd < 0)
+        {
+            _rseProfilStateChange.RaiseEvent(ProfilState.Angry);
+        }
+        else
+        {
+            _rseProfilStateChange.RaiseEvent(ProfilState.Neutral);
+
+        }
+        _rseUpdateCharm.RaiseEvent(charmAdd);
+
     }
 
     IEnumerator EventTextDisplaying(DisturbingActifEvent disturbingActifEvent)
     {
-
+        _panelActifEvent.SetActive(true);
 
         _textActifEvent.text = "";
 
@@ -157,6 +207,29 @@ public class S_DisturbingEventManager : MonoBehaviour
         _timerCoroutine = StartCoroutine(SliderTimerToAnwer(disturbingActifEvent));
     }
 
+    IEnumerator TextThoughtDisplay(string textToDIsplay)
+    {
+        _thoughtGameObject.SetActive(true);
+
+        _textThought.text = "";
+
+        for (int i = 0; i < textToDIsplay.Length; i++)
+        {
+            _textThought.text += textToDIsplay[i];
+
+           
+            yield return new WaitForSeconds(_ssoTimeBetweenCharactereDisplay.Value);
+
+        }
+
+        yield return new WaitForSeconds(2f);
+
+        _thoughtGameObject.SetActive(false);
+
+
+        _textThought.text = "";
+
+    }
 
     void DisplayResponseOption(DisturbingActifEvent disturbingActifEvent)
     {
@@ -227,8 +300,10 @@ public class S_DisturbingEventManager : MonoBehaviour
         StopAllCoroutines();
         ClearAnswer();
 
-        _uiElementEvent.gameObject.SetActive(false);
-        _uiElementEvent.anchoredPosition = _offscreenPosition;
+        _panelActifEvent.SetActive(false);
+
+
+        StartCoroutine(MoveBackoffScreen(_offscreenPosition, _moveDuration));
 
 
     }
@@ -269,4 +344,25 @@ public class S_DisturbingEventManager : MonoBehaviour
 
         StartCoroutine(EventTextDisplaying(disturbingActifEvent));
     }
+
+    IEnumerator MoveBackoffScreen(Vector2 destination, float duration)
+    {
+        float elapsedTime = 0f;
+        Vector2 startPosition = _uiElementEvent.anchoredPosition;
+
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+            float t = elapsedTime / duration;
+
+            _uiElementEvent.anchoredPosition = Vector2.Lerp(startPosition, destination, t);
+
+            yield return null;
+        }
+
+        _uiElementEvent.anchoredPosition = destination;
+        _uiElementEvent.gameObject.SetActive(false);
+
+    }
+
 }

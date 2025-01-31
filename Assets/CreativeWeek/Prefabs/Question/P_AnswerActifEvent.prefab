@@ -189,7 +189,6 @@ MonoBehaviour:
   _textReplyContent: {fileID: 7087311691927286735}
   _rseOnActifEventAnswerGive: {fileID: 11400000, guid: 970c229f922fb17458e496d5af4cd359, type: 2}
   _rseOnActiveEventAnswerGiveToQuestion: {fileID: 11400000, guid: 1ccc6e8745560f947b1b75bf76a1d148, type: 2}
-  _rseOnSpeechAnswerGive: {fileID: 11400000, guid: 57ba02c7fe4e2e847a0e46eb0e6f8a48, type: 2}
 --- !u!114 &5214052444050822535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,8 +233,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: S_Answer, Assembly-CSharp
+      - m_Target: {fileID: 5728403666320532791}
+        m_TargetAssemblyTypeName: S_AnswerActifEvent, Assembly-CSharp
         m_MethodName: CallAnswerVerification
         m_Mode: 1
         m_Arguments:

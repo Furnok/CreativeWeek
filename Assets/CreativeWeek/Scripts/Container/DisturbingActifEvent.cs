@@ -9,6 +9,7 @@ public class DisturbingActifEvent
     public string EventContent;
     public float TimeToAnswer;
     public Sprite Sprite;
+    public AudioClip AudioClip;
     public Vector2 PositionSprite = new Vector2(-100, 0);
     public List<ActifEventAnswer> ActifEventAnswer;
 }

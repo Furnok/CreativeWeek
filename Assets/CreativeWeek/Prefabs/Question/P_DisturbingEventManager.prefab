@@ -357,6 +357,8 @@ MonoBehaviour:
   _textActifEvent: {fileID: 4182003364335007433}
   _textTimeLeft: {fileID: 5127265884067498876}
   _textThought: {fileID: 5738410730236674663}
+  _thoughtGameObject: {fileID: 3997399543411303175}
+  _panelActifEvent: {fileID: 6671216959123920060}
   _sliderTimeToAnwser: {fileID: 4752417793884549589}
   _sliderTimeFill: {fileID: 1118344851629796153}
   _answerContentParents: {fileID: 2334641988323974262}
@@ -368,6 +370,7 @@ MonoBehaviour:
   _rseOnActiveEventAnswerGiveToQuestion: {fileID: 11400000, guid: 1ccc6e8745560f947b1b75bf76a1d148, type: 2}
   _rseUpdateCharm: {fileID: 11400000, guid: e41c6646dbbcac6499fd8e50b3eea620, type: 2}
   _rseProfilStateChange: {fileID: 11400000, guid: 982e136023cfbcc43bb5a5a05b53ee1f, type: 2}
+  _playSoundActifEvent: {fileID: 11400000, guid: 47a074d61ff2ac2458f60b24a1ea481f, type: 2}
   RSO_DistrubingEventDone: {fileID: 11400000, guid: eee5cf92d5686f14894cd2d96a456f0f, type: 2}
   _rsoCureentProfil: {fileID: 11400000, guid: eb35386258e8e7e448ebc31f81ace3a3, type: 2}
   _rsoCureentListObject: {fileID: 11400000, guid: 0f3e026b0611e6f48a359d9d7b55928d, type: 2}
