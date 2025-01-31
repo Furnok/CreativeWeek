@@ -186,6 +186,7 @@ MonoBehaviour:
   _OnGoodPresentation: {fileID: 11400000, guid: e0b89d49e5f059541bd548cd882b53d2, type: 2}
   _rseIsTextDisturbEvent: {fileID: 11400000, guid: e0beecb9fa8a14e41a86ac9e521a31fb, type: 2}
   _onDateStepChange: {fileID: 11400000, guid: 01fdbe97f9f07434e840732540dde4c4, type: 2}
+  _rseChooseDoEvent: {fileID: 11400000, guid: e7d1dd0c100d221489347ae8848b37f6, type: 2}
   _rsoCurrentDateStep: {fileID: 11400000, guid: 8027ce831cfa44d47a13fd5047f94313, type: 2}
   _ssoTimeBetweenCharactereDisplay: {fileID: 11400000, guid: a7a3b86abc75d4c43b23e14c0b510fc1, type: 2}
   _ssoTimeToAnswer: {fileID: 11400000, guid: c0d55d14e14e1094aa8d64d001e79a01, type: 2}
@@ -313,7 +314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.003921569}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.039215688}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
