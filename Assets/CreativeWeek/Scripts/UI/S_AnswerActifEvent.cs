@@ -26,7 +26,6 @@ public class S_AnswerActifEvent : MonoBehaviour
     {
         if (_actifEventAnswer.Equals(default(ActifEventAnswer)) == false)
         {
-            Debug.Log("evetnyes");
             _rseOnActifEventAnswerGive.RaiseEvent();
 
             _rseOnActiveEventAnswerGiveToQuestion.RaiseEvent(_actifEventAnswer);

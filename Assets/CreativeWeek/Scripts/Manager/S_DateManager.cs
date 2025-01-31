@@ -26,6 +26,7 @@ public class S_DateManager : MonoBehaviour
 
     [SerializeField] RSE_CallLoseDate _rseCallLoseDate;
 
+    [SerializeField] RSE_OnDateStepChange _onDateStepChange;
 
 
     [Header("RSO")]
@@ -93,7 +94,6 @@ public class S_DateManager : MonoBehaviour
     {
         if(_isGameOver == false)
         {
-            Debug.Log("enterA");
             StartCoroutine(DelayGenerateSpeech());
         }
     }
@@ -101,7 +101,6 @@ public class S_DateManager : MonoBehaviour
     {
         if (_isGameOver == false)
         {
-            Debug.Log("enterB");
 
             StartCoroutine(DelayGenerateQuestion());
         }
@@ -111,7 +110,6 @@ public class S_DateManager : MonoBehaviour
     {
         if (_isGameOver == false)
         {
-            Debug.Log("enterC");
 
             StartCoroutine(DelayGenerateSpeechQuestion());
         }
@@ -199,6 +197,8 @@ public class S_DateManager : MonoBehaviour
 
         _rsoCurrentDateStep.Value = DateStep.Starter;
 
+        _onDateStepChange.RaiseEvent();
+
         Debug.Log($"{_rsoCurrentDateStep.Value}");
     }
 
@@ -279,6 +279,5 @@ public class S_DateManager : MonoBehaviour
     void StopGameLoop()
     {
         _isGameOver = true;
-        Debug.Log($"{_isGameOver}");
     }
 }
