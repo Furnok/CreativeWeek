@@ -121,7 +121,6 @@ public class S_DisturbingEventManager : MonoBehaviour
 
     void MakeEvent()
     {
-        Debug.Log("dodododod");
         _uiElementEvent.anchoredPosition = _offscreenPosition;
 
         //_playSoundActifEvent.RaiseEvent(disturbingActifEvent?.AudioClip); // enlever le point quand les auio clip sont mis

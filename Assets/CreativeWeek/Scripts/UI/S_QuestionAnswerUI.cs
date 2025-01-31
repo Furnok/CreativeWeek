@@ -89,6 +89,11 @@ public class S_QuestionAnswerUI : MonoBehaviour
 
 
     }
+
+    private void Update()
+    {
+
+    }
     void DisplayQuestionAnswer(Question question)
     {
         StartCoroutine(QuestionDisplay(question));
@@ -331,11 +336,9 @@ public class S_QuestionAnswerUI : MonoBehaviour
 
     IEnumerator DisplayDate(string textToDisplay)
     {
-        Debug.Log($"{_rsoCurrentDateStep.Value}");
 
 
         yield return StartCoroutine(TextDisplay(textToDisplay));
-        Debug.Log(_rsoCurrentDateStep.Value.ToString());
         if (_rsoCurrentDateStep.Value == DateStep.Bill)
         {
             //rseGameTcheckVlaueCharmIfWinOrNotEvent
@@ -348,9 +351,9 @@ public class S_QuestionAnswerUI : MonoBehaviour
         {
             _rsoCurrentDateStep.Value = (DateStep)((int)_rsoCurrentDateStep.Value + 1);
 
+            //Debug.Log(_rsoCurrentDateStep.Value.ToString());
             _rseChooseDoEvent.RaiseEvent();
-
-            _onDateStepChange.RaiseEvent();
+            //_onDateStepChange.RaiseEvent();
 
         }
 
@@ -358,6 +361,7 @@ public class S_QuestionAnswerUI : MonoBehaviour
         {
             
         }
+
         _rseDelayGenerateSpeechQuestion.RaiseEvent();
     }
 

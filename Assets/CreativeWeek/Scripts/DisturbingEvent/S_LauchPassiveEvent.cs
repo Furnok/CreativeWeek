@@ -21,6 +21,9 @@ public class S_LauchPassiveEvent : MonoBehaviour
     private void OnEnable()
     {
         RSE_OnDateStepChange.action += CheckDateStep;
+
+        //coroutineLaunchEventPassive = StartCoroutine(LaunchEvent());
+
     }
     private void OnDisable()
     {
@@ -39,6 +42,8 @@ public class S_LauchPassiveEvent : MonoBehaviour
     }
     IEnumerator LaunchEvent()
     {
+        Debug.Log("gg");
+
         float randomTime = Random.Range(timeMin, timeMax);
         yield return new WaitForSeconds(randomTime);
         RSE_ChoosePassiveEvent?.RaiseEvent();
