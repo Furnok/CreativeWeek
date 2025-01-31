@@ -19,18 +19,18 @@ MonoBehaviour:
     CurrentProfilState: 0
     ListProfilStates:
     - State: 0
-      Sprite: {fileID: 21300000, guid: 0a953f90e7ca77c48bbbdbb263587629, type: 3}
+      Sprite: {fileID: 21300000, guid: 3fef158658403dd499b6ef0195b88518, type: 3}
     - State: 1
-      Sprite: {fileID: 21300000, guid: 383421e3c04f3c649a91d42330d98729, type: 3}
+      Sprite: {fileID: 21300000, guid: 8723d0c52198466469f50ed2e7a9b9fc, type: 3}
     - State: 2
-      Sprite: {fileID: 21300000, guid: 3d4a741349b71db43802b856fdb3809d, type: 3}
+      Sprite: {fileID: 21300000, guid: bed182fb42a44714689d4075ef8e1e5a, type: 3}
     Description: 'Imma funky young girl with drips not to be slept on I like stayin
       in street with my homies and smoke dope I''m lookin for the GOAT cuz Don''t
       forget I''m built different Here for brat summer b*tch! '
     ProfilSprite: {fileID: 21300000, guid: 45a04cb036d4fe74c9901b0445566f00, type: 3}
     DietType: 1
     DrinkPreference: 3
-    Intolerances: 01000000
+    Intolerances: 00000000
     BillSeparation: 3
   - Age: 25
     Name: Baltazar
@@ -38,20 +38,20 @@ MonoBehaviour:
     CurrentProfilState: 0
     ListProfilStates:
     - State: 0
-      Sprite: {fileID: 21300000, guid: 8b27302e454351d438fe047cad2dc4fb, type: 3}
+      Sprite: {fileID: 21300000, guid: 7edf13fc1ae799a41afd700b87b725a6, type: 3}
     - State: 1
-      Sprite: {fileID: 21300000, guid: 02c14f3a5315b974db9fc67458da7fd0, type: 3}
+      Sprite: {fileID: 21300000, guid: 7f68df712f9d91040b3d01f928c98ed5, type: 3}
     - State: 2
-      Sprite: {fileID: 21300000, guid: 3cb83a897b13dd14a8c1c46b3abb9ce7, type: 3}
+      Sprite: {fileID: 21300000, guid: 105148afe2f6aae4ea0d16205877cdbc, type: 3}
     Description: 'My greatest salutations, dear I am looking for the diamond I shall
       polish My favorite color is gold I  eagerly anticipate to bring you to my 3
       floors yachts (with pools) I shall offer you perls that mirror the very essence
       of My Eyes '
     ProfilSprite: {fileID: 21300000, guid: 1051c9f50e223ee44a8e3a551078d0c8, type: 3}
-    DietType: 0
-    DrinkPreference: 0
-    Intolerances: 
-    BillSeparation: 0
+    DietType: 1
+    DrinkPreference: 2
+    Intolerances: 02000000
+    BillSeparation: 3
   - Age: 21
     Name: Meloe
     ProfilType: 2
@@ -68,7 +68,7 @@ MonoBehaviour:
       your future in your hand and make the lunar horoscope I won't date if Mercury
       is in retrograde.
     ProfilSprite: {fileID: 21300000, guid: b9fbe34b3f43f7a4f9e6ad5f28464a71, type: 3}
-    DietType: 0
-    DrinkPreference: 0
-    Intolerances: 
-    BillSeparation: 0
+    DietType: 2
+    DrinkPreference: 2
+    Intolerances: 00000000
+    BillSeparation: 1
