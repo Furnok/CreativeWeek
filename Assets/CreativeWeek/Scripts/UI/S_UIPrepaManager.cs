@@ -114,6 +114,7 @@ public class S_UIPrepaManager : MonoBehaviour
         panelTel.SetActive(false);
         panelMatch.SetActive(false);
         panelProfil.SetActive(false);
+        panelButtonPhone.SetActive(false);
 
         rsePlaySoundMusic.RaiseEvent();
 

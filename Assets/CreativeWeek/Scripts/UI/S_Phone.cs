@@ -20,7 +20,7 @@ public class S_Phone : MonoBehaviour
         textName.text = $"{rsoCurrentProfile.Value.Name}, {rsoCurrentProfile.Value.Age} years";
         textAge.text = $"{rsoCurrentProfile.Value.ProfilType}, {rsoCurrentProfile.Value.DietType}, {rsoCurrentProfile.Value.DrinkPreference}, {rsoCurrentProfile.Value.BillSeparation}";
 
-        textType.text = "";
+        textType.text = "Intolerances: ";
 
         for (int i = 0; i < rsoCurrentProfile.Value.Intolerances.Count; i++)
         {
