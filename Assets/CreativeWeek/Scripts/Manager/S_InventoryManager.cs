@@ -51,9 +51,12 @@ public class S_InventoryManager : MonoBehaviour
                 }
             }
 
-            if (RSO_CurrentListObject.Value.Any(item => item.Index == 0 || item.Index == 1 || item.Index == 2))
+            if (index == 0 || index == 1 || index == 2)
             {
-                haveAlreadyTenue = true;
+                if (RSO_CurrentListObject.Value.Any(item => item.Index == 0 || item.Index == 1 || item.Index == 2))
+                {
+                    haveAlreadyTenue = true;
+                }
             }
 
             if (isNotInCurrentList && !haveAlreadyTenue)
