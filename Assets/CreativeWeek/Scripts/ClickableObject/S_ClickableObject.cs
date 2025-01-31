@@ -13,26 +13,23 @@ public class S_ClickableObject : MonoBehaviour, IPointerEnterHandler, IPointerEx
         GetComponent<Image>().material = _material;
         _material.SetTexture("_ImageTexture", GetComponent<Image>().sprite.texture);
 
-        GetComponent<RectTransform>().localScale = new Vector3(1.2f, 1.2f, 1.2f);
+        GetComponent<RectTransform>().localScale = new Vector3(GetComponent<RectTransform>().localScale.x + 0.2f, GetComponent<RectTransform>().localScale.y + 0.2f, GetComponent<RectTransform>().localScale.z + 0.2f);
         transform.GetChild(0).gameObject.SetActive(true);
-
-        //GetComponent<Image>().color = new Color(1, 1, 0, 1f);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         GetComponent<Image>().material = null;
 
-        GetComponent<RectTransform>().localScale = new Vector3(1f, 1f, 1f);
+        GetComponent<RectTransform>().localScale = new Vector3(GetComponent<RectTransform>().localScale.x - 0.2f, GetComponent<RectTransform>().localScale.y - 0.2f, GetComponent<RectTransform>().localScale.z - 0.2f);
         transform.GetChild(0).gameObject.SetActive(false);
-
-        //GetComponent<Image>().color = Color.white;
     }
 
     private void OnDisable()
     {
-        GetComponent<Image>().color = Color.white;
-        GetComponent<RectTransform>().localScale = new Vector3(1f, 1f, 1f);
+        GetComponent<Image>().material = null;
+
+        GetComponent<RectTransform>().localScale = new Vector3(GetComponent<RectTransform>().localScale.x - 0.2f, GetComponent<RectTransform>().localScale.y - 0.2f, GetComponent<RectTransform>().localScale.z - 0.2f);
         transform.GetChild(0).gameObject.SetActive(false);
     }
 
