@@ -47,9 +47,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SFXAudioSource: {fileID: 1017518258338517244}
-  SFX_Ambulance: {fileID: 0}
-  SFX_Friend: {fileID: 0}
-  SFX_Mariachi: {fileID: 0}
+  SFX_Ambulance: {fileID: 8300000, guid: 2014d0952a1e0a64f9ecebdf5602e461, type: 3}
+  SFX_Friend: {fileID: 8300000, guid: 681cb18d2c5003e4b92900bff114bfa3, type: 3}
+  SFX_Mariachi: {fileID: 8300000, guid: c51dab5ee39ad334f8682baa9aa537a8, type: 3}
   RSE_PlaySoundAmbulance: {fileID: 11400000, guid: d31a678a8f398794ead237effb0690ce, type: 2}
   RSE_PlaySoundFriend: {fileID: 11400000, guid: a9c3e8abcf377974fb83f35604013572, type: 2}
   RSE_PlaySoundMariachi: {fileID: 11400000, guid: 80cded50b6d0d614f98a97e0e5960b6a, type: 2}
@@ -95,11 +95,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 3901776993286055276, guid: 044b05b4c97ea15409ad3372809350a6, type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e5bc0be3656c0c241b82e614acd5b61e, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
