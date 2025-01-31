@@ -22,7 +22,7 @@ MonoBehaviour:
   - NameEvent: Vendeur de Rose
     EventContent: Vend des roses
     TimeToAnswer: 0
-    Sprite: {fileID: 21300000, guid: a1b4e4c044405f54bab144d27847afa5, type: 3}
+    Sprite: {fileID: 21300000, guid: 65520ac5608184347a8cc81abf92ef61, type: 3}
     PositionSprite: {x: -100, y: 0}
     ActifEventAnswer: []
   - NameEvent: SDF
