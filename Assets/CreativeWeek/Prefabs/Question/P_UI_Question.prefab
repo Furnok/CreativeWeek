@@ -187,6 +187,7 @@ MonoBehaviour:
   _rseIsTextDisturbEvent: {fileID: 11400000, guid: e0beecb9fa8a14e41a86ac9e521a31fb, type: 2}
   _onDateStepChange: {fileID: 11400000, guid: 01fdbe97f9f07434e840732540dde4c4, type: 2}
   _rseChooseDoEvent: {fileID: 11400000, guid: e7d1dd0c100d221489347ae8848b37f6, type: 2}
+  _rseCallLoseDate: {fileID: 11400000, guid: c2e1371eed5b0a94fb3014ac62687079, type: 2}
   _rsoCurrentDateStep: {fileID: 11400000, guid: 8027ce831cfa44d47a13fd5047f94313, type: 2}
   _ssoTimeBetweenCharactereDisplay: {fileID: 11400000, guid: a7a3b86abc75d4c43b23e14c0b510fc1, type: 2}
   _ssoTimeToAnswer: {fileID: 11400000, guid: c0d55d14e14e1094aa8d64d001e79a01, type: 2}

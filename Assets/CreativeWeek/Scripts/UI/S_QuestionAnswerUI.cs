@@ -42,6 +42,7 @@ public class S_QuestionAnswerUI : MonoBehaviour
 
     [SerializeField] RSE_ChooseDoEvent _rseChooseDoEvent;
 
+    [SerializeField] RSE_CallLoseDate _rseCallLoseDate;
 
     [Header("RSO")]
     [SerializeField] RSO_CurrentDateStep _rsoCurrentDateStep;
@@ -67,6 +68,8 @@ public class S_QuestionAnswerUI : MonoBehaviour
         _OnGoodPresentation.action += StartDisplayingPresentationGood;
 
         _rseIsTextDisturbEvent.action += SetIsTextDisturb;
+
+        _rseCallLoseDate.action += GameStop;
     }
 
     private void OnDestroy()
@@ -81,6 +84,9 @@ public class S_QuestionAnswerUI : MonoBehaviour
         _OnGoodPresentation.action -= StartDisplayingPresentationGood;
 
         _rseIsTextDisturbEvent.action -= SetIsTextDisturb;
+
+        _rseCallLoseDate.action -= GameStop;
+
 
     }
     void DisplayQuestionAnswer(Question question)
@@ -325,12 +331,10 @@ public class S_QuestionAnswerUI : MonoBehaviour
 
     IEnumerator DisplayDate(string textToDisplay)
     {
-        Debug.Log("1");
         Debug.Log($"{_rsoCurrentDateStep.Value}");
 
 
         yield return StartCoroutine(TextDisplay(textToDisplay));
-        Debug.Log("1.5");
         Debug.Log(_rsoCurrentDateStep.Value.ToString());
         if (_rsoCurrentDateStep.Value == DateStep.Bill)
         {
@@ -347,10 +351,8 @@ public class S_QuestionAnswerUI : MonoBehaviour
             _rseChooseDoEvent.RaiseEvent();
 
             _onDateStepChange.RaiseEvent();
-            Debug.Log("3");
 
         }
-        Debug.Log("4");
 
         if (_rsoCurrentDateStep.Value != DateStep.Bill)
         {
@@ -417,5 +419,11 @@ public class S_QuestionAnswerUI : MonoBehaviour
         _textDate.text = "";
 
         _rseUpdateCharm.RaiseEvent(-100);
+    }
+
+    void GameStop()
+    {
+        ClearAnswer();
+        StopAllCoroutines();
     }
 }

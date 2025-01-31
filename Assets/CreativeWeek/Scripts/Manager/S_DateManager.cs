@@ -24,6 +24,9 @@ public class S_DateManager : MonoBehaviour
     [SerializeField] RSE_OnBadPresentation _OnBadPresentation;
     [SerializeField] RSE_OnGoodPresentation _OnGoodPresentation;
 
+    [SerializeField] RSE_CallLoseDate _rseCallLoseDate;
+
+
 
     [Header("RSO")]
     [SerializeField] RSO_CurrentProfile _rsoCurrentProfile;
@@ -34,6 +37,8 @@ public class S_DateManager : MonoBehaviour
     [Header("SSO")]
     [SerializeField] SSO_ListProfile _ssoListProfile;
 
+    bool _isGameOver = false;
+
     private void Start()
     {
         _rsoCurrentDateStep.Value = DateStep.Presentation;
@@ -42,6 +47,7 @@ public class S_DateManager : MonoBehaviour
         _rseDelayGenerateSpeech.action += GenerateSpeech;
         _rseDelayGenerateSpeechQuestion.action += GenerateSpeechQuestion;
 
+        _rseCallLoseDate.action += StopGameLoop;
 
         StartDate();
     }
@@ -53,15 +59,18 @@ public class S_DateManager : MonoBehaviour
         _rseDelayGenerateQuestion.action -= GenerateQuestion;
         _rseDelayGenerateSpeech.action -= GenerateSpeech;
         _rseDelayGenerateSpeechQuestion.action -= GenerateSpeechQuestion;
+
+        _rseCallLoseDate.action -= StopGameLoop;
+
     }
 
     void StartDate()
     {
-        var item = new Item();
-        item.Index = 0;
-        _rsoCurrentProfile.Value = _ssoListProfile.Value[0];
-        _rsoCurrentProfile.Value.ProfilType = ProfilType.Street;
-        _rsoCurrentListObject.Value.Add(item);
+        //var item = new Item();
+        //item.Index = 0;
+        //_rsoCurrentProfile.Value = _ssoListProfile.Value[0];
+        //_rsoCurrentProfile.Value.ProfilType = ProfilType.Street;
+        //_rsoCurrentListObject.Value.Add(item);
 
 
 
@@ -82,16 +91,30 @@ public class S_DateManager : MonoBehaviour
 
     void GenerateSpeech()
     {
-        StartCoroutine(DelayGenerateSpeech());
+        if(_isGameOver == false)
+        {
+            Debug.Log("enterA");
+            StartCoroutine(DelayGenerateSpeech());
+        }
     }
     void GenerateQuestion()
     {
-        StartCoroutine(DelayGenerateQuestion());
+        if (_isGameOver == false)
+        {
+            Debug.Log("enterB");
+
+            StartCoroutine(DelayGenerateQuestion());
+        }
     }
 
     void GenerateSpeechQuestion()
     {
-        StartCoroutine(DelayGenerateSpeechQuestion());
+        if (_isGameOver == false)
+        {
+            Debug.Log("enterC");
+
+            StartCoroutine(DelayGenerateSpeechQuestion());
+        }
     }
 
     IEnumerator DelayGenerateSpeech()
@@ -251,5 +274,11 @@ public class S_DateManager : MonoBehaviour
                 }
                 break;
         }
+    }
+
+    void StopGameLoop()
+    {
+        _isGameOver = true;
+        Debug.Log($"{_isGameOver}");
     }
 }

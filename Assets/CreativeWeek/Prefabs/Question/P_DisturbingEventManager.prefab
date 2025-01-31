@@ -371,6 +371,7 @@ MonoBehaviour:
   _rseUpdateCharm: {fileID: 11400000, guid: e41c6646dbbcac6499fd8e50b3eea620, type: 2}
   _rseProfilStateChange: {fileID: 11400000, guid: 982e136023cfbcc43bb5a5a05b53ee1f, type: 2}
   _playSoundActifEvent: {fileID: 11400000, guid: 47a074d61ff2ac2458f60b24a1ea481f, type: 2}
+  _rseCallLoseDate: {fileID: 11400000, guid: c2e1371eed5b0a94fb3014ac62687079, type: 2}
   RSO_DistrubingEventDone: {fileID: 11400000, guid: eee5cf92d5686f14894cd2d96a456f0f, type: 2}
   _rsoCureentProfil: {fileID: 11400000, guid: eb35386258e8e7e448ebc31f81ace3a3, type: 2}
   _rsoCureentListObject: {fileID: 11400000, guid: 0f3e026b0611e6f48a359d9d7b55928d, type: 2}

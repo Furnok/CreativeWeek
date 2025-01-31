@@ -55,6 +55,7 @@ MonoBehaviour:
   _rseUpdateCharm: {fileID: 11400000, guid: e41c6646dbbcac6499fd8e50b3eea620, type: 2}
   _OnBadPresentation: {fileID: 11400000, guid: fb4c04be6a9d3f848b1499f366257b7a, type: 2}
   _OnGoodPresentation: {fileID: 11400000, guid: e0b89d49e5f059541bd548cd882b53d2, type: 2}
+  _rseCallLoseDate: {fileID: 11400000, guid: c2e1371eed5b0a94fb3014ac62687079, type: 2}
   _rsoCurrentProfile: {fileID: 11400000, guid: eb35386258e8e7e448ebc31f81ace3a3, type: 2}
   _rsoCurrentDateStep: {fileID: 11400000, guid: 8027ce831cfa44d47a13fd5047f94313, type: 2}
   _rsoCurrentListObject: {fileID: 11400000, guid: 0f3e026b0611e6f48a359d9d7b55928d, type: 2}

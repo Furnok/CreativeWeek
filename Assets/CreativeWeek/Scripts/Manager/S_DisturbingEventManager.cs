@@ -40,6 +40,9 @@ public class S_DisturbingEventManager : MonoBehaviour
 
     [SerializeField] RSE_PlaySoundActifEvent _playSoundActifEvent;
 
+    [SerializeField] RSE_CallLoseDate _rseCallLoseDate;
+
+
     [Header("RSO")]
     [SerializeField] RSO_DistrubingEventDone RSO_DistrubingEventDone;
     [SerializeField] RSO_CurrentProfile _rsoCureentProfil;
@@ -62,6 +65,8 @@ public class S_DisturbingEventManager : MonoBehaviour
         RSE_ChooseDoEvent.action += ChooseDoEvent;
         _rseOnActifEventAnswerGive.action += StopTimerCoroutine;
         _rseOnActiveEventAnswerGiveToQuestion.action += TceckAnswerEventActif;
+
+        _rseCallLoseDate.action += GameStop;
     }
     private void OnDisable()
     {
@@ -69,6 +74,7 @@ public class S_DisturbingEventManager : MonoBehaviour
         _rseOnActifEventAnswerGive.action -= StopTimerCoroutine;
         _rseOnActiveEventAnswerGiveToQuestion.action -= TceckAnswerEventActif;
 
+        _rseCallLoseDate.action -= GameStop;
 
     }
     private void OnDestroy()
@@ -365,4 +371,10 @@ public class S_DisturbingEventManager : MonoBehaviour
 
     }
 
+
+    void GameStop()
+    {
+        StopAllCoroutines();
+        ClearAnswer();
+    }
 }
