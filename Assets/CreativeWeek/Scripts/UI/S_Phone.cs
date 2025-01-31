@@ -16,7 +16,7 @@ public class S_Phone : MonoBehaviour
 
     private void OnEnable()
     {
-        imageProfil.sprite = rsoCurrentProfile.Value.ListProfilStates[0].Sprite;
+        imageProfil.sprite = rsoCurrentProfile.Value.ProfilSprite;
         textName.text = $"{rsoCurrentProfile.Value.Name}, {rsoCurrentProfile.Value.Age} years";
         textAge.text = $"{rsoCurrentProfile.Value.ProfilType}, {rsoCurrentProfile.Value.DietType}, {rsoCurrentProfile.Value.DrinkPreference}, {rsoCurrentProfile.Value.BillSeparation}";
 

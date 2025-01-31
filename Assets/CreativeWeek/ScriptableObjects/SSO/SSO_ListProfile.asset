@@ -27,6 +27,7 @@ MonoBehaviour:
     Description: 'Imma funky young girl with drips not to be slept on I like stayin
       in street with my homies and smoke dope I''m lookin for the GOAT cuz Don''t
       forget I''m built different Here for brat summer b*tch! '
+    ProfilSprite: {fileID: 21300000, guid: 45a04cb036d4fe74c9901b0445566f00, type: 3}
     DietType: 0
     DrinkPreference: 0
     Intolerances: 
@@ -46,6 +47,7 @@ MonoBehaviour:
       polish My favorite color is gold I  eagerly anticipate to bring you to my 3
       floors yachts (with pools) I shall offer you perls that mirror the very essence
       of My Eyes '
+    ProfilSprite: {fileID: 21300000, guid: 1051c9f50e223ee44a8e3a551078d0c8, type: 3}
     DietType: 0
     DrinkPreference: 0
     Intolerances: 
@@ -65,6 +67,7 @@ MonoBehaviour:
       travelling troop and I got place in my caravan for a second person I can read
       your future in your hand and make the lunar horoscope I won't date if Mercury
       is in retrograde.
+    ProfilSprite: {fileID: 21300000, guid: b9fbe34b3f43f7a4f9e6ad5f28464a71, type: 3}
     DietType: 0
     DrinkPreference: 0
     Intolerances: 
