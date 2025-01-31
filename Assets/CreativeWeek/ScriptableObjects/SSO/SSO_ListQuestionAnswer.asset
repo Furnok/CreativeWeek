@@ -19,8 +19,8 @@ MonoBehaviour:
     Answers:
     - AnswerName: Water
       ReplyContentText: Water
-      DateAnswerIfPositifReply: yes
-      DateAnswerIfNegatifReply: no
+      DateAnswerIfPositifReply: Yeah there is nothing better than fresh water!
+      DateAnswerIfNegatifReply: Just water? That's a bit lame...
       CharmeIfValidAnswer: 10
       CharmeIfUnvalidAnswer: -10
       ConditionIn:
@@ -28,10 +28,10 @@ MonoBehaviour:
         DietType: 0
         BillSeparation: 0
         IntoleranceType: 
-    - AnswerName: Soda
-      ReplyContentText: Soda
-      DateAnswerIfPositifReply: yay
-      DateAnswerIfNegatifReply: nine
+    - AnswerName: Cola
+      ReplyContentText: Cola
+      DateAnswerIfPositifReply: Oh I love Cola! That's the best of al soda by far!
+      DateAnswerIfNegatifReply: Cola?! In a date?
       CharmeIfValidAnswer: 10
       CharmeIfUnvalidAnswer: -10
       ConditionIn:
@@ -41,8 +41,8 @@ MonoBehaviour:
         IntoleranceType: 
     - AnswerName: Wine
       ReplyContentText: Wine
-      DateAnswerIfPositifReply: yay
-      DateAnswerIfNegatifReply: nine
+      DateAnswerIfPositifReply: Hmm classy!
+      DateAnswerIfNegatifReply: 'Uhh I''m don''t really like alcohol... '
       CharmeIfValidAnswer: 10
       CharmeIfUnvalidAnswer: -10
       ConditionIn:
@@ -50,14 +50,126 @@ MonoBehaviour:
         DietType: 0
         BillSeparation: 0
         IntoleranceType: 
+  - QuestionName: Starter
+    QuestionContent: I'm thirsty.
+    QuestionDateStep: 1
+    Answers:
+    - AnswerName: Water
+      ReplyContentText: Peach Iced Tea
+      DateAnswerIfPositifReply: Hmm sounds good! I needed to refresh myself!
+      DateAnswerIfNegatifReply: Oh uhh it's not that hot in here...
+      CharmeIfValidAnswer: 10
+      CharmeIfUnvalidAnswer: -10
+      ConditionIn:
+        DrinkPreference: 2
+        DietType: 0
+        BillSeparation: 0
+        IntoleranceType: 02000000
+    - AnswerName: Cola
+      ReplyContentText: Watermelon Lemonade
+      DateAnswerIfPositifReply: Hmm watermelon is perfect in this days!
+      DateAnswerIfNegatifReply: I'm not really into fruit...
+      CharmeIfValidAnswer: 10
+      CharmeIfUnvalidAnswer: -10
+      ConditionIn:
+        DrinkPreference: 3
+        DietType: 0
+        BillSeparation: 0
+        IntoleranceType: 02000000
+    - AnswerName: Wine
+      ReplyContentText: Sex On The Beach
+      DateAnswerIfPositifReply: Ho ho I see where you wan't to go...
+      DateAnswerIfNegatifReply: So that's what is interesting you... Disapointing.
+      CharmeIfValidAnswer: 10
+      CharmeIfUnvalidAnswer: -10
+      ConditionIn:
+        DrinkPreference: 1
+        DietType: 0
+        BillSeparation: 0
+        IntoleranceType: 02000000
+  - QuestionName: Starter
+    QuestionContent: I'm thirsty.
+    QuestionDateStep: 1
+    Answers:
+    - AnswerName: Water
+      ReplyContentText: Peanut Butter Smoothie
+      DateAnswerIfPositifReply: Oh that smoothie is the best on earth!
+      DateAnswerIfNegatifReply: Peanut butter? Really?
+      CharmeIfValidAnswer: 10
+      CharmeIfUnvalidAnswer: -10
+      ConditionIn:
+        DrinkPreference: 2
+        DietType: 0
+        BillSeparation: 0
+        IntoleranceType: 03000000
+    - AnswerName: Cola
+      ReplyContentText: Homemade Ginger Beer
+      DateAnswerIfPositifReply: Sure! A good beer is what we need to learn about
+        each others.
+      DateAnswerIfNegatifReply: Uhh not really the time for a beer...
+      CharmeIfValidAnswer: 10
+      CharmeIfUnvalidAnswer: -10
+      ConditionIn:
+        DrinkPreference: 3
+        DietType: 0
+        BillSeparation: 0
+        IntoleranceType: 02000000
+    - AnswerName: Wine
+      ReplyContentText: White Russian
+      DateAnswerIfPositifReply: A vodka cocktail? You sure are enterprising!
+      DateAnswerIfNegatifReply: Ugh you don't know vodka's taste is horrible?
+      CharmeIfValidAnswer: 10
+      CharmeIfUnvalidAnswer: -10
+      ConditionIn:
+        DrinkPreference: 1
+        DietType: 0
+        BillSeparation: 0
+        IntoleranceType: 00000000
+  - QuestionName: Starter
+    QuestionContent: I'm thirsty.
+    QuestionDateStep: 1
+    Answers:
+    - AnswerName: Water
+      ReplyContentText: Iced Hibiscus Tea
+      DateAnswerIfPositifReply: Nice I needed a good tea right now!
+      DateAnswerIfNegatifReply: Well I'm not really into tea...
+      CharmeIfValidAnswer: 10
+      CharmeIfUnvalidAnswer: -10
+      ConditionIn:
+        DrinkPreference: 2
+        DietType: 0
+        BillSeparation: 0
+        IntoleranceType: 03000000
+    - AnswerName: Cola
+      ReplyContentText: Papsi White
+      DateAnswerIfPositifReply: I can tell you know which soda is really the best!
+      DateAnswerIfNegatifReply: Papsi? Who still drink that?
+      CharmeIfValidAnswer: 10
+      CharmeIfUnvalidAnswer: -10
+      ConditionIn:
+        DrinkPreference: 3
+        DietType: 0
+        BillSeparation: 0
+        IntoleranceType: 00000000
+    - AnswerName: Wine
+      ReplyContentText: White Rabbit Cocktail
+      DateAnswerIfPositifReply: Ooh you know what you're doing..
+      DateAnswerIfNegatifReply: I don't really like gin...
+      CharmeIfValidAnswer: 10
+      CharmeIfUnvalidAnswer: -10
+      ConditionIn:
+        DrinkPreference: 1
+        DietType: 0
+        BillSeparation: 0
+        IntoleranceType: 02000000
   - QuestionName: Dinner
     QuestionContent: It's time to do the dinner order.
     QuestionDateStep: 2
     Answers:
     - AnswerName: Beefteck
       ReplyContentText: Beefteck
-      DateAnswerIfPositifReply: yes
-      DateAnswerIfNegatifReply: no
+      DateAnswerIfPositifReply: Yum! I needed a good old meat to eat!
+      DateAnswerIfNegatifReply: Eurk you don't even know I hate meat!?
       CharmeIfValidAnswer: 10
       CharmeIfUnvalidAnswer: -10
       ConditionIn:
@@ -67,8 +179,8 @@ MonoBehaviour:
         IntoleranceType: 
     - AnswerName: Chili Vege
       ReplyContentText: Chili Vege
-      DateAnswerIfPositifReply: yes
-      DateAnswerIfNegatifReply: no
+      DateAnswerIfPositifReply: Hm I like it a little spicy...
+      DateAnswerIfNegatifReply: I can't really eat spicy...
       CharmeIfValidAnswer: 10
       CharmeIfUnvalidAnswer: -10
       ConditionIn:
@@ -78,8 +190,8 @@ MonoBehaviour:
         IntoleranceType: 
     - AnswerName: Chickpear Falafel Burgers
       ReplyContentText: Chickpear Falafel Burgers
-      DateAnswerIfPositifReply: yes
-      DateAnswerIfNegatifReply: no
+      DateAnswerIfPositifReply: Classic I like that!
+      DateAnswerIfNegatifReply: What's that?
       CharmeIfValidAnswer: 10
       CharmeIfUnvalidAnswer: -10
       ConditionIn:
@@ -87,14 +199,148 @@ MonoBehaviour:
         DietType: 3
         BillSeparation: 0
         IntoleranceType: 
+  - QuestionName: Dinner
+    QuestionContent: It's time to do the dinner order.
+    QuestionDateStep: 2
+    Answers:
+    - AnswerName: Roti sans pareil
+      ReplyContentText: Roti sans pareil
+      DateAnswerIfPositifReply: Hm it sounds good to me! I love it when it's a good
+        pink on the inside!
+      DateAnswerIfNegatifReply: That's too much meat for me...
+      CharmeIfValidAnswer: 10
+      CharmeIfUnvalidAnswer: -10
+      ConditionIn:
+        DrinkPreference: 0
+        DietType: 1
+        BillSeparation: 0
+        IntoleranceType: 0000000001000000
+    - AnswerName: Double Bean & Roasted Pepper Chili
+      ReplyContentText: Double Bean & Roasted Pepper Chili
+      DateAnswerIfPositifReply: I'm always down for a little specialty!
+      DateAnswerIfNegatifReply: You know beens make you fart right?
+      CharmeIfValidAnswer: 10
+      CharmeIfUnvalidAnswer: -10
+      ConditionIn:
+        DrinkPreference: 0
+        DietType: 2
+        BillSeparation: 0
+        IntoleranceType: 
+    - AnswerName: Lentil Nut Roast
+      ReplyContentText: Lentil Nut Roast
+      DateAnswerIfPositifReply: Sure sounds original i've never had some!
+      DateAnswerIfNegatifReply: Oh uh I'd like to eat a real meal please....
+      CharmeIfValidAnswer: 10
+      CharmeIfUnvalidAnswer: -10
+      ConditionIn:
+        DrinkPreference: 0
+        DietType: 3
+        BillSeparation: 0
+        IntoleranceType: 03000000
+  - QuestionName: Dinner
+    QuestionContent: It's time to do the dinner order.
+    QuestionDateStep: 2
+    Answers:
+    - AnswerName: 'Hamburger '
+      ReplyContentText: 'Hamburger '
+      DateAnswerIfPositifReply: Ohh hamburger at restaurant are always really good!
+      DateAnswerIfNegatifReply: What? Do you think you're in a fast food?
+      CharmeIfValidAnswer: 10
+      CharmeIfUnvalidAnswer: -10
+      ConditionIn:
+        DrinkPreference: 0
+        DietType: 1
+        BillSeparation: 0
+        IntoleranceType: 0000000001000000
+    - AnswerName: Cesear Salad
+      ReplyContentText: Cesear Salad
+      DateAnswerIfPositifReply: Yep a good old classic for me!
+      DateAnswerIfNegatifReply: A salade? Really?
+      CharmeIfValidAnswer: 10
+      CharmeIfUnvalidAnswer: -10
+      ConditionIn:
+        DrinkPreference: 0
+        DietType: 2
+        BillSeparation: 0
+        IntoleranceType: 0000000001000000
+    - AnswerName: Honey Garlic Tofu
+      ReplyContentText: Honey Garlic Tofu
+      DateAnswerIfPositifReply: Hey give me the honey I'll give you the moon...
+      DateAnswerIfNegatifReply: Urgh you like tofu?
+      CharmeIfValidAnswer: 10
+      CharmeIfUnvalidAnswer: -10
+      ConditionIn:
+        DrinkPreference: 0
+        DietType: 3
+        BillSeparation: 0
+        IntoleranceType: 01000000
   - QuestionName: Dessert
     QuestionContent: Suprise me for the desert.
     QuestionDateStep: 3
     Answers:
-    - AnswerName: Cake
-      ReplyContentText: Cake
-      DateAnswerIfPositifReply: yes
-      DateAnswerIfNegatifReply: no
+    - AnswerName: Apple Crumble Supreme
+      ReplyContentText: Apple Crumble Supreme
+      DateAnswerIfPositifReply: Mmmh I love apples!
+      DateAnswerIfNegatifReply: I don't like the feeling of crunch between my teeth
+      CharmeIfValidAnswer: 10
+      CharmeIfUnvalidAnswer: -10
+      ConditionIn:
+        DrinkPreference: 0
+        DietType: 0
+        BillSeparation: 0
+        IntoleranceType: 0200000003000000
+    - AnswerName: Green Kiwi Smoothie
+      ReplyContentText: Green Kiwi Smoothie
+      DateAnswerIfPositifReply: A smoothie ? Yeah why not!
+      DateAnswerIfNegatifReply: Urgh.. A bit too acid for me...
+      CharmeIfValidAnswer: 10
+      CharmeIfUnvalidAnswer: -10
+      ConditionIn:
+        DrinkPreference: 0
+        DietType: 0
+        BillSeparation: 0
+        IntoleranceType: 02000000
+    - AnswerName: Healthy Upside-Down Cake
+      ReplyContentText: Healthy Upside-Down Cake
+      DateAnswerIfPositifReply: Rework the rules, I love the risk!
+      DateAnswerIfNegatifReply: There is a good reason why a cake has a side...
+      CharmeIfValidAnswer: 10
+      CharmeIfUnvalidAnswer: -10
+      ConditionIn:
+        DrinkPreference: 0
+        DietType: 0
+        BillSeparation: 0
+        IntoleranceType: 0200000001000000
+  - QuestionName: Dessert
+    QuestionContent: Suprise me for the desert.
+    QuestionDateStep: 3
+    Answers:
+    - AnswerName: Rice Pudding
+      ReplyContentText: Rice Pudding
+      DateAnswerIfPositifReply: Yum, sweet rice i like that!
+      DateAnswerIfNegatifReply: Whoever puts rice in a dessert is a food terrorist!
+      CharmeIfValidAnswer: 10
+      CharmeIfUnvalidAnswer: -10
+      ConditionIn:
+        DrinkPreference: 0
+        DietType: 0
+        BillSeparation: 0
+        IntoleranceType: 02000000
+    - AnswerName: Green Kiwi Smoothie
+      ReplyContentText: Green Kiwi Smoothie
+      DateAnswerIfPositifReply: A smoothie ? Yeah why not!
+      DateAnswerIfNegatifReply: Urgh.. A bit too acid for me...
+      CharmeIfValidAnswer: 10
+      CharmeIfUnvalidAnswer: -10
+      ConditionIn:
+        DrinkPreference: 0
+        DietType: 0
+        BillSeparation: 0
+        IntoleranceType: 02000000
+    - AnswerName: Match Mochi Ice Cream
+      ReplyContentText: Match Mochi Ice Cream
+      DateAnswerIfPositifReply: Fresh and sweet, a perfect match!
+      DateAnswerIfNegatifReply: Some ice cream now?
       CharmeIfValidAnswer: 10
       CharmeIfUnvalidAnswer: -10
       ConditionIn:
@@ -102,21 +348,36 @@ MonoBehaviour:
         DietType: 0
         BillSeparation: 0
         IntoleranceType: 
-    - AnswerName: Coffe
-      ReplyContentText: Coffe
-      DateAnswerIfPositifReply: yes
-      DateAnswerIfNegatifReply: no
+  - QuestionName: Dessert
+    QuestionContent: Suprise me for the desert.
+    QuestionDateStep: 3
+    Answers:
+    - AnswerName: Flourless chocolate & almond cake
+      ReplyContentText: Flourless chocolate & almond cake
+      DateAnswerIfPositifReply: The flavor of chocolate would never disappoints me!
+      DateAnswerIfNegatifReply: I don't want chocolate right now...
       CharmeIfValidAnswer: 10
       CharmeIfUnvalidAnswer: -10
       ConditionIn:
         DrinkPreference: 0
         DietType: 0
         BillSeparation: 0
-        IntoleranceType: 
-    - AnswerName: Burger
-      ReplyContentText: Burger
-      DateAnswerIfPositifReply: yes
-      DateAnswerIfNegatifReply: no
+        IntoleranceType: 03000000
+    - AnswerName: Milk & Cookies
+      ReplyContentText: Milk & Cookies
+      DateAnswerIfPositifReply: A classic that remind me a lot of memories!
+      DateAnswerIfNegatifReply: You think I'm a kid?
+      CharmeIfValidAnswer: 10
+      CharmeIfUnvalidAnswer: -10
+      ConditionIn:
+        DrinkPreference: 0
+        DietType: 0
+        BillSeparation: 0
+        IntoleranceType: 0000000001000000
+    - AnswerName: Chai Coconut & Mango Creams
+      ReplyContentText: Chai Coconut & Mango Creams
+      DateAnswerIfPositifReply: So colorful and exotic!
+      DateAnswerIfNegatifReply: I'm not a fitness girl...
       CharmeIfValidAnswer: 10
       CharmeIfUnvalidAnswer: -10
       ConditionIn:
