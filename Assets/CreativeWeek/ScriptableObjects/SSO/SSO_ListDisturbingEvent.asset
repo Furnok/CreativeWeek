@@ -16,7 +16,8 @@ MonoBehaviour:
   - NameEvent: Server Beer Pong Fan
     EventContent: It seems the server is fan of your dark beer pong past.
     TimeToAnswer: 10
-    Sprite: {fileID: 21300000, guid: 48ab50dd11c2af84fb2796e57949c63f, type: 3}
+    Sprite: {fileID: 21300000, guid: 35bd378d758dfcf42b70fc9e59e80cd9, type: 3}
+    AudioClip: {fileID: 0}
     PositionSprite: {x: -100, y: 0}
     ActifEventAnswer:
     - AnswerName: Admit
@@ -51,6 +52,7 @@ MonoBehaviour:
     EventContent: A roses seller appeared, should I buy one?
     TimeToAnswer: 10
     Sprite: {fileID: 21300000, guid: 65520ac5608184347a8cc81abf92ef61, type: 3}
+    AudioClip: {fileID: 0}
     PositionSprite: {x: -100, y: 0}
     ActifEventAnswer:
     - AnswerName: Send Away
@@ -112,7 +114,8 @@ MonoBehaviour:
   - NameEvent: SDF Encounter
     EventContent: An homeless grandpa stare at you.
     TimeToAnswer: 10
-    Sprite: {fileID: 21300000, guid: a1b4e4c044405f54bab144d27847afa5, type: 3}
+    Sprite: {fileID: 21300000, guid: 2153abf242996e44493f37b20e75fe1f, type: 3}
+    AudioClip: {fileID: 0}
     PositionSprite: {x: -100, y: 0}
     ActifEventAnswer:
     - AnswerName: Send Away
@@ -174,7 +177,8 @@ MonoBehaviour:
   - NameEvent: Barking Dog
     EventContent: A barking dog appeared! What should I do!?
     TimeToAnswer: 10
-    Sprite: {fileID: 21300000, guid: 32d0ad51698190a4bb8fd41fbb7059ab, type: 3}
+    Sprite: {fileID: 21300000, guid: d913c01a1850c0e4db10fe7ca6086926, type: 3}
+    AudioClip: {fileID: 0}
     PositionSprite: {x: -100, y: 0}
     ActifEventAnswer:
     - AnswerName: Send Away
