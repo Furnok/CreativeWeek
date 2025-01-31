@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class S_UIToilet : MonoBehaviour
 {
@@ -6,6 +7,7 @@ public class S_UIToilet : MonoBehaviour
 
     [Header("References")]
     [SerializeField] GameObject toiletPanel;
+    [SerializeField] AudioMixer audioMixer;
 
     [Header("RSE")]
     [SerializeField] RSE_EnterToilet RSE_EnterToilet;
