@@ -6,10 +6,14 @@ using UnityEngine.UI;
 
 public class S_DisturbingEventManager : MonoBehaviour
 {
-    //[Header("Parameters")]
+    [Header("Parameters")]
+    [SerializeField] RectTransform _uiElementEvent;
+    [SerializeField] Vector2 _offscreenPosition;
+    [SerializeField] Vector2 _targetPosition;
+    [SerializeField] float _moveDuration;
 
     [Header("References")]
-    [SerializeField] TextMeshProUGUI _textActifEvent; // text and question 
+    [SerializeField] TextMeshProUGUI _textActifEvent;
     [SerializeField] TextMeshProUGUI _textTimeLeft;
     [SerializeField] TextMeshProUGUI _textThought;
 
@@ -20,9 +24,14 @@ public class S_DisturbingEventManager : MonoBehaviour
 
     [SerializeField] S_AnswerActifEvent _answerActifEvent;
 
+    [SerializeField] Image _eventImage;
+
     [Header("RSE")]
     [SerializeField] RSE_CallDoEvent RSE_CallDoEvent;
     [SerializeField] RSE_ChooseDoEvent RSE_ChooseDoEvent;
+
+    [SerializeField] RSE_OnActifEventAnswerGive _rseOnActifEventAnswerGive;
+    [SerializeField] RSE_OnActifEventAnswerGiveToEvent _rseOnActiveEventAnswerGiveToQuestion;
 
     [Header("RSO")]
     [SerializeField] RSO_DistrubingEventDone RSO_DistrubingEventDone;
@@ -44,10 +53,13 @@ public class S_DisturbingEventManager : MonoBehaviour
     private void OnEnable()
     {
         RSE_ChooseDoEvent.action += ChooseDoEvent;
+        _rseOnActifEventAnswerGive.action += StopTimerCoroutine;
     }
     private void OnDisable()
     {
         RSE_ChooseDoEvent.action -= ChooseDoEvent;
+        _rseOnActifEventAnswerGive.action -= StopTimerCoroutine;
+
     }
     private void OnDestroy()
     {
@@ -56,6 +68,10 @@ public class S_DisturbingEventManager : MonoBehaviour
     private void Start()
     {
         RSO_DistrubingEventDone.Value.Clear();
+
+        _uiElementEvent.anchoredPosition = _offscreenPosition;
+
+        StartCoroutine(MoveToPosition(_targetPosition, _moveDuration));
     }
     private void ChooseDoEvent()
     {
@@ -114,22 +130,21 @@ public class S_DisturbingEventManager : MonoBehaviour
 
     IEnumerator SliderTimerToAnwer(DisturbingActifEvent disturbingActifEvent)
     {
-        float currentTimeToRespond = disturbingActifEvent.TimeToAnswer;//need timer of actf wuestion event
+        float currentTimeToRespond = disturbingActifEvent.TimeToAnswer;
 
         _sliderTimeToAnwser.maxValue = currentTimeToRespond;
         _sliderTimeToAnwser.value = currentTimeToRespond;
 
         float elapsedTime = 0f;
 
-        while (elapsedTime < disturbingActifEvent.TimeToAnswer)//need timer of actf wuestion event
+        while (elapsedTime < disturbingActifEvent.TimeToAnswer)
         {
             elapsedTime += Time.deltaTime;
 
-            _textTimeLeft.text = Mathf.Lerp(disturbingActifEvent.TimeToAnswer, 0f, elapsedTime / disturbingActifEvent.TimeToAnswer).ToString("F2") + "s";//need timer of actf wuestion event
-            _sliderTimeToAnwser.value = Mathf.Lerp(disturbingActifEvent.TimeToAnswer, 0f, elapsedTime / disturbingActifEvent.TimeToAnswer);//need timer of actf wuestion event
+            _textTimeLeft.text = Mathf.Lerp(disturbingActifEvent.TimeToAnswer, 0f, elapsedTime / disturbingActifEvent.TimeToAnswer).ToString("F2") + "s";
+            _sliderTimeToAnwser.value = Mathf.Lerp(disturbingActifEvent.TimeToAnswer, 0f, elapsedTime / disturbingActifEvent.TimeToAnswer);
 
-            currentTimeToRespond = Mathf.Lerp(disturbingActifEvent.TimeToAnswer, 0f, elapsedTime / disturbingActifEvent.TimeToAnswer);//need timer of actf wuestion event
-
+            currentTimeToRespond = Mathf.Lerp(disturbingActifEvent.TimeToAnswer, 0f, elapsedTime / disturbingActifEvent.TimeToAnswer);
             //if (timeToRespond <= _timeTicking)
             //{
             //    _sliderTimeFill.transform.GetComponent<Image>().color = Color.red;
@@ -169,5 +184,23 @@ public class S_DisturbingEventManager : MonoBehaviour
             Destroy(answer.gameObject);
         }
         _answersActifEventList.Clear();
+    }
+
+    IEnumerator MoveToPosition(Vector2 destination, float duration)
+    {
+        float elapsedTime = 0f;
+        Vector2 startPosition = _uiElementEvent.anchoredPosition;
+
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+            float t = elapsedTime / duration;
+
+            _uiElementEvent.anchoredPosition = Vector2.Lerp(startPosition, destination, t);
+
+            yield return null;
+        }
+
+        _uiElementEvent.anchoredPosition = destination;
     }
 }

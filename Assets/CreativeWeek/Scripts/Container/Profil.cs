@@ -64,6 +64,7 @@ public class Profil
     public ProfilState CurrentProfilState;
     public List<ProfilStateDictionary> ListProfilStates;
     public string Description;
+    public Sprite ProfilSprte;
     //public List<ItemUseEffect> ItemsWantedAndUnwanted;
     [HideInInspector] public DietType DietType;
     [HideInInspector] public DrinkPreference DrinkPreference;
