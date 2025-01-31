@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 965021775900247183}
   - component: {fileID: 1334511181388023527}
+  - component: {fileID: 8707208562446942371}
   m_Layer: 0
   m_Name: P_PassiveEventManager
   m_TagString: Untagged
@@ -48,3 +49,20 @@ MonoBehaviour:
   RSE_CallAmbulanceEvent: {fileID: 11400000, guid: 4d5aef79d62a0d946ad74c713dc49454, type: 2}
   RSE_CallFriendEvent: {fileID: 11400000, guid: 5a0a81988fef2a84caf3af2230d77869, type: 2}
   RSE_CallMariachiEvent: {fileID: 11400000, guid: 220e578f7c18add4d9a079a1bdfb8b85, type: 2}
+--- !u!114 &8707208562446942371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789303068065018215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 758e694f2ceb6504e827c5e5e88c6b92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeMin: 10
+  timeMax: 41
+  RSE_ChoosePassiveEvent: {fileID: 11400000, guid: ad7bd4b1e4ab26b4b8a32b44e89bf2d1, type: 2}
+  RSE_OnDateStepChange: {fileID: 11400000, guid: 01fdbe97f9f07434e840732540dde4c4, type: 2}
+  RSO_CurrentDateStep: {fileID: 11400000, guid: 8027ce831cfa44d47a13fd5047f94313, type: 2}
