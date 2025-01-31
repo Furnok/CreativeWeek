@@ -49,12 +49,13 @@ public class S_InventoryManager : MonoBehaviour
                 {
                     isNotInCurrentList = false;
                 }
-
-                if (item.Index == index)
-                {
-                    haveAlreadyTenue = true;
-                }
             }
+
+            if (RSO_CurrentListObject.Value.Any(item => item.Index == 0 || item.Index == 1 || item.Index == 2))
+            {
+                haveAlreadyTenue = true;
+            }
+
             if (isNotInCurrentList && !haveAlreadyTenue)
             {
                 Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);

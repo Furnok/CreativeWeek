@@ -3250,6 +3250,9 @@ MonoBehaviour:
   rseEndTimer: {fileID: 11400000, guid: 6a372d7afb90e104ab3bc0ca0f1aaa69, type: 2}
   callPause: {fileID: 11400000, guid: 6a9afb96814299746ab6dc22df4aaac0, type: 2}
   unCallPause: {fileID: 11400000, guid: 25386d36ffe7dd84eb23468dcbb85da9, type: 2}
+  rsePlaySoundNotif: {fileID: 11400000, guid: 34e6dc9ecd85de64db4f022d7eec568b, type: 2}
+  rsePlaySoundMatch: {fileID: 11400000, guid: 00b24aa5abd374e43bf6718b212e74eb, type: 2}
+  rsePlaySoundMusic: {fileID: 11400000, guid: 63a43bcb18bfcdc458d2322f8d24b750, type: 2}
 --- !u!114 &2021811847834525268
 MonoBehaviour:
   m_ObjectHideFlags: 0
