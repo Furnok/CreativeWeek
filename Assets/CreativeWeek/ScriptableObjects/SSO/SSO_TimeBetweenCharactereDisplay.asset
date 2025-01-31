@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b8db5bc5dbe1d547b052035d4075850, type: 3}
   m_Name: SSO_TimeBetweenCharactereDisplay
   m_EditorClassIdentifier: 
-  _value: 0.05
+  _value: 0.025

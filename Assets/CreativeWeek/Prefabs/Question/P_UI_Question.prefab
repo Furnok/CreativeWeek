@@ -366,7 +366,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 618, y: 18.725}
+  m_AnchoredPosition: {x: 618, y: 18.725002}
   m_SizeDelta: {x: 170.6545, y: 53.219}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3067756767717586906
@@ -478,6 +478,7 @@ GameObject:
   - component: {fileID: 6425293021501786905}
   - component: {fileID: 4863077035069224812}
   - component: {fileID: 5069708888641202388}
+  - component: {fileID: 4223926564893989905}
   m_Layer: 5
   m_Name: TextDate
   m_TagString: Untagged
@@ -542,7 +543,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 0.08962262, b: 0.08962262, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -618,6 +619,22 @@ MonoBehaviour:
   test: {fileID: 4504091389179872823}
   RSE_CallFriendEvent: {fileID: 11400000, guid: 5a0a81988fef2a84caf3af2230d77869, type: 2}
   RSE_PlaySoundFriend: {fileID: 11400000, guid: a9c3e8abcf377974fb83f35604013572, type: 2}
+--- !u!114 &4223926564893989905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4504091389179872823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05254886b1ff14546b887a602617e01c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayAmbulanceSound: 10
+  RSE_IsTextDisturbed: {fileID: 11400000, guid: e0beecb9fa8a14e41a86ac9e521a31fb, type: 2}
+  RSE_CallAmbulanceEvent: {fileID: 11400000, guid: 4d5aef79d62a0d946ad74c713dc49454, type: 2}
+  RSE_PlaySoundAmbulance: {fileID: 11400000, guid: d31a678a8f398794ead237effb0690ce, type: 2}
 --- !u!1 &5248147036031133954
 GameObject:
   m_ObjectHideFlags: 0
@@ -728,7 +745,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -18.807, y: 0}
+  m_AnchoredPosition: {x: -18.807007, y: 0}
   m_SizeDelta: {x: -37.614, y: 69.975}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!1 &7221902675562439663
